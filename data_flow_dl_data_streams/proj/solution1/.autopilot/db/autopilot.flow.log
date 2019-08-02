@@ -1,0 +1,1376 @@
+INFO-FLOW: Workspace /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1 opened at Wed Jul 31 02:48:37 MDT 2019
+Command     open_solution done; 2.18 sec.
+Execute     set_part zynq 
+Execute       ap_part_info -name zynq -data single -quiet 
+Execute       ap_family_info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg484:-2 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.lib 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/plb46.lib 
+Execute               source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/fsl.lib 
+Execute               source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/axi4.lib 
+Execute               source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.lib 
+Execute               source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.lib 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.lib 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfir.lib 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfft.lib 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/dds_compiler.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/plb46.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/fsl.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/axi4.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/util.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfft.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfir.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.11 sec.
+Command         ap_source done; 0.11 sec.
+Execute         ap_part_info -data single -name xc7z020-clg484-2 
+Execute         ap_part_info -name xc7z020-clg484-2 -data resources 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         config_chip_info -quiet -speed medium 
+Command       add_library done; 0.2 sec.
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq_fpv6 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute               source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-2'
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.32 sec.
+Execute     create_clock -period 75MHz 
+Execute       config_clock -quiet -name default -period 13.333 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 13.333ns.
+Execute     csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       is_encrypted /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example_test.cpp 
+Execute       is_xip /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example_test.cpp 
+Execute       is_encrypted /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example.cpp 
+Execute       is_xip /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example.cpp 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       source run_sim.tcl 
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 3.86 sec.
+Execute     csynth_design 
+Execute       get_config_compile -dump_cfg 
+Execute       get_config_compile -dump_post_cfg 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-10] Analyzing design file 'example.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling example.cpp as C++
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute         clang_39 -src example.cpp  -fno-limit-debug-info -gcc-toolchain /proj/xbuilds/HEAD_daily_latest/installs/lin64/Vivado/HEAD/tps/lnx64/gcc-6.2.0 -fhls -fno-exceptions  -E "example.cpp"       -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Wpragmas  -fno-threadsafe-statics -fno-use-cxa-atexit  -std=gnu++03  -target fpga64-xilinx-linux-gnu    -fno-threadsafe-statics -fno-use-cxa-atexit -I "/proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot/39" -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot" -I "/proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.pp.0.cpp" 
+Execute           ap_eval exec -ignorestderr /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/clang.example.cpp.diag.yml -fno-limit-debug-info -gcc-toolchain /proj/xbuilds/HEAD_daily_latest/installs/lin64/Vivado/HEAD/tps/lnx64/gcc-6.2.0 -fhls -fno-exceptions -E example.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Wpragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++03 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -I /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot/39 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot -I /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.pp.0.cpp > /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/clang.example.cpp.out.log 2> /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/clang.example.cpp.err.log 
+Command           ap_eval done; 0.11 sec.
+Command         clang_39 done; 0.11 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.1 seconds per iteration
+Execute         set_directive_top example -name=example 
+INFO-FLOW: Setting directive 'TOP' name=example 
+INFO-FLOW: Setting directive 'TOP' name=example 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO-FLOW: Setting directive 'TOP' name=example 
+Execute         list_core -type functional_unit 
+Execute         clang_tidy xilinx-systemc-detector /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.pp.0.cpp std=gnu++03 -target fpga  -directive=/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/.systemc_flag -fix-errors /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.pp.0.cpp -- -std=gnu++03 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.93 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-constantarray-param,xilinx-loop-brace-bracket,xilinx-remove-assert /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.pp.0.cpp std=gnu++03 -target fpga  
+INFO-FLOW: exec /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-loop-brace-bracket,xilinx-remove-assert -fix-errors /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.pp.0.cpp -- -std=gnu++03 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.72 sec.
+Execute         clang_tidy xilinx-directive2pragma /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.pp.0.cpp std=gnu++03 -target fpga  -directive=/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/all.directive.json -fix-errors /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.pp.0.cpp -- -std=gnu++03 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.88 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 1.6 seconds per iteration
+Execute         clang_tidy -errorcheck xilinx-top-parameters /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.pp.0.cpp std=gnu++03 -target fpga  
+Execute           ap_eval exec -ignorestderr /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/clang-tidy.example.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-top-parameters -fix-errors /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.pp.0.cpp -- -std=gnu++03 -target fpga -fhls -ferror-limit=0 > /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/clang-tidy.example.pp.0.cpp.out.log 2> /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/clang-tidy.example.pp.0.cpp.err.log 
+Command           ap_eval done; 0.63 sec.
+Command         clang_tidy done; 0.63 sec.
+Execute         clang_tidy -errorcheck xilinx-array-stream-check /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.pp.0.cpp std=gnu++03 -target fpga  
+Execute           ap_eval exec -ignorestderr /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/clang-tidy.example.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-array-stream-check -fix-errors /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.pp.0.cpp -- -std=gnu++03 -target fpga -fhls -ferror-limit=0 > /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/clang-tidy.example.pp.0.cpp.out.log 2> /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/clang-tidy.example.pp.0.cpp.err.log 
+Command           ap_eval done; 0.64 sec.
+Command         clang_tidy done; 0.64 sec.
+Execute         clang_tidy -errorcheck xilinx-stream-in-struct /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.pp.0.cpp std=gnu++03 -target fpga  
+Execute           ap_eval exec -ignorestderr /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/clang-tidy.example.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-stream-in-struct -fix-errors /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.pp.0.cpp -- -std=gnu++03 -target fpga -fhls -ferror-limit=0 > /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/clang-tidy.example.pp.0.cpp.out.log 2> /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/clang-tidy.example.pp.0.cpp.err.log 
+Command           ap_eval done; 0.63 sec.
+Command         clang_tidy done; 0.63 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/xilinx-dataflow-lawyer.example.pp.0.cpp.diag.yml /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.pp.0.cpp -- -std=gnu++03 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/xilinx-dataflow-lawyer.example.pp.0.cpp.out.log 2> /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/xilinx-dataflow-lawyer.example.pp.0.cpp.err.log 
+Command         ap_eval done; 0.62 sec.
+WARNING: [HLS 214-111] Streams will behave like static variables inside a dataflow region: example.cpp:7:19
+Execute         send_msg_by_id WARNING @200-471@%s%s 1 example.cpp 
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file example.cpp
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute         clang_39 -src /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.pragma.2.cpp  -fno-limit-debug-info -fhls -flto -fno-exceptions   -Wno-error=c++11-narrowing   "/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.pragma.2.cpp"      -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Wpragmas  -fno-threadsafe-statics -fno-use-cxa-atexit  -std=gnu++03  -target fpga64-xilinx-linux-gnu  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot" -I "/proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -g -o "/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.bc" 
+Execute           ap_eval exec -ignorestderr /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/clang.example.pragma.2.cpp.diag.yml -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.pragma.2.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Wpragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++03 -target fpga64-xilinx-linux-gnu -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot -I /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.bc > /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/clang.example.pragma.2.cpp.out.log 2> /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/clang.example.pragma.2.cpp.err.log 
+Command           ap_eval done; 0.65 sec.
+Execute           send_msg_by_id WARNING @200-651@%s example.cpp:5:33: warning: extra token before pragma subject is ignored [-Wextra-tokens]
+#pragma HLS INTERFACE axis port=&A
+                                ^
+example.cpp:6:33: warning: extra token before pragma subject is ignored [-Wextra-tokens]
+#pragma HLS INTERFACE axis port=&B
+                                ^
+2 warnings generated.
+ 
+WARNING: [HLS 200-651] Found issues in source files:
+example.cpp:5:33: warning: extra token before pragma subject is ignored [-Wextra-tokens]
+#pragma HLS INTERFACE axis port=&A
+                                ^
+example.cpp:6:33: warning: extra token before pragma subject is ignored [-Wextra-tokens]
+#pragma HLS INTERFACE axis port=&B
+                                ^
+2 warnings generated.
+
+Command         clang_39 done; 0.67 sec.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute         run_link_or_opt -out /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.0.bc -args  "/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.g.bc"  
+Execute           ap_eval exec -ignorestderr /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/tools/clang-3.9-csynth/bin/llvm-link /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.g.bc -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.0.bc > /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/llvm-link.a.g.ld.0.bc.out.log 2> /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/llvm-link.a.g.ld.0.bc.err.log 
+INFO-FLOW: 
+Execute         run_link_or_opt -opt -out /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.1.lower.bc -args /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute           ap_eval exec -ignorestderr /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.diag.yml /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.1.lower.bc > /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.out.log 2> /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.err.log 
+INFO-FLOW: 
+INFO-FLOW: Linking math bc lib
+Execute         run_link_or_opt -out /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/lib/libhlsm_39.bc /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/lib/libhlsmc++_39.bc 
+Execute           ap_eval exec -ignorestderr /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/tools/clang-3.9-csynth/bin/llvm-link /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/lib/libhlsm_39.bc /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/lib/libhlsmc++_39.bc -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.2.m1.bc > /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.out.log 2> /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.err.log 
+Command           ap_eval done; 3.39 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 3.39 sec.
+Execute         run_link_or_opt -opt -out /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=example -reflow-float-conversion 
+Execute           ap_eval exec -ignorestderr /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.diag.yml /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=example -reflow-float-conversion -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.out.log 2> /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.err.log 
+Command           ap_eval done; 1.1 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 1.11 sec.
+Execute         run_link_or_opt -out /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/lib/libfloatconversion_39.bc 
+Execute           ap_eval exec -ignorestderr /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/tools/clang-3.9-csynth/bin/llvm-link /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/lib/libfloatconversion_39.bc -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.4.m2.bc > /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.out.log 2> /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.err.log 
+INFO-FLOW: 
+Command         run_link_or_opt done; 0.11 sec.
+Execute         run_link_or_opt -opt -out /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=example 
+Execute           ap_eval exec -ignorestderr /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.diag.yml /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=example -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.5.gdce.bc > /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.out.log 2> /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.err.log 
+INFO-FLOW: 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_interface -m_axi_offset 
+Execute         get_config_export -xo 
+INFO-FLOW: Doing LTO.
+Execute         clang_39 -src /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.0.bc  -fhls -mllvm -hls-top-function-name=example  -mllvm -hls-db-dir -mllvm /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db  -emit-llvm -c -mllvm -hls-bitcode-version=3.1  -target fpga64-xilinx-none  -mllvm  -xcl-xmlinfo=/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/../../../kernel.xml  -mllvm -pass-remarks=supported-subset -mllvm -hls-top-function-prefix=example_ -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -mllvm -maxi-latency=0 -x ir "/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.5.gdce.bc" -o "/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.lto.bc"  
+Execute           ap_eval exec -ignorestderr /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/clang.a.g.ld.0.bc.diag.yml -fhls -mllvm -hls-top-function-name=example -mllvm -hls-db-dir -mllvm /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db -emit-llvm -c -mllvm -hls-bitcode-version=3.1 -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/../../../kernel.xml -mllvm -pass-remarks=supported-subset -mllvm -hls-top-function-prefix=example_ -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -mllvm -maxi-latency=0 -x ir /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.lto.bc > /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/clang.a.g.ld.0.bc.out.log 2> /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/clang.a.g.ld.0.bc.err.log 
+Command           ap_eval done; 0.24 sec.
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axis<32, 2, 5, 6> >::read()' into 'proc_1(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:18:13)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::write(int const&)' into 'proc_1(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:24:19)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::write(int const&)' into 'proc_1(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:20:19)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::read(int&)' into 'hls::stream<int>::read()' (/proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot/hls_stream.h:110:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axis<32, 2, 5, 6> >::write(ap_axis<32, 2, 5, 6> const&)' into 'proc_2(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:40:7)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::read()' into 'proc_2(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:39:53)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::read()' into 'proc_2(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:39:30)
+Command         clang_39 done; 0.8 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1006.684 ; gain = 332.059 ; free physical = 5820 ; free virtual = 27599
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1006.684 ; gain = 332.059 ; free physical = 5820 ; free virtual = 27598
+Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute           cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top example -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.0.bc -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command           transform done; 0.13 sec.
+Execute           disassemble /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.1 /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.1 
+Execute             is_encrypted /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.1.bc 
+Command           disassemble done; 1.1 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:30 ; elapsed = 00:00:41 . Memory (MB): peak = 1006.684 ; gain = 332.059 ; free physical = 5785 ; free virtual = 27574
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute           transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.1.bc -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command           transform done; 0.19 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute           transform -syn-check /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.2.prechk.bc -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+Command           transform done; 0.14 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 1007.828 ; gain = 333.203 ; free physical = 5745 ; free virtual = 27536
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.g.1.bc to /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute           transform -hls -tmp /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db -interface-port-rename -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -function-uniquify -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.o.1.bc -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (example.cpp:17) in function 'proc_1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' (example.cpp:22) in function 'proc_1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (example.cpp:38) in function 'proc_2' automatically.
+INFO: [XFORM 203-712] Applying dataflow to function 'example', detected/extracted 2 process function(s): 
+	 'proc_1'
+	 'proc_2'.
+Command           transform done; 0.34 sec.
+Execute           disassemble /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.o.1.tmp /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.o.1.tmp 
+Execute             is_encrypted /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.o.1.tmp.bc 
+Command           disassemble done; 1.09 sec.
+INFO-FLOW: Presyn 2...
+Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.o.1.tmp.bc -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+Command           transform done; 0.23 sec.
+Execute           disassemble /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.o.2 /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.o.2 
+Execute             is_encrypted /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.o.2.bc 
+Command           disassemble done; 1.08 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 1134.684 ; gain = 460.059 ; free physical = 5667 ; free virtual = 27482
+INFO-FLOW: Building ssdm...
+Execute           transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin2 -bitwidthmin2 -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.o.2.bc -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Command           transform done; 0.32 sec.
+Execute           disassemble /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.o.3 /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.o.3 
+Execute             is_encrypted /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/a.o.3.bc 
+Command           disassemble done; 1.09 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:35 ; elapsed = 00:00:46 . Memory (MB): peak = 1134.684 ; gain = 460.059 ; free physical = 5627 ; free virtual = 27449
+INFO-FLOW: Finish building internal data model.
+Command         opt_and_import_c done; 5.83 sec.
+Command       elaborate done; 17.43 sec.
+Execute       autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'example' ...
+Execute         ap_set_top_model example 
+Execute         get_model_list example -filter all-wo-channel -topdown 
+Execute         preproc_iomode -model example 
+Execute         preproc_iomode -model proc_2 
+Execute         preproc_iomode -model proc_1 
+Execute         get_model_list example -filter all-wo-channel 
+INFO-FLOW: Model list for configure: proc_1 proc_2 example
+INFO-FLOW: Configuring Module : proc_1 ...
+Execute         set_default_model proc_1 
+Execute         apply_spec_resource_limit proc_1 
+INFO-FLOW: Configuring Module : proc_2 ...
+Execute         set_default_model proc_2 
+Execute         apply_spec_resource_limit proc_2 
+INFO-FLOW: Configuring Module : example ...
+Execute         set_default_model example 
+Execute         apply_spec_resource_limit example 
+INFO-FLOW: Model list for preprocess: proc_1 proc_2 example
+INFO-FLOW: Preprocessing Module: proc_1 ...
+Execute         set_default_model proc_1 
+Execute         cdfg_preprocess -model proc_1 
+Execute         rtl_gen_preprocess proc_1 
+INFO-FLOW: Preprocessing Module: proc_2 ...
+Execute         set_default_model proc_2 
+Execute         cdfg_preprocess -model proc_2 
+Execute         rtl_gen_preprocess proc_2 
+INFO-FLOW: Preprocessing Module: example ...
+Execute         set_default_model example 
+Execute         cdfg_preprocess -model example 
+Execute         rtl_gen_preprocess example 
+INFO-FLOW: Model list for synthesis: proc_1 proc_2 example
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'proc_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model proc_1 
+Execute         schedule -model proc_1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 45.96 seconds; current allocated memory: 415.237 MB.
+Execute         syn_report -verbosereport -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_1.verbose.sched.rpt 
+Execute         db_write -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_1.sched.adb -f 
+INFO-FLOW: Finish scheduling proc_1.
+Execute         set_default_model proc_1 
+Execute         bind -model proc_1 
+BIND OPTION: model=proc_1
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 415.393 MB.
+Execute         syn_report -verbosereport -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_1.verbose.bind.rpt 
+Execute         db_write -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_1.bind.adb -f 
+INFO-FLOW: Finish binding proc_1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'proc_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model proc_2 
+Execute         schedule -model proc_2 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 415.465 MB.
+Execute         syn_report -verbosereport -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_2.verbose.sched.rpt 
+Execute         db_write -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_2.sched.adb -f 
+INFO-FLOW: Finish scheduling proc_2.
+Execute         set_default_model proc_2 
+Execute         bind -model proc_2 
+BIND OPTION: model=proc_2
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 415.596 MB.
+Execute         syn_report -verbosereport -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_2.verbose.bind.rpt 
+Execute         db_write -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_2.bind.adb -f 
+INFO-FLOW: Finish binding proc_2.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'example' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model example 
+Execute         schedule -model example 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 415.654 MB.
+Execute         syn_report -verbosereport -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.verbose.sched.rpt 
+Execute         db_write -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.sched.adb -f 
+INFO-FLOW: Finish scheduling example.
+Execute         set_default_model example 
+Execute         bind -model example 
+BIND OPTION: model=example
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 415.807 MB.
+Execute         syn_report -verbosereport -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.verbose.bind.rpt 
+Execute         db_write -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.bind.adb -f 
+INFO-FLOW: Finish binding example.
+Execute         get_model_list example -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute         rtl_gen_preprocess proc_1 
+Execute         rtl_gen_preprocess proc_2 
+Execute         rtl_gen_preprocess example 
+INFO-FLOW: Model list for RTL generation: proc_1 proc_2 example
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'proc_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model proc_1 -module_prefix example_ -vendor xilinx -mg_file /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_1.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'proc_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 416.262 MB.
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.rtl_wrap.cfg.tcl 
+Execute         gen_rtl proc_1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/syn/systemc/example_proc_1 -synmodules proc_1 proc_2 example 
+Execute         gen_rtl proc_1 -style xilinx -f -lang vhdl -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/syn/vhdl/example_proc_1 
+Execute         gen_rtl proc_1 -style xilinx -f -lang vlog -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/syn/verilog/example_proc_1 
+Execute         syn_report -csynth -model proc_1 -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/syn/report/proc_1_csynth.rpt 
+Execute         syn_report -rtlxml -model proc_1 -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/syn/report/proc_1_csynth.xml 
+Execute         syn_report -verbosereport -model proc_1 -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_1.verbose.rpt 
+Execute         db_write -model proc_1 -f -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_1.adb 
+Execute         gen_tb_info proc_1 -p /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'proc_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model proc_2 -module_prefix example_ -vendor xilinx -mg_file /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_2.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'proc_2'.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 417.155 MB.
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.rtl_wrap.cfg.tcl 
+Execute         gen_rtl proc_2 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/syn/systemc/example_proc_2 -synmodules proc_1 proc_2 example 
+Execute         gen_rtl proc_2 -style xilinx -f -lang vhdl -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/syn/vhdl/example_proc_2 
+Execute         gen_rtl proc_2 -style xilinx -f -lang vlog -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/syn/verilog/example_proc_2 
+Execute         syn_report -csynth -model proc_2 -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/syn/report/proc_2_csynth.rpt 
+Execute         syn_report -rtlxml -model proc_2 -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/syn/report/proc_2_csynth.xml 
+Execute         syn_report -verbosereport -model proc_2 -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_2.verbose.rpt 
+Execute         db_write -model proc_2 -f -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_2.adb 
+Execute         gen_tb_info proc_2 -p /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_2 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'example' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model example -module_prefix example_ -vendor xilinx -mg_file /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/B_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/B_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/B_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/B_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/B_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/B_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/B_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'example' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'example'.
+Command         create_rtl_model done; 0.11 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 417.846 MB.
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.rtl_wrap.cfg.tcl 
+Execute         gen_rtl example -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/syn/systemc/example_example -synmodules proc_1 proc_2 example 
+Execute         gen_rtl example -istop -style xilinx -f -lang vhdl -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/syn/vhdl/example_example 
+Execute         gen_rtl example -istop -style xilinx -f -lang vlog -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/syn/verilog/example_example 
+Execute         syn_report -csynth -model example -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/syn/report/example_csynth.rpt 
+Execute         syn_report -rtlxml -model example -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/syn/report/example_csynth.xml 
+Execute         syn_report -verbosereport -model example -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.verbose.rpt 
+Execute         db_write -model example -f -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.adb 
+Execute         gen_tb_info example -p /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example 
+Execute         export_constraint_db -f -tool general -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.constraint.tcl 
+Execute         syn_report -designview -model example -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.design.xml 
+Execute         get_config_rtl -disable_wave_debug 
+Execute         syn_report -wcfg -model example -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example_dataflow_ana.wcfg 
+Execute         syn_report -protoinst -model example -o /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.protoinst 
+Execute         get_config_debug -directory 
+Execute         sc_get_clocks example 
+Execute         get_config_export -vivado_clock 
+Execute         sc_get_portdomain example 
+INFO-FLOW: Model list for RTL component generation: proc_1 proc_2 example
+INFO-FLOW: Handling components in module [proc_1] ... 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_1.compgen.tcl 
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Handling components in module [proc_2] ... 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_2.compgen.tcl 
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Handling components in module [example] ... 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.compgen.tcl 
+INFO-FLOW: Found component example_fifo_w32_d8_A.
+INFO-FLOW: Append model example_fifo_w32_d8_A
+INFO-FLOW: Found component example_fifo_w32_d8_A.
+INFO-FLOW: Append model example_fifo_w32_d8_A
+INFO-FLOW: Found component example_start_for_proc_2_U0.
+INFO-FLOW: Append model example_start_for_proc_2_U0
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Append model proc_1
+INFO-FLOW: Append model proc_2
+INFO-FLOW: Append model example
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: regslice_core regslice_core example_fifo_w32_d8_A example_fifo_w32_d8_A example_start_for_proc_2_U0 regslice_core proc_1 proc_2 example
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model example_fifo_w32_d8_A
+INFO-FLOW: To file: write model example_fifo_w32_d8_A
+INFO-FLOW: To file: write model example_start_for_proc_2_U0
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model proc_1
+INFO-FLOW: To file: write model proc_2
+INFO-FLOW: To file: write model example
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/generic/autopilot/common.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/generic/autopilot/op.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/generic/autopilot/interface.gen 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/plb46.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/fsl.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/axi4.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/util.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfft.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfir.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=13.333 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_1.compgen.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_2.compgen.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'data_channel11_U(example_fifo_w32_d8_A)' using Shift Registers.
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'data_channel22_U(example_fifo_w32_d8_A)' using Shift Registers.
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_proc_2_U0_U(example_start_for_proc_2_U0)' using Shift Registers.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/generic/autopilot/common.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/generic/autopilot/op.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/generic/autopilot/interface.gen 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/plb46.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/fsl.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/axi4.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/util.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfft.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfir.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.11 sec.
+Command         ap_source done; 0.11 sec.
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=example xml_exists=0
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.rtl_wrap.cfg.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.rtl_wrap.cfg.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.rtl_wrap.cfg.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_1.compgen.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_2.compgen.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_1.compgen.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_2.compgen.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_1.compgen.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_2.compgen.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.constraint.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=30
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=14
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=1 #modelList=9 #gSsdmPorts=30
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute         get_config_export -xo 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.rtl_wrap.cfg.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.compgen.dataonly.tcl 
+Execute         get_config_export -xo 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.constraint.tcl 
+Execute         sc_get_clocks example 
+Execute         ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute         get_config_debug -directory 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_1.tbgen.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/proc_2.tbgen.tcl 
+Execute         source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute         get_config_rtl -kernel_profile 
+Execute         get_config_rtl -stall_sig_gen 
+Execute         get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:35 ; elapsed = 00:00:49 . Memory (MB): peak = 1134.684 ; gain = 460.059 ; free physical = 5621 ; free virtual = 27445
+INFO: [VHDL 208-304] Generating VHDL RTL for example with prefix example_.
+INFO: [VLOG 209-307] Generating Verilog RTL for example with prefix example_.
+Command       autosyn done; 3.29 sec.
+Command     csynth_design done; 20.73 sec.
+Execute     cosim_design -deadlock_detect 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/generic/autopilot/common.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/generic/autopilot/op.gen 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/generic/autopilot/interface.gen 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/plb46.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/fsl.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/axi4.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/util.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfft.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfir.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.11 sec.
+Command       ap_source done; 0.11 sec.
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.rtl_wrap.cfg.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       is_encrypted /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example_test.cpp 
+Execute       is_encrypted /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example.cpp 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+INFO-FLOW: TB processing: /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example_test.cpp /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/./sim/autowrap/testbench/example_test.cpp_pre.cpp
+Execute       clang_tidy xilinx-tb-process /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/./sim/autowrap/testbench/example_test.cpp_pre.cpp.tb.cpp std=c++11 
+INFO-FLOW: exec /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/./sim/autowrap/testbench/example_test.cpp_pre.cpp.tb.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command       clang_tidy done; 2.74 sec.
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+INFO-FLOW: TB processing: /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example.cpp /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/./sim/autowrap/testbench/example.cpp_pre.cpp
+Execute       clang_tidy xilinx-tb-process /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/./sim/autowrap/testbench/example.cpp_pre.cpp.tb.cpp std=c++11 
+INFO-FLOW: exec /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/./sim/autowrap/testbench/example.cpp_pre.cpp.tb.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command       clang_tidy done; 2.57 sec.
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/./sim/autowrap/testbench/tb.status.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.rtl_wrap.cfg.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.rtl_wrap.cfg.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.rtl_wrap.cfg.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       source .run_sim.tcl 
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Command       ap_source done; 0.58 sec.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+INFO: [COSIM 212-12] Generating RTL test bench ...
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source ../tv/cdatafile/ref.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source ../tv/cdatafile/ref.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+Execute       source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/example.tbgen.tcl 
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+Execute       source .run_sim.tcl 
+Execute         source check_sim.tcl 
+Execute         source .sim.status.tcl 
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+ERROR: [COSIM 212-303] Aborting co-simulation: RTL simulation failed.  
+ERROR: [COSIM 212-344] Rtl simulation failed.
+Command       ap_source done; error code: 1; 13.04 sec.
+Execute       send_msg_by_id ERROR @200-742@ -drc COSIM,DATAFLOW 
+ERROR: [HLS 200-742] Deadlock detected in co-simulation, please check co-simulation log or dataflow viewer for details
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+Command     cosim_design done; error code: 2; 27.38 sec.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1 opened at Wed Jul 31 19:52:47 MDT 2019
+Execute     config_clock -quiet -name default -period 13.333 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 13.333ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.lib 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/plb46.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/fsl.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/axi4.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.lib 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfir.lib 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfft.lib 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq.gen 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/plb46.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/fsl.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/axi4.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/util.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfft.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfir.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.13 sec.
+Command     ap_source done; 0.13 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7z020-clg484-2 
+Execute       ap_part_info -name xc7z020-clg484-2 -data single -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg484:-2 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xc7z020-clg484-2 
+Execute         ap_part_info -name xc7z020-clg484-2 -data resources 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-2'
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.12 sec.
+Execute     ap_part_info -data single -name xc7z020-clg484-2 
+Execute     ap_part_info -name xc7z020-clg484-2 -data resources 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 0.41 sec.
+Execute   set_part xc7z020-clg484-2 
+Execute     ap_part_info -name xc7z020-clg484-2 -data single -quiet 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     add_library xilinx/zynq/zynq:xc7z020:-clg484:-2 
+Execute       get_default_platform 
+Execute       ap_part_info -data single -name xc7z020-clg484-2 
+Execute       ap_part_info -name xc7z020-clg484-2 -data resources 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       config_chip_info -quiet -speed medium 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     get_default_platform 
+Command   set_part done; 0.11 sec.
+Execute   create_clock -period 75MHz -name default 
+Execute   source ./proj/solution1/directives.tcl 
+Execute     set_directive_top -name example example 
+INFO-FLOW: Setting directive 'TOP' name=example 
+Execute   csim_design -profile -quiet 
+Execute     source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example_test.cpp 
+Execute     is_xip /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example_test.cpp 
+Execute     is_encrypted /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example.cpp 
+Execute     is_xip /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example.cpp 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     source run_sim.tcl 
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 11.16 sec.
+Command ap_source done; 11.72 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1 opened at Wed Jul 31 20:40:06 MDT 2019
+Execute     config_clock -quiet -name default -period 13.333 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 13.333ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.lib 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/plb46.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/fsl.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/axi4.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.lib 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfir.lib 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfft.lib 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq.gen 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/plb46.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/fsl.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/axi4.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/util.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfft.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfir.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.12 sec.
+Command     ap_source done; 0.13 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7z020-clg484-2 
+Execute       ap_part_info -name xc7z020-clg484-2 -data single -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg484:-2 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xc7z020-clg484-2 
+Execute         ap_part_info -name xc7z020-clg484-2 -data resources 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-2'
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.11 sec.
+Execute     ap_part_info -data single -name xc7z020-clg484-2 
+Execute     ap_part_info -name xc7z020-clg484-2 -data resources 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 0.35 sec.
+Execute   set_part xc7z020-clg484-2 
+Execute     ap_part_info -name xc7z020-clg484-2 -data single -quiet 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     add_library xilinx/zynq/zynq:xc7z020:-clg484:-2 
+Execute       get_default_platform 
+Execute       ap_part_info -data single -name xc7z020-clg484-2 
+Execute       ap_part_info -name xc7z020-clg484-2 -data resources 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       config_chip_info -quiet -speed medium 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     get_default_platform 
+Command   set_part done; 0.11 sec.
+Execute   create_clock -period 75MHz -name default 
+Execute   source ./proj/solution1/directives.tcl 
+Execute     set_directive_top -name example example 
+INFO-FLOW: Setting directive 'TOP' name=example 
+Execute   csim_design -profile -quiet 
+Execute     source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example_test.cpp 
+Execute     is_xip /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example_test.cpp 
+Execute     is_encrypted /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example.cpp 
+Execute     is_xip /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example.cpp 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 2.12 sec.
+Command ap_source done; error code: 1; 2.63 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1 opened at Wed Jul 31 20:41:20 MDT 2019
+Execute     config_clock -quiet -name default -period 13.333 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 13.333ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.lib 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/plb46.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/fsl.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/axi4.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.lib 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfir.lib 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfft.lib 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq.gen 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/plb46.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/fsl.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/axi4.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/util.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfft.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfir.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.11 sec.
+Command     ap_source done; 0.11 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7z020-clg484-2 
+Execute       ap_part_info -name xc7z020-clg484-2 -data single -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg484:-2 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xc7z020-clg484-2 
+Execute         ap_part_info -name xc7z020-clg484-2 -data resources 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-2'
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.11 sec.
+Execute     ap_part_info -data single -name xc7z020-clg484-2 
+Execute     ap_part_info -name xc7z020-clg484-2 -data resources 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 0.33 sec.
+Execute   set_part xc7z020-clg484-2 
+Execute     ap_part_info -name xc7z020-clg484-2 -data single -quiet 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     add_library xilinx/zynq/zynq:xc7z020:-clg484:-2 
+Execute       get_default_platform 
+Execute       ap_part_info -data single -name xc7z020-clg484-2 
+Execute       ap_part_info -name xc7z020-clg484-2 -data resources 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       config_chip_info -quiet -speed medium 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     get_default_platform 
+Execute   create_clock -period 75MHz -name default 
+Execute   source ./proj/solution1/directives.tcl 
+Execute     set_directive_top -name example example 
+INFO-FLOW: Setting directive 'TOP' name=example 
+Execute   csim_design -profile -quiet 
+Execute     source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example_test.cpp 
+Execute     is_xip /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example_test.cpp 
+Execute     is_encrypted /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example.cpp 
+Execute     is_xip /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example.cpp 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; error code: 1; 
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 2.4 sec.
+Command ap_source done; error code: 1; 2.88 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1 opened at Wed Jul 31 20:47:01 MDT 2019
+Execute     config_clock -quiet -name default -period 13.333 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 13.333ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.lib 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/plb46.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/fsl.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/axi4.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.lib 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.lib 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfir.lib 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfft.lib 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq.gen 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/plb46.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/fsl.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/axi4.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/util.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfft.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfir.gen 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.11 sec.
+Command     ap_source done; 0.11 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source /proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7z020-clg484-2 
+Execute       ap_part_info -name xc7z020-clg484-2 -data single -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg484:-2 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xc7z020-clg484-2 
+Execute         ap_part_info -name xc7z020-clg484-2 -data resources 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-2'
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.11 sec.
+Execute     ap_part_info -data single -name xc7z020-clg484-2 
+Execute     ap_part_info -name xc7z020-clg484-2 -data resources 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 0.33 sec.
+Execute   set_part xc7z020-clg484-2 
+Execute     ap_part_info -name xc7z020-clg484-2 -data single -quiet 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     add_library xilinx/zynq/zynq:xc7z020:-clg484:-2 
+Execute       get_default_platform 
+Execute       ap_part_info -data single -name xc7z020-clg484-2 
+Execute       ap_part_info -name xc7z020-clg484-2 -data resources 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       config_chip_info -quiet -speed medium 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     get_default_platform 
+Command   set_part done; 0.11 sec.
+Execute   create_clock -period 75MHz -name default 
+Execute   source ./proj/solution1/directives.tcl 
+Execute     set_directive_top -name example example 
+INFO-FLOW: Setting directive 'TOP' name=example 
+Execute   csim_design -profile -quiet 
+Execute     source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example_test.cpp 
+Execute     is_xip /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example_test.cpp 
+Execute     is_encrypted /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example.cpp 
+Execute     is_xip /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example.cpp 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     source run_sim.tcl 
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 8.62 sec.
+Command ap_source done; 9.11 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1 opened at Thu Aug 01 02:46:38 MDT 2019
+Execute     config_clock -quiet -name default -period 13.333 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 13.333ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq 
+Execute       source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.lib 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/plb46.lib 
+Execute           source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/fsl.lib 
+Execute           source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/axi4.lib 
+Execute           source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.lib 
+Execute           source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.lib 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfir.lib 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfft.lib 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq.gen 
+Execute       source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.gen 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/plb46.gen 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/fsl.gen 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/axi4.gen 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.gen 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/util.gen 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfft.gen 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/ip/xfir.gen 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.15 sec.
+Command     ap_source done; 0.17 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute           source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source /proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7z020-clg484-2 
+Execute       ap_part_info -name xc7z020-clg484-2 -data single -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg484:-2 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xc7z020-clg484-2 
+Execute         ap_part_info -name xc7z020-clg484-2 -data resources 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-2'
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.12 sec.
+Execute     ap_part_info -data single -name xc7z020-clg484-2 
+Execute     ap_part_info -name xc7z020-clg484-2 -data resources 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 0.45 sec.
+Execute   set_part xc7z020-clg484-2 
+Execute     ap_part_info -name xc7z020-clg484-2 -data single -quiet 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     add_library xilinx/zynq/zynq:xc7z020:-clg484:-2 
+Execute       get_default_platform 
+Execute       ap_part_info -data single -name xc7z020-clg484-2 
+Execute       ap_part_info -name xc7z020-clg484-2 -data resources 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       config_chip_info -quiet -speed medium 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     get_default_platform 
+Execute   create_clock -period 75MHz -name default 
+Execute   source ./proj/solution1/directives.tcl 
+Execute     set_directive_top -name example example 
+INFO-FLOW: Setting directive 'TOP' name=example 
+Execute   csim_design -profile -quiet 
+Execute     source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example_test.cpp 
+Execute     is_xip /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example_test.cpp 
+Execute     is_encrypted /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example.cpp 
+Execute     is_xip /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example.cpp 
+Execute     ap_part_info -name xc7z020-clg484-2 -data info 
+Execute     source run_sim.tcl 
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 13.01 sec.
+Command ap_source done; 13.62 sec.
+Execute cleanup_all 

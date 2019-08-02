@@ -1,0 +1,14 @@
+#template_tql < $HLS_REGR_HOME/common/template_unit.tql
+description: This is a HLS testcase
+level: 3
+memory: 1
+owner: danliu
+products: vivado_hls
+tags: negative
+user:
+  hls_dataflow: 1
+  device: virtex7
+  device: zynq
+  prj_file: script.tcl
+  post_run_cmd: post_run.sh
+  scout_hls_only: 1

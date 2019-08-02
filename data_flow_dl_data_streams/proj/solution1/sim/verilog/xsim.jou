@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2019.2.0 (64-bit)
+# SW Build 2605609 on Tue Jul 30 20:16:38 MDT 2019
+# IP Build 2605178 on Tue Jul 30 22:59:07 MDT 2019
+# Start of session at: Wed Jul 31 02:49:22 2019
+# Process ID: 19538
+# Current directory: /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/example/xsim_script.tcl}
+# Log file: /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/sim/verilog/xsim.log
+# Journal file: /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/sim/verilog/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/example/xsim_script.tcl
+source example.tcl

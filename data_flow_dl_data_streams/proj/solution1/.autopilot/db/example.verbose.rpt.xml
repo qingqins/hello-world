@@ -1,0 +1,131 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'example'" level="0">
+<item name = "Date">Wed Jul 31 02:49:00 2019
+</item>
+<item name = "Version">2019.2.0 (Build 2605627 on Tue Jul 30 20:40:18 MDT 2019)</item>
+<item name = "Project">proj</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">13.33, 5.297, 3.60</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">24, 24, 0.127 (us), 0.127 (us), 25, 25, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="proc_1_U0">proc_1, 24, 24, 81.624 (ns), 81.624 (ns), 24, 24, none</column>
+<column name="proc_2_U0">proc_2, 13, 13, 68.861 (ns), 68.861 (ns), 13, 13, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 1, -</column>
+<column name="FIFO">0, -, 12, 92, -</column>
+<column name="Instance">-, -, 98, 138, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, -, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="proc_1_U0">proc_1, 0, 0, 85, 64, 0</column>
+<column name="proc_2_U0">proc_2, 0, 0, 13, 74, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="data_channel11_U">0, 6, 0, -, 8, 32, 256</column>
+<column name="data_channel22_U">0, 6, 0, -, 8, 32, 256</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_idle">and, 0, 0, 1, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="A_TDATA">in, 32, axis, A_V_data_V, pointer</column>
+<column name="A_TKEEP">in, 4, axis, A_V_keep_V, pointer</column>
+<column name="A_TSTRB">in, 4, axis, A_V_strb_V, pointer</column>
+<column name="A_TUSER">in, 2, axis, A_V_user_V, pointer</column>
+<column name="A_TLAST">in, 1, axis, A_V_last_V, pointer</column>
+<column name="A_TID">in, 5, axis, A_V_id_V, pointer</column>
+<column name="A_TDEST">in, 6, axis, A_V_dest_V, pointer</column>
+<column name="A_TVALID">in, 1, axis, A_V_dest_V, pointer</column>
+<column name="A_TREADY">out, 1, axis, A_V_dest_V, pointer</column>
+<column name="B_TDATA">out, 32, axis, B_V_data_V, pointer</column>
+<column name="B_TKEEP">out, 4, axis, B_V_keep_V, pointer</column>
+<column name="B_TSTRB">out, 4, axis, B_V_strb_V, pointer</column>
+<column name="B_TUSER">out, 2, axis, B_V_user_V, pointer</column>
+<column name="B_TLAST">out, 1, axis, B_V_last_V, pointer</column>
+<column name="B_TID">out, 5, axis, B_V_id_V, pointer</column>
+<column name="B_TDEST">out, 6, axis, B_V_dest_V, pointer</column>
+<column name="B_TVALID">out, 1, axis, B_V_dest_V, pointer</column>
+<column name="B_TREADY">in, 1, axis, B_V_dest_V, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, example, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, example, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, example, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, example, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, example, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, example, return value</column>
+</table>
+</item>
+</section>
+</profile>

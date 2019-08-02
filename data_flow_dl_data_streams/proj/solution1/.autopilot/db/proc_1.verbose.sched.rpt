@@ -1,0 +1,190 @@
+
+
+================================================================
+== Vivado HLS Report for 'proc_1'
+================================================================
+* Date:           Wed Jul 31 02:48:59 2019
+
+* Version:        2019.2.0 (Build 2605627 on Tue Jul 30 20:40:18 MDT 2019)
+* Project:        proj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg484-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  13.33|     3.401|        3.60|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-------------+-------------+-----+-----+---------+
+    |  Latency  |      Latency Realtime     |  Interval | Pipeline|
+    | min | max |     min     |     max     | min | max |   Type  |
+    +-----+-----+-------------+-------------+-----+-----+---------+
+    |   24|   24| 81.624 (ns) | 81.624 (ns) |   24|   24|   none  |
+    +-----+-----+-------------+-------------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |   10|   10|         2|          1|          1|    10|    yes   |
+        |- Loop 2  |   10|   10|         2|          1|          1|    10|    yes   |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+  * Pipeline-1: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 2
+  Pipeline-0 : II = 1, D = 2, States = { 2 3 }
+  Pipeline-1 : II = 1, D = 2, States = { 5 6 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 4 3 
+3 --> 2 
+4 --> 5 
+5 --> 7 6 
+6 --> 5 
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.46>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_channel2, void @empty_2, i32, i32, void @empty_1, i32, i32, void @empty_1, void @empty_1, void @empty_1, i32, i32, i32, i32, void @empty_1, void @empty_1"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_channel1, void @empty_2, i32, i32, void @empty_1, i32, i32, void @empty_1, void @empty_1, void @empty_1, i32, i32, i32, i32, void @empty_1, void @empty_1"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i6 %A_V_dest_V, i5 %A_V_id_V, i1 %A_V_last_V, i2 %A_V_user_V, i4 %A_V_strb_V, i4 %A_V_keep_V, i32 %A_V_data_V, void @empty, i32, i32, void @empty_0, i32, i32, void @empty_1, void @empty_1, void @empty_1, i32, i32, i32, i32, void @empty_1, void @empty_1"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.46ns)   --->   "%br_ln17 = br void %for.inc" [example.cpp:17]   --->   Operation 11 'br' 'br_ln17' <Predicate = true> <Delay = 0.46>
+
+State 2 <SV = 1> <Delay = 0.99>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%access03 = phi i32, void %entry, i32 %tmp_data_V, void %for.inc.split"   --->   Operation 12 'phi' 'access03' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%i = phi i4, void %entry, i4 %i_2, void %for.inc.split"   --->   Operation 13 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @p_str"   --->   Operation 14 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.96ns)   --->   "%icmp_ln17 = icmp_eq  i4 %i, i4" [example.cpp:17]   --->   Operation 15 'icmp' 'icmp_ln17' <Predicate = true> <Delay = 0.96> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64, i64, i64"   --->   Operation 16 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.99ns)   --->   "%i_2 = add i4 %i, i4" [example.cpp:17]   --->   Operation 17 'add' 'i_2' <Predicate = true> <Delay = 0.99> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln17 = br i1 %icmp_ln17, void %for.inc.split, void %for.inc20.preheader" [example.cpp:17]   --->   Operation 18 'br' 'br_ln17' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%empty_8 = read i54 @_ssdm_op_Read.axis.volatile.i32P.i4P.i4P.i2P.i1P.i5P.i6P, i32 %A_V_data_V, i4 %A_V_keep_V, i4 %A_V_strb_V, i2 %A_V_user_V, i1 %A_V_last_V, i5 %A_V_id_V, i6 %A_V_dest_V"   --->   Operation 19 'read' 'empty_8' <Predicate = (!icmp_ln17)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%tmp_data_V = extractvalue i54 %empty_8"   --->   Operation 20 'extractvalue' 'tmp_data_V' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.40>
+ST_3 : Operation 21 [1/1] (3.40ns)   --->   "%write_ln133 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P, i32 %data_channel1, i32 %tmp_data_V"   --->   Operation 21 'write' 'write_ln133' <Predicate = (!icmp_ln17)> <Delay = 3.40> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 22 'br' 'br_ln0' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+
+State 4 <SV = 2> <Delay = 0.46>
+ST_4 : Operation 23 [1/1] (0.46ns)   --->   "%br_ln0 = br void %for.inc20"   --->   Operation 23 'br' 'br_ln0' <Predicate = true> <Delay = 0.46>
+
+State 5 <SV = 3> <Delay = 0.99>
+ST_5 : Operation 24 [1/1] (0.00ns)   --->   "%i_3 = phi i4 %i_4, void %for.inc20.split, i4, void %for.inc20.preheader"   --->   Operation 24 'phi' 'i_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 25 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @p_str"   --->   Operation 25 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 26 [1/1] (0.96ns)   --->   "%icmp_ln22 = icmp_eq  i4 %i_3, i4" [example.cpp:22]   --->   Operation 26 'icmp' 'icmp_ln22' <Predicate = true> <Delay = 0.96> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 27 [1/1] (0.00ns)   --->   "%empty_9 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64, i64, i64"   --->   Operation 27 'speclooptripcount' 'empty_9' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 28 [1/1] (0.99ns)   --->   "%i_4 = add i4 %i_3, i4" [example.cpp:22]   --->   Operation 28 'add' 'i_4' <Predicate = true> <Delay = 0.99> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln22 = br i1 %icmp_ln22, void %for.inc20.split, void %for.end22" [example.cpp:22]   --->   Operation 29 'br' 'br_ln22' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 4> <Delay = 3.40>
+ST_6 : Operation 30 [1/1] (3.40ns)   --->   "%write_ln133 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P, i32 %data_channel2, i32 %access03"   --->   Operation 30 'write' 'write_ln133' <Predicate = (!icmp_ln22)> <Delay = 3.40> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_6 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc20"   --->   Operation 31 'br' 'br_ln0' <Predicate = (!icmp_ln22)> <Delay = 0.00>
+
+State 7 <SV = 4> <Delay = 0.00>
+ST_7 : Operation 32 [1/1] (0.00ns)   --->   "%ret_ln26 = ret" [example.cpp:26]   --->   Operation 32 'ret' 'ret_ln26' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 13.3ns, clock uncertainty: 3.6ns.
+
+ <State 1>: 0.466ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('access03') with incoming values : ('tmp_data_V') [15]  (0.466 ns)
+
+ <State 2>: 0.997ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', example.cpp:17) [16]  (0 ns)
+	'add' operation ('i', example.cpp:17) [20]  (0.997 ns)
+
+ <State 3>: 3.4ns
+The critical path consists of the following:
+	fifo write on port 'data_channel1' [25]  (3.4 ns)
+
+ <State 4>: 0.466ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', example.cpp:22) [30]  (0.466 ns)
+
+ <State 5>: 0.997ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', example.cpp:22) [30]  (0 ns)
+	'add' operation ('i', example.cpp:22) [34]  (0.997 ns)
+
+ <State 6>: 3.4ns
+The critical path consists of the following:
+	fifo write on port 'data_channel2' [37]  (3.4 ns)
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

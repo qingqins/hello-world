@@ -1,0 +1,21 @@
+Sourcing Tcl script '/home/qingqing/.Xilinx/HLS_init.tcl'
+INFO: [HLS 200-10] Running '/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/bin/unwrapped/lnx64.o/scout_hls'
+INFO: [HLS 200-10] For user 'qingqing' on host 'xcoengvm229145' (Linux_x86_64 version 3.10.0-693.el7.x86_64) on Thu Aug 01 02:46:38 MDT 2019
+INFO: [HLS 200-10] On os "CentOS Linux release 7.4.1708 (Core) "
+INFO: [HLS 200-10] In directory '/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams'
+Sourcing Tcl script '/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/csim.tcl'
+INFO: [HLS 200-10] Opening project '/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj'.
+INFO: [HLS 200-10] Adding design file 'example.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'example_test.cpp' to the project
+INFO: [HLS 200-10] Opening solution '/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 13.333ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-2'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../example_test.cpp in debug mode
+   Compiling ../../../../example.cpp in debug mode
+   Generating csim.exe
+Success: HW and SW results match
+   Generating dot files
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************

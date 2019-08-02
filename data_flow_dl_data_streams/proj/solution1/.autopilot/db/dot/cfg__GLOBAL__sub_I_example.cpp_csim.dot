@@ -1,0 +1,7 @@
+digraph "CFG for '_GLOBAL__sub_I_example.cpp' function" {
+	label="CFG for '_GLOBAL__sub_I_example.cpp' function";
+
+	Node0x493fb90 [shape=record,filename="../../../../example.cpp",linenumber="0",label="{entry.predFake}"];
+	Node0x493fb90 -> Node0x47f8040[ callList="" memoryops="" filename="../../../../example.cpp"];
+	Node0x47f8040 [shape=record,filename="",linenumber="",label="{entry.succFake}"];
+}

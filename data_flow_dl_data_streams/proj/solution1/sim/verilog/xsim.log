@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# xsim v2019.2.0 (64-bit)
+# SW Build 2605609 on Tue Jul 30 20:16:38 MDT 2019
+# IP Build 2605178 on Tue Jul 30 22:59:07 MDT 2019
+# Start of session at: Wed Jul 31 02:49:22 2019
+# Process ID: 19538
+# Current directory: /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/example/xsim_script.tcl}
+# Log file: /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/sim/verilog/xsim.log
+# Journal file: /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/sim/verilog/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/example/xsim_script.tcl
+# xsim {example} -autoloadwcfg -tclbatch {example.tcl}
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source example.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 4 [0.00%] @ "127000"
+
+//////////////////////////////////////////////////////////////////////////////
+// ERROR!!! DEADLOCK DETECTED at 307000 ns! SIMULATION WILL BE STOPPED! //
+//////////////////////////////////////////////////////////////////////////////
+/////////////////////////
+// Dependence cycle 1:
+// (1): Process: example_example.proc_1_U0
+//      Channel: example_example.data_channel11_U, FULL
+// (2): Process: example_example.proc_2_U0
+//      Channel: example_example.data_channel22_U, EMPTY
+////////////////////////////////////////////////////////////////////////
+// Totally 1 cycles detected!
+////////////////////////////////////////////////////////////////////////
+$finish called at time : 346840 ps : File "/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/sim/verilog/AESL_deadlock_report_unit.v" Line 329
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed Jul 31 02:49:29 2019...

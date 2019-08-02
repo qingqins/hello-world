@@ -1,0 +1,5 @@
+   Build using "/proj/xbuilds/HEAD_daily_latest/installs/lin64/Vivado/HEAD/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling example_test.cpp_pre.cpp.tb.cpp
+   Compiling example.cpp_pre.cpp.tb.cpp
+   Compiling apatb_example.cpp
+   Generating cosim.tv.exe

@@ -1,0 +1,16 @@
+digraph "CFG for 'hls::stream\<int, 0\>::stream' function" {
+	label="CFG for 'hls::stream\<int, 0\>::stream' function";
+
+	Node0x4944e40 [shape=record,filename="",linenumber="",label="{entry.predFake}"];
+	Node0x4944e40 -> Node0x47723d0[ callList="" memoryops="" filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/hls_stream.h"];
+	Node0x47723d0 [shape=record,filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/hls_stream.h",linenumber="72",label="{entry.succFake|{<s0>T|<s1>F}}"];
+	Node0x47723d0:s0 -> Node0x4947e60;
+	Node0x47723d0:s1 -> Node0x4773f50[ callList="" memoryops="" filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/hls_stream.h"];
+	Node0x4947e60 [shape=record,filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/hls_stream.h",linenumber="72",label="{typeid.bad_typeid}"];
+	Node0x4773f50 [shape=record,filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/hls_stream.h",linenumber="73",label="{typeid.end.succFake|{<s0>T|<s1>F}}"];
+	Node0x4773f50:s0 -> Node0x494a8d0[label="W:3" callList="" memoryops="" filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/hls_stream.h"];
+	Node0x4773f50:s1 -> Node0x494a8d0[label="W:1" callList="" memoryops="" filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/hls_stream.h"];
+	Node0x494a8d0 [shape=record,filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/hls_stream.h",linenumber="84",label="{if.end.predFake}"];
+	Node0x494a8d0 -> Node0x4774e90[ callList="" memoryops="" filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/hls_stream.h"];
+	Node0x4774e90 [shape=record,filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/hls_stream.h",linenumber="86",label="{if.end.succFake}"];
+}

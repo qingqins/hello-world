@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog>
+        <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***&#xA;could not read &quot;/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/sim/tv/rtldatafile/sim/report/cosim.log&quot;: no such file or directory&#xA;    while executing&#xA;&quot;source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/cosim.tcl&quot;&#xA;    invoked from within&#xA;&quot;hls::main /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/cosim.tcl&quot;&#xA;    (&quot;uplevel&quot; body line 1)&#xA;    invoked from within&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xA;    invoked from within&#xA;&quot;hls_proc $argv&quot;&#xA;" projectName="proj" solutionName="solution1" date="2019-07-31T01:54:17.680-0600"/>
+        <logs message="ERROR: [HLS 200-742] Deadlock detected in co-simulation, please check co-simulation log or dataflow viewer for details" projectName="proj" solutionName="solution1" date="2019-07-31T01:54:17.597-0600"/>
+        <logs message="ERROR: [COSIM 212-344] Rtl simulation failed." projectName="proj" solutionName="solution1" date="2019-07-31T01:54:17.589-0600"/>
+        <logs message="ERROR: [COSIM 212-303] Aborting co-simulation: RTL simulation failed.  " projectName="proj" solutionName="solution1" date="2019-07-31T01:54:17.559-0600"/>
+        <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***&#xA;could not read &quot;/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/sim/tv/rtldatafile/sim/report/cosim.log&quot;: no such file or directory&#xA;    while executing&#xA;&quot;source /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/cosim.tcl&quot;&#xA;    invoked from within&#xA;&quot;hls::main /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/cosim.tcl&quot;&#xA;    (&quot;uplevel&quot; body line 1)&#xA;    invoked from within&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xA;    invoked from within&#xA;&quot;hls_proc $argv&quot;&#xA;" projectName="proj" solutionName="solution1" date="2019-07-31T01:43:40.194-0600"/>
+        <logs message="ERROR: [HLS 200-742] Deadlock detected in co-simulation, please check co-simulation log or dataflow viewer for details" projectName="proj" solutionName="solution1" date="2019-07-31T01:43:40.099-0600"/>
+        <logs message="ERROR: [COSIM 212-344] Rtl simulation failed." projectName="proj" solutionName="solution1" date="2019-07-31T01:43:40.091-0600"/>
+        <logs message="ERROR: [COSIM 212-303] Aborting co-simulation: RTL simulation failed.  " projectName="proj" solutionName="solution1" date="2019-07-31T01:43:40.062-0600"/>
+      </simLog>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution1" date="2019-07-31T20:41:23.651-0600"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution1" date="2019-07-31T20:41:23.633-0600"/>
+        <logs message="ERROR: HW and SW results mismatch" projectName="proj" solutionName="solution1" date="2019-07-31T20:41:23.587-0600"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="proj" solutionName="solution1" date="2019-07-31T20:40:09.363-0600"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="proj" solutionName="solution1" date="2019-07-31T01:29:29.599-0600" type="Warning"/>
+        <logs message="WARNING: [HLS 200-651] Found issues in source files:&#xA;example.cpp:5:33: warning: extra token before pragma subject is ignored [-Wextra-tokens]&#xA;#pragma HLS INTERFACE axis port=&amp;A&#xA;                                ^&#xA;example.cpp:6:33: warning: extra token before pragma subject is ignored [-Wextra-tokens]&#xA;#pragma HLS INTERFACE axis port=&amp;B&#xA;                                ^&#xA;2 warnings generated.&#xA;&#xA;" projectName="proj" solutionName="solution1" date="2019-07-31T01:29:22.171-0600" type="Warning"/>
+        <logs message="WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file example.cpp" projectName="proj" solutionName="solution1" date="2019-07-31T01:29:15.963-0600" type="Warning"/>
+        <logs message="WARNING: [HLS 214-111] Streams will behave like static variables inside a dataflow region: example.cpp:7:19" projectName="proj" solutionName="solution1" date="2019-07-31T01:29:15.222-0600" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="WARNING: Hls::stream 'hls::stream&lt;ap_axis&lt;32, 2, 5, 6>, 0>.2' contains leftover data, which may result in RTL simulation hanging." projectName="proj" solutionName="solution1" date="2019-07-31T20:41:23.612-0600" type="Warning"/>
+      </csimLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,452 @@
+==============================================================
+Scout HLS - High-Level Synthesis from C, C++ and OpenCL v2019.2.0 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-2'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 13.333ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-10] Analyzing design file 'example.cpp' ... 
+WARNING: [HLS 214-111] Streams will behave like static variables inside a dataflow region: example.cpp:7:19
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file example.cpp
+WARNING: [HLS 200-651] Found issues in source files:
+example.cpp:5:33: warning: extra token before pragma subject is ignored [-Wextra-tokens]
+#pragma HLS INTERFACE axis port=&A
+                                ^
+example.cpp:6:33: warning: extra token before pragma subject is ignored [-Wextra-tokens]
+#pragma HLS INTERFACE axis port=&B
+                                ^
+2 warnings generated.
+
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axis<32, 2, 5, 6> >::read()' into 'proc_1(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:18:13)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::write(int const&)' into 'proc_1(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:24:19)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::write(int const&)' into 'proc_1(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:20:19)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::read(int&)' into 'hls::stream<int>::read()' (/proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot/hls_stream.h:110:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axis<32, 2, 5, 6> >::write(ap_axis<32, 2, 5, 6> const&)' into 'proc_2(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:40:7)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::read()' into 'proc_2(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:39:53)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::read()' into 'proc_2(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:39:30)
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 997.336 ; gain = 332.059 ; free physical = 1644 ; free virtual = 26592
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 997.336 ; gain = 332.059 ; free physical = 1644 ; free virtual = 26592
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:32 ; elapsed = 00:00:41 . Memory (MB): peak = 997.336 ; gain = 332.059 ; free physical = 1607 ; free virtual = 26568
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:32 ; elapsed = 00:00:41 . Memory (MB): peak = 998.480 ; gain = 333.203 ; free physical = 1567 ; free virtual = 26530
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (example.cpp:17) in function 'proc_1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' (example.cpp:22) in function 'proc_1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (example.cpp:38) in function 'proc_2' automatically.
+INFO: [XFORM 203-712] Applying dataflow to function 'example', detected/extracted 2 process function(s): 
+	 'proc_1'
+	 'proc_2'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:35 ; elapsed = 00:00:44 . Memory (MB): peak = 1125.336 ; gain = 460.059 ; free physical = 1489 ; free virtual = 26475
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 1125.336 ; gain = 460.059 ; free physical = 1448 ; free virtual = 26442
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'example' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'proc_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 45.46 seconds; current allocated memory: 413.495 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 413.651 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'proc_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 413.723 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 413.854 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'example' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 413.912 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 414.067 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'proc_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'proc_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 414.568 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'proc_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'proc_2'.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 415.488 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'example' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_user_V' to 'axis' (register, both mode).
+==============================================================
+Scout HLS - High-Level Synthesis from C, C++ and OpenCL v2019.2.0 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Scout HLS - High-Level Synthesis from C, C++ and OpenCL v2019.2.0 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 13.333ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-2'
+INFO: [HLS 200-10] Analyzing design file 'example.cpp' ... 
+WARNING: [HLS 214-111] Streams will behave like static variables inside a dataflow region: example.cpp:7:19
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file example.cpp
+WARNING: [HLS 200-651] Found issues in source files:
+example.cpp:5:33: warning: extra token before pragma subject is ignored [-Wextra-tokens]
+#pragma HLS INTERFACE axis port=&A
+                                ^
+example.cpp:6:33: warning: extra token before pragma subject is ignored [-Wextra-tokens]
+#pragma HLS INTERFACE axis port=&B
+                                ^
+2 warnings generated.
+
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axis<32, 2, 5, 6> >::read()' into 'proc_1(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:18:13)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::write(int const&)' into 'proc_1(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:24:19)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::write(int const&)' into 'proc_1(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:20:19)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::read(int&)' into 'hls::stream<int>::read()' (/proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot/hls_stream.h:110:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axis<32, 2, 5, 6> >::write(ap_axis<32, 2, 5, 6> const&)' into 'proc_2(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:40:7)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::read()' into 'proc_2(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:39:53)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::read()' into 'proc_2(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:39:30)
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1006.676 ; gain = 332.062 ; free physical = 6336 ; free virtual = 27459
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1006.676 ; gain = 332.062 ; free physical = 6336 ; free virtual = 27459
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 1006.676 ; gain = 332.062 ; free physical = 6504 ; free virtual = 27638
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 1007.820 ; gain = 333.207 ; free physical = 6464 ; free virtual = 27601
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (example.cpp:17) in function 'proc_1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' (example.cpp:22) in function 'proc_1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (example.cpp:38) in function 'proc_2' automatically.
+INFO: [XFORM 203-712] Applying dataflow to function 'example', detected/extracted 2 process function(s): 
+	 'proc_1'
+	 'proc_2'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:32 ; elapsed = 00:00:41 . Memory (MB): peak = 1134.676 ; gain = 460.062 ; free physical = 6386 ; free virtual = 27546
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:33 ; elapsed = 00:00:42 . Memory (MB): peak = 1134.676 ; gain = 460.062 ; free physical = 6345 ; free virtual = 27513
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'example' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'proc_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 42.36 seconds; current allocated memory: 415.281 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 415.437 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'proc_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 415.515 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 415.644 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'example' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 415.708 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 415.861 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'proc_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'proc_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 416.339 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'proc_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'proc_2'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 417.238 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'example' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_id_V' to 'axis' (register, both mode).
+==============================================================
+Scout HLS - High-Level Synthesis from C, C++ and OpenCL v2019.2.0 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 13.333ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-2'
+INFO: [HLS 200-10] Analyzing design file 'example.cpp' ... 
+WARNING: [HLS 214-111] Streams will behave like static variables inside a dataflow region: example.cpp:7:19
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file example.cpp
+WARNING: [HLS 200-651] Found issues in source files:
+example.cpp:5:33: warning: extra token before pragma subject is ignored [-Wextra-tokens]
+#pragma HLS INTERFACE axis port=&A
+                                ^
+example.cpp:6:33: warning: extra token before pragma subject is ignored [-Wextra-tokens]
+#pragma HLS INTERFACE axis port=&B
+                                ^
+2 warnings generated.
+
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axis<32, 2, 5, 6> >::read()' into 'proc_1(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:18:13)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::write(int const&)' into 'proc_1(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:24:19)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::write(int const&)' into 'proc_1(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:20:19)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::read(int&)' into 'hls::stream<int>::read()' (/proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot/hls_stream.h:110:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axis<32, 2, 5, 6> >::write(ap_axis<32, 2, 5, 6> const&)' into 'proc_2(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:40:7)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::read()' into 'proc_2(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:39:53)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::read()' into 'proc_2(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:39:30)
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 1006.676 ; gain = 332.062 ; free physical = 6489 ; free virtual = 27618
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 1006.676 ; gain = 332.062 ; free physical = 6488 ; free virtual = 27617
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 1006.676 ; gain = 332.062 ; free physical = 6447 ; free virtual = 27587
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 1007.820 ; gain = 333.207 ; free physical = 6406 ; free virtual = 27548
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (example.cpp:17) in function 'proc_1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' (example.cpp:22) in function 'proc_1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (example.cpp:38) in function 'proc_2' automatically.
+INFO: [XFORM 203-712] Applying dataflow to function 'example', detected/extracted 2 process function(s): 
+	 'proc_1'
+	 'proc_2'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 1134.676 ; gain = 460.062 ; free physical = 6313 ; free virtual = 27478
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 1134.676 ; gain = 460.062 ; free physical = 6266 ; free virtual = 27439
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'example' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'proc_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 41.16 seconds; current allocated memory: 415.344 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 415.500 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'proc_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 415.578 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 415.708 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'example' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 415.771 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 415.925 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'proc_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'proc_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 416.402 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'proc_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'proc_2'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 417.347 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'example' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_id_V' to 'axis' (register, both mode).
+==============================================================
+Scout HLS - High-Level Synthesis from C, C++ and OpenCL v2019.2.0 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Scout HLS - High-Level Synthesis from C, C++ and OpenCL v2019.2.0 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Scout HLS - High-Level Synthesis from C, C++ and OpenCL v2019.2.0 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Scout HLS - High-Level Synthesis from C, C++ and OpenCL v2019.2.0 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-2'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 13.333ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-10] Analyzing design file 'example.cpp' ... 
+WARNING: [HLS 214-111] Streams will behave like static variables inside a dataflow region: example.cpp:7:19
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file example.cpp
+WARNING: [HLS 200-651] Found issues in source files:
+example.cpp:5:33: warning: extra token before pragma subject is ignored [-Wextra-tokens]
+#pragma HLS INTERFACE axis port=&A
+                                ^
+example.cpp:6:33: warning: extra token before pragma subject is ignored [-Wextra-tokens]
+#pragma HLS INTERFACE axis port=&B
+                                ^
+2 warnings generated.
+
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axis<32, 2, 5, 6> >::read()' into 'proc_1(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:18:13)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::write(int const&)' into 'proc_1(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:24:19)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::write(int const&)' into 'proc_1(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:20:19)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::read(int&)' into 'hls::stream<int>::read()' (/proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot/hls_stream.h:110:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axis<32, 2, 5, 6> >::write(ap_axis<32, 2, 5, 6> const&)' into 'proc_2(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:40:7)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::read()' into 'proc_2(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:39:53)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int>::read()' into 'proc_2(hls::stream<ap_axis<32, 2, 5, 6> >&, hls::stream<int>&, hls::stream<int>&)' (example.cpp:39:30)
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1006.684 ; gain = 332.059 ; free physical = 5820 ; free virtual = 27599
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1006.684 ; gain = 332.059 ; free physical = 5820 ; free virtual = 27598
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:30 ; elapsed = 00:00:41 . Memory (MB): peak = 1006.684 ; gain = 332.059 ; free physical = 5785 ; free virtual = 27574
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:31 ; elapsed = 00:00:42 . Memory (MB): peak = 1007.828 ; gain = 333.203 ; free physical = 5745 ; free virtual = 27536
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (example.cpp:17) in function 'proc_1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' (example.cpp:22) in function 'proc_1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (example.cpp:38) in function 'proc_2' automatically.
+INFO: [XFORM 203-712] Applying dataflow to function 'example', detected/extracted 2 process function(s): 
+	 'proc_1'
+	 'proc_2'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 1134.684 ; gain = 460.059 ; free physical = 5667 ; free virtual = 27482
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:35 ; elapsed = 00:00:46 . Memory (MB): peak = 1134.684 ; gain = 460.059 ; free physical = 5627 ; free virtual = 27449
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'example' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'proc_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 45.96 seconds; current allocated memory: 415.237 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 415.393 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'proc_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 415.465 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 415.596 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'example' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 415.654 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 415.807 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'proc_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'proc_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 416.262 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'proc_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'proc_2'.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 417.155 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'example' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_user_V' to 'axis' (register, both mode).
+==============================================================
+Scout HLS - High-Level Synthesis from C, C++ and OpenCL v2019.2.0 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Scout HLS - High-Level Synthesis from C, C++ and OpenCL v2019.2.0 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Scout HLS - High-Level Synthesis from C, C++ and OpenCL v2019.2.0 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Scout HLS - High-Level Synthesis from C, C++ and OpenCL v2019.2.0 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Scout HLS - High-Level Synthesis from C, C++ and OpenCL v2019.2.0 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================

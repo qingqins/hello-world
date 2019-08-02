@@ -1,0 +1,25 @@
+[
+    {
+        "cycleName": "Dependence cycle 1",
+        "processList": [
+            {
+                "processName": "example_example.proc_1_U0",
+                "channelList": [
+                    {
+                        "channelName": "example_example.data_channel11_U",
+                        "channelStatus": "FULL"
+                    }
+                ]
+            },
+            {
+                "processName": "example_example.proc_2_U0",
+                "channelList": [
+                    {
+                        "channelName": "example_example.data_channel22_U",
+                        "channelStatus": "EMPTY"
+                    }
+                ]
+            }
+        ]
+    }
+]

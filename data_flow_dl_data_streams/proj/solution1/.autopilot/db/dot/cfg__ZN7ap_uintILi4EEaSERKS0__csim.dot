@@ -1,0 +1,7 @@
+digraph "CFG for 'ap_uint\<4\>::operator=' function" {
+	label="CFG for 'ap_uint\<4\>::operator=' function";
+
+	Node0x47616f0 [shape=record,filename="",linenumber="",label="{entry.predFake}"];
+	Node0x47616f0 -> Node0x474ad60[ callList="" memoryops="" filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/ap_int.h"];
+	Node0x474ad60 [shape=record,filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/ap_int.h",linenumber="277",label="{entry.succFake}"];
+}
