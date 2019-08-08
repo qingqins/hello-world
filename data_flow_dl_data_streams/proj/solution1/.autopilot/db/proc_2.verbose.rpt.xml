@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'proc_2'" level="0">
-<item name = "Date">Wed Jul 31 02:49:00 2019
+<item name = "Date">Thu Aug  8 02:59:41 2019
 </item>
-<item name = "Version">2019.2.0 (Build 2605627 on Tue Jul 30 20:40:18 MDT 2019)</item>
+<item name = "Version">2019.2.0 (Build 2609964 on Mon Aug 05 02:36:12 MDT 2019)</item>
 <item name = "Project">proj</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">13.33, 5.297, 3.60</column>
+<column name="ap_clk">13.33, 7.737, 3.60</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">13, 13, 68.861 (ns), 68.861 (ns), 13, 13, none</column>
+<column name="">13, 13, 0.101 (us), 0.101 (us), 13, 13, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -48,12 +48,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 50, -</column>
+<column name="Expression">-, -, 0, 116, -</column>
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, -, -, -, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 24, -</column>
-<column name="Register">-, -, 13, -, -</column>
+<column name="Register">-, -, 14, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
@@ -78,15 +78,18 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="B_TDATA_int">+, 0, 0, 32, 32, 32</column>
-<column name="i_1_fu_120_p2">+, 0, 0, 6, 4, 1</column>
+<column name="add_fu_134_p2">+, 0, 0, 32, 32, 32</column>
+<column name="add_ln63_fu_140_p2">+, 0, 0, 32, 32, 1</column>
+<column name="i_1_fu_122_p2">+, 0, 0, 6, 4, 1</column>
 <column name="ap_block_pp0_stage0_01001">and, 0, 0, 1, 1, 1</column>
 <column name="ap_block_state3_io">and, 0, 0, 1, 1, 1</column>
 <column name="ap_block_state4_io">and, 0, 0, 1, 1, 1</column>
-<column name="icmp_ln38_fu_114_p2">icmp, 0, 0, 2, 4, 4</column>
+<column name="icmp_ln59_fu_116_p2">icmp, 0, 0, 2, 4, 4</column>
+<column name="icmp_ln60_fu_128_p2">icmp, 0, 0, 2, 4, 3</column>
 <column name="ap_block_pp0_stage0_11001">or, 0, 0, 1, 1, 1</column>
 <column name="ap_block_state1">or, 0, 0, 1, 1, 1</column>
 <column name="ap_block_state3_pp0_stage0_iter1">or, 0, 0, 1, 1, 1</column>
+<column name="B_TDATA_int">select, 0, 0, 32, 1, 32</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">xor, 0, 0, 2, 2, 1</column>
 </table>
@@ -100,7 +103,7 @@
 <column name="ap_enable_reg_pp0_iter2">3, 2, 1, 2</column>
 <column name="data_channel1_blk_n">3, 2, 1, 2</column>
 <column name="data_channel2_blk_n">3, 2, 1, 2</column>
-<column name="i_reg_103">3, 2, 4, 8</column>
+<column name="i_reg_105">3, 2, 4, 8</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -110,9 +113,10 @@
 <column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
-<column name="i_reg_103">4, 0, 4, 0</column>
-<column name="icmp_ln38_reg_133">1, 0, 1, 0</column>
-<column name="icmp_ln38_reg_133_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="i_reg_105">4, 0, 4, 0</column>
+<column name="icmp_ln59_reg_154">1, 0, 1, 0</column>
+<column name="icmp_ln59_reg_154_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="icmp_ln60_reg_163">1, 0, 1, 0</column>
 </table>
 </item>
 </section>

@@ -101,6 +101,10 @@
             <obj_property name="ElementShortName">ap_done</obj_property>
             <obj_property name="ObjectShortName">ap_done</obj_property>
          </wvobject>
+         <wvobject type="logic" fp_name="/apatb_example_top/AESL_inst_example_example/ap_continue">
+            <obj_property name="ElementShortName">ap_continue</obj_property>
+            <obj_property name="ObjectShortName">ap_continue</obj_property>
+         </wvobject>
       </wvobject>
       <wvobject type="group" fp_name="proc_1_U0_group">
          <obj_property name="label">proc_1_U0</obj_property>

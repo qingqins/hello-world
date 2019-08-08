@@ -1,7 +1,0 @@
-digraph "CFG for 'ap_int_base\<32, true\>::to_int' function" {
-	label="CFG for 'ap_int_base\<32, true\>::to_int' function";
-
-	Node0x47411c0 [shape=record,filename="",linenumber="",label="{entry.predFake}"];
-	Node0x47411c0 -> Node0x489f510[ callList="" memoryops="" filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/ap_int_base.h"];
-	Node0x489f510 [shape=record,filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/ap_int_base.h",linenumber="509",label="{entry.succFake}"];
-}

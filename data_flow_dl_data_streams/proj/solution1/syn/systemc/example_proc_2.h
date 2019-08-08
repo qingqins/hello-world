@@ -67,25 +67,29 @@ struct example_proc_2 : public sc_module {
     sc_signal< sc_logic > ap_CS_fsm_pp0_stage0;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter1;
     sc_signal< bool > ap_block_pp0_stage0;
-    sc_signal< sc_lv<1> > icmp_ln38_reg_133;
+    sc_signal< sc_lv<1> > icmp_ln59_reg_154;
     sc_signal< sc_logic > data_channel2_blk_n;
     sc_signal< sc_logic > B_TDATA_blk_n;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter2;
-    sc_signal< sc_lv<1> > icmp_ln38_reg_133_pp0_iter1_reg;
-    sc_signal< sc_lv<4> > i_reg_103;
-    sc_signal< sc_lv<1> > icmp_ln38_fu_114_p2;
+    sc_signal< sc_lv<1> > icmp_ln59_reg_154_pp0_iter1_reg;
+    sc_signal< sc_lv<4> > i_reg_105;
+    sc_signal< sc_lv<1> > icmp_ln59_fu_116_p2;
     sc_signal< bool > ap_block_state2_pp0_stage0_iter0;
     sc_signal< bool > ap_block_state3_pp0_stage0_iter1;
     sc_signal< bool > ap_block_state3_io;
     sc_signal< bool > ap_block_state4_pp0_stage0_iter2;
     sc_signal< bool > ap_block_state4_io;
     sc_signal< bool > ap_block_pp0_stage0_11001;
-    sc_signal< sc_lv<4> > i_1_fu_120_p2;
+    sc_signal< sc_lv<4> > i_1_fu_122_p2;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter0;
+    sc_signal< sc_lv<1> > icmp_ln60_fu_128_p2;
+    sc_signal< sc_lv<1> > icmp_ln60_reg_163;
     sc_signal< bool > ap_block_state1;
     sc_signal< bool > ap_block_pp0_stage0_subdone;
     sc_signal< sc_logic > ap_condition_pp0_exit_iter0_state2;
     sc_signal< bool > ap_block_pp0_stage0_01001;
+    sc_signal< sc_lv<32> > add_fu_134_p2;
+    sc_signal< sc_lv<32> > add_ln63_fu_140_p2;
     sc_signal< sc_logic > ap_CS_fsm_state5;
     sc_signal< sc_logic > regslice_both_B_V_data_V_U_apdone_blk;
     sc_signal< sc_lv<3> > ap_NS_fsm;
@@ -130,6 +134,7 @@ struct example_proc_2 : public sc_module {
     static const sc_lv<5> ap_const_lv5_0;
     static const sc_lv<6> ap_const_lv6_1;
     static const sc_lv<4> ap_const_lv4_A;
+    static const sc_lv<4> ap_const_lv4_5;
     static const sc_lv<32> ap_const_lv32_2;
     // Thread declarations
     void thread_ap_var_for_const2();
@@ -142,6 +147,8 @@ struct example_proc_2 : public sc_module {
     void thread_B_TDATA_int();
     void thread_B_TVALID();
     void thread_B_TVALID_int();
+    void thread_add_fu_134_p2();
+    void thread_add_ln63_fu_140_p2();
     void thread_ap_CS_fsm_pp0_stage0();
     void thread_ap_CS_fsm_state1();
     void thread_ap_CS_fsm_state5();
@@ -165,8 +172,9 @@ struct example_proc_2 : public sc_module {
     void thread_data_channel1_read();
     void thread_data_channel2_blk_n();
     void thread_data_channel2_read();
-    void thread_i_1_fu_120_p2();
-    void thread_icmp_ln38_fu_114_p2();
+    void thread_i_1_fu_122_p2();
+    void thread_icmp_ln59_fu_116_p2();
+    void thread_icmp_ln60_fu_128_p2();
     void thread_ap_NS_fsm();
 };
 

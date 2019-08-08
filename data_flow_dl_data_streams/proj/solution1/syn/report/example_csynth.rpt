@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'example'
 ================================================================
-* Date:           Wed Jul 31 02:49:00 2019
+* Date:           Thu Aug  8 02:59:42 2019
 
-* Version:        2019.2.0 (Build 2605627 on Tue Jul 30 20:40:18 MDT 2019)
+* Version:        2019.2.0 (Build 2609964 on Mon Aug 05 02:36:12 MDT 2019)
 * Project:        proj
 * Solution:       solution1
 * Product family: zynq
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  13.33|     5.297|        3.60|
+    |ap_clk  |  13.33|     7.737|        3.60|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,7 +29,7 @@
     |  Latency  |     Latency Realtime    |  Interval | Pipeline |
     | min | max |     min    |     max    | min | max |   Type   |
     +-----+-----+------------+------------+-----+-----+----------+
-    |   24|   24| 0.127 (us) | 0.127 (us) |   25|   25| dataflow |
+    |   24|   24| 0.186 (us) | 0.186 (us) |   25|   25| dataflow |
     +-----+-----+------------+------------+-----+-----+----------+
 
     + Detail: 
@@ -38,8 +38,8 @@
         |           |        |  Latency  |      Latency Realtime     |  Interval | Pipeline|
         |  Instance | Module | min | max |     min     |     max     | min | max |   Type  |
         +-----------+--------+-----+-----+-------------+-------------+-----+-----+---------+
-        |proc_1_U0  |proc_1  |   24|   24| 81.624 (ns) | 81.624 (ns) |   24|   24|   none  |
-        |proc_2_U0  |proc_2  |   13|   13| 68.861 (ns) | 68.861 (ns) |   13|   13|   none  |
+        |proc_2_U0  |proc_2  |   13|   13|  0.101 (us) |  0.101 (us) |   13|   13|   none  |
+        |proc_1_U0  |proc_1  |   24|   24| 77.760 (ns) | 77.760 (ns) |   24|   24|   none  |
         +-----------+--------+-----+-----+-------------+-------------+-----+-----+---------+
 
         * Loop: 
@@ -56,13 +56,13 @@
 +-----------------+---------+-------+--------+-------+-----+
 |DSP              |        -|      -|       -|      -|    -|
 |Expression       |        -|      -|       0|      1|    -|
-|FIFO             |        0|      -|      12|     92|    -|
-|Instance         |        -|      -|      98|    138|    -|
+|FIFO             |        0|      -|     198|    134|    -|
+|Instance         |        0|      -|     135|    244|    -|
 |Memory           |        -|      -|       -|      -|    -|
 |Multiplexer      |        -|      -|       -|      -|    -|
 |Register         |        -|      -|       -|      -|    -|
 +-----------------+---------+-------+--------+-------+-----+
-|Total            |        0|      0|     110|    231|    0|
+|Total            |        0|      0|     333|    379|    0|
 +-----------------+---------+-------+--------+-------+-----+
 |Available        |      280|    220|  106400|  53200|    0|
 +-----------------+---------+-------+--------+-------+-----+
@@ -71,14 +71,15 @@
 
 + Detail: 
     * Instance: 
-    +-----------+--------+---------+-------+----+----+-----+
-    |  Instance | Module | BRAM_18K| DSP48E| FF | LUT| URAM|
-    +-----------+--------+---------+-------+----+----+-----+
-    |proc_1_U0  |proc_1  |        0|      0|  85|  64|    0|
-    |proc_2_U0  |proc_2  |        0|      0|  13|  74|    0|
-    +-----------+--------+---------+-------+----+----+-----+
-    |Total      |        |        0|      0|  98| 138|    0|
-    +-----------+--------+---------+-------+----+----+-----+
+    +-------------------------+-----------------------+---------+-------+----+-----+-----+
+    |         Instance        |         Module        | BRAM_18K| DSP48E| FF | LUT | URAM|
+    +-------------------------+-----------------------+---------+-------+----+-----+-----+
+    |example_control_s_axi_U  |example_control_s_axi  |        0|      0|  36|   40|    0|
+    |proc_1_U0                |proc_1                 |        0|      0|  85|   64|    0|
+    |proc_2_U0                |proc_2                 |        0|      0|  14|  140|    0|
+    +-------------------------+-----------------------+---------+-------+----+-----+-----+
+    |Total                    |                       |        0|      0| 135|  244|    0|
+    +-------------------------+-----------------------+---------+-------+----+-----+-----+
 
     * DSP48E: 
     N/A
@@ -87,14 +88,14 @@
     N/A
 
     * FIFO: 
-    +------------------+---------+---+----+-----+------+-----+---------+
-    |       Name       | BRAM_18K| FF| LUT| URAM| Depth| Bits| Size:D*B|
-    +------------------+---------+---+----+-----+------+-----+---------+
-    |data_channel11_U  |        0|  6|   0|    -|     8|   32|      256|
-    |data_channel22_U  |        0|  6|   0|    -|     8|   32|      256|
-    +------------------+---------+---+----+-----+------+-----+---------+
-    |Total             |        0| 12|   0|    0|    16|   64|      512|
-    +------------------+---------+---+----+-----+------+-----+---------+
+    +------------------+---------+----+----+-----+------+-----+---------+
+    |       Name       | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +------------------+---------+----+----+-----+------+-----+---------+
+    |data_channel11_U  |        0|  99|   0|    -|     8|   32|      256|
+    |data_channel22_U  |        0|  99|   0|    -|     8|   32|      256|
+    +------------------+---------+----+----+-----+------+-----+---------+
+    |Total             |        0| 198|   0|    0|    16|   64|      512|
+    +------------------+---------+----+----+-----+------+-----+---------+
 
     * Expression: 
     +--------------+----------+-------+---+----+------------+------------+
@@ -117,32 +118,46 @@
 == Interface
 ================================================================
 * Summary: 
-+----------+-----+-----+------------+--------------+--------------+
-| RTL Ports| Dir | Bits|  Protocol  | Source Object|    C Type    |
-+----------+-----+-----+------------+--------------+--------------+
-|A_TDATA   |  in |   32|    axis    |  A_V_data_V  |    pointer   |
-|A_TKEEP   |  in |    4|    axis    |  A_V_keep_V  |    pointer   |
-|A_TSTRB   |  in |    4|    axis    |  A_V_strb_V  |    pointer   |
-|A_TUSER   |  in |    2|    axis    |  A_V_user_V  |    pointer   |
-|A_TLAST   |  in |    1|    axis    |  A_V_last_V  |    pointer   |
-|A_TID     |  in |    5|    axis    |   A_V_id_V   |    pointer   |
-|A_TDEST   |  in |    6|    axis    |  A_V_dest_V  |    pointer   |
-|A_TVALID  |  in |    1|    axis    |  A_V_dest_V  |    pointer   |
-|A_TREADY  | out |    1|    axis    |  A_V_dest_V  |    pointer   |
-|B_TDATA   | out |   32|    axis    |  B_V_data_V  |    pointer   |
-|B_TKEEP   | out |    4|    axis    |  B_V_keep_V  |    pointer   |
-|B_TSTRB   | out |    4|    axis    |  B_V_strb_V  |    pointer   |
-|B_TUSER   | out |    2|    axis    |  B_V_user_V  |    pointer   |
-|B_TLAST   | out |    1|    axis    |  B_V_last_V  |    pointer   |
-|B_TID     | out |    5|    axis    |   B_V_id_V   |    pointer   |
-|B_TDEST   | out |    6|    axis    |  B_V_dest_V  |    pointer   |
-|B_TVALID  | out |    1|    axis    |  B_V_dest_V  |    pointer   |
-|B_TREADY  |  in |    1|    axis    |  B_V_dest_V  |    pointer   |
-|ap_clk    |  in |    1| ap_ctrl_hs |    example   | return value |
-|ap_rst_n  |  in |    1| ap_ctrl_hs |    example   | return value |
-|ap_start  |  in |    1| ap_ctrl_hs |    example   | return value |
-|ap_done   | out |    1| ap_ctrl_hs |    example   | return value |
-|ap_ready  | out |    1| ap_ctrl_hs |    example   | return value |
-|ap_idle   | out |    1| ap_ctrl_hs |    example   | return value |
-+----------+-----+-----+------------+--------------+--------------+
++-----------------------+-----+-----+---------------+--------------+--------------+
+|       RTL Ports       | Dir | Bits|    Protocol   | Source Object|    C Type    |
++-----------------------+-----+-----+---------------+--------------+--------------+
+|s_axi_control_AWVALID  |  in |    1|     s_axi     |    control   |  return void |
+|s_axi_control_AWREADY  | out |    1|     s_axi     |    control   |  return void |
+|s_axi_control_AWADDR   |  in |    4|     s_axi     |    control   |  return void |
+|s_axi_control_WVALID   |  in |    1|     s_axi     |    control   |  return void |
+|s_axi_control_WREADY   | out |    1|     s_axi     |    control   |  return void |
+|s_axi_control_WDATA    |  in |   32|     s_axi     |    control   |  return void |
+|s_axi_control_WSTRB    |  in |    4|     s_axi     |    control   |  return void |
+|s_axi_control_ARVALID  |  in |    1|     s_axi     |    control   |  return void |
+|s_axi_control_ARREADY  | out |    1|     s_axi     |    control   |  return void |
+|s_axi_control_ARADDR   |  in |    4|     s_axi     |    control   |  return void |
+|s_axi_control_RVALID   | out |    1|     s_axi     |    control   |  return void |
+|s_axi_control_RREADY   |  in |    1|     s_axi     |    control   |  return void |
+|s_axi_control_RDATA    | out |   32|     s_axi     |    control   |  return void |
+|s_axi_control_RRESP    | out |    2|     s_axi     |    control   |  return void |
+|s_axi_control_BVALID   | out |    1|     s_axi     |    control   |  return void |
+|s_axi_control_BREADY   |  in |    1|     s_axi     |    control   |  return void |
+|s_axi_control_BRESP    | out |    2|     s_axi     |    control   |  return void |
+|ap_clk                 |  in |    1| ap_ctrl_chain |    example   | return value |
+|ap_rst_n               |  in |    1| ap_ctrl_chain |    example   | return value |
+|interrupt              | out |    1| ap_ctrl_chain |    example   | return value |
+|A_TDATA                |  in |   32|      axis     |  A_V_data_V  |    pointer   |
+|A_TKEEP                |  in |    4|      axis     |  A_V_keep_V  |    pointer   |
+|A_TSTRB                |  in |    4|      axis     |  A_V_strb_V  |    pointer   |
+|A_TUSER                |  in |    2|      axis     |  A_V_user_V  |    pointer   |
+|A_TLAST                |  in |    1|      axis     |  A_V_last_V  |    pointer   |
+|A_TID                  |  in |    5|      axis     |   A_V_id_V   |    pointer   |
+|A_TDEST                |  in |    6|      axis     |  A_V_dest_V  |    pointer   |
+|A_TVALID               |  in |    1|      axis     |  A_V_dest_V  |    pointer   |
+|A_TREADY               | out |    1|      axis     |  A_V_dest_V  |    pointer   |
+|B_TDATA                | out |   32|      axis     |  B_V_data_V  |    pointer   |
+|B_TKEEP                | out |    4|      axis     |  B_V_keep_V  |    pointer   |
+|B_TSTRB                | out |    4|      axis     |  B_V_strb_V  |    pointer   |
+|B_TUSER                | out |    2|      axis     |  B_V_user_V  |    pointer   |
+|B_TLAST                | out |    1|      axis     |  B_V_last_V  |    pointer   |
+|B_TID                  | out |    5|      axis     |   B_V_id_V   |    pointer   |
+|B_TDEST                | out |    6|      axis     |  B_V_dest_V  |    pointer   |
+|B_TVALID               | out |    1|      axis     |  B_V_dest_V  |    pointer   |
+|B_TREADY               |  in |    1|      axis     |  B_V_dest_V  |    pointer   |
++-----------------------+-----+-----+---------------+--------------+--------------+
 

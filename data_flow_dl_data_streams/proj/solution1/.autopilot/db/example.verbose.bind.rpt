@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'example'
 ================================================================
-* Date:           Wed Jul 31 02:49:00 2019
+* Date:           Thu Aug  8 02:59:41 2019
 
-* Version:        2019.2.0 (Build 2605627 on Tue Jul 30 20:40:18 MDT 2019)
+* Version:        2019.2.0 (Build 2609964 on Mon Aug 05 02:36:12 MDT 2019)
 * Project:        proj
 * Solution:       solution1
 * Product family: zynq
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  13.33|     5.297|        3.60|
+    |ap_clk  |  13.33|     7.737|        3.60|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,18 +29,18 @@
     |  Latency  |     Latency Realtime    |  Interval | Pipeline |
     | min | max |     min    |     max    | min | max |   Type   |
     +-----+-----+------------+------------+-----+-----+----------+
-    |   24|   24| 0.127 (us) | 0.127 (us) |   25|   25| dataflow |
+    |   24|   24| 0.186 (us) | 0.186 (us) |   25|   25| dataflow |
     +-----+-----+------------+------------+-----+-----+----------+
 
     + Detail: 
         * Instance: 
-        +------------------+--------+-----+-----+-------------+-------------+-----+-----+---------+
-        |                  |        |  Latency  |      Latency Realtime     |  Interval | Pipeline|
-        |     Instance     | Module | min | max |     min     |     max     | min | max |   Type  |
-        +------------------+--------+-----+-----+-------------+-------------+-----+-----+---------+
-        |grp_proc_1_fu_78  |proc_1  |   24|   24| 81.624 (ns) | 81.624 (ns) |   24|   24|   none  |
-        |grp_proc_2_fu_98  |proc_2  |   13|   13| 68.861 (ns) | 68.861 (ns) |   13|   13|   none  |
-        +------------------+--------+-----+-----+-------------+-------------+-----+-----+---------+
+        +-------------------+--------+-----+-----+-------------+-------------+-----+-----+---------+
+        |                   |        |  Latency  |      Latency Realtime     |  Interval | Pipeline|
+        |      Instance     | Module | min | max |     min     |     max     | min | max |   Type  |
+        +-------------------+--------+-----+-----+-------------+-------------+-----+-----+---------+
+        |grp_proc_2_fu_84   |proc_2  |   13|   13|  0.101 (us) |  0.101 (us) |   13|   13|   none  |
+        |grp_proc_1_fu_104  |proc_1  |   24|   24| 77.760 (ns) | 77.760 (ns) |   24|   24|   none  |
+        +-------------------+--------+-----+-----+-------------+-------------+-----+-----+---------+
 
         * Loop: 
         N/A
@@ -87,8 +87,8 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%data_channel11 = alloca i64"   --->   Operation 7 'alloca' 'data_channel11' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 33 'FIFO' <Latency = 0> <II = 1> <Delay = 3.24> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 8> <FIFO>
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%data_channel22 = alloca i64"   --->   Operation 8 'alloca' 'data_channel22' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 33 'FIFO' <Latency = 0> <II = 1> <Delay = 3.24> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 8> <FIFO>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%data_channel11 = alloca i64"   --->   Operation 7 'alloca' 'data_channel11' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 34 'FIFO' <Latency = 0> <II = 1> <Delay = 3.24> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 8> <FIFO>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%data_channel22 = alloca i64"   --->   Operation 8 'alloca' 'data_channel22' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 34 'FIFO' <Latency = 0> <II = 1> <Delay = 3.24> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 8> <FIFO>
 
 State 2 <SV = 1> <Delay = 0.00>
 ST_2 : Operation 9 [2/2] (0.00ns)   --->   "%call_ln10 = call void @proc_1, i32 %data_channel11, i32 %data_channel22, i32 %A_V_data_V, i4 %A_V_keep_V, i4 %A_V_strb_V, i2 %A_V_user_V, i1 %A_V_last_V, i5 %A_V_id_V, i6 %A_V_dest_V" [example.cpp:10]   --->   Operation 9 'call' 'call_ln10' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
@@ -103,29 +103,31 @@ State 5 <SV = 4> <Delay = 0.00>
 ST_5 : Operation 12 [1/2] (0.00ns)   --->   "%call_ln11 = call void @proc_2, i32 %data_channel11, i32 %data_channel22, i32 %B_V_data_V, i4 %B_V_keep_V, i4 %B_V_strb_V, i2 %B_V_user_V, i1 %B_V_last_V, i5 %B_V_id_V, i6 %B_V_dest_V, void %call_ln10, void %call_ln10" [example.cpp:11]   --->   Operation 12 'call' 'call_ln11' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 6 <SV = 5> <Delay = 0.00>
-ST_6 : Operation 13 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln0 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32, i32, void @empty_3"   --->   Operation 13 'specdataflowpipeline' 'specdataflowpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 14 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_4"   --->   Operation 14 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_V_data_V, i4 %A_V_keep_V, i4 %A_V_strb_V, i2 %A_V_user_V, i1 %A_V_last_V, i5 %A_V_id_V, i6 %A_V_dest_V, void @empty, i32, i32, void @empty_0, i32, i32, void @empty_1, void @empty_1, void @empty_1, i32, i32, i32, i32, void @empty_1, void @empty_1"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 16 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %A_V_data_V"   --->   Operation 16 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 17 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %A_V_keep_V"   --->   Operation 17 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 18 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %A_V_strb_V"   --->   Operation 18 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 19 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %A_V_user_V"   --->   Operation 19 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 20 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %A_V_last_V"   --->   Operation 20 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 21 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %A_V_id_V"   --->   Operation 21 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 22 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i6 %A_V_dest_V"   --->   Operation 22 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_V_data_V, i4 %B_V_keep_V, i4 %B_V_strb_V, i2 %B_V_user_V, i1 %B_V_last_V, i5 %B_V_id_V, i6 %B_V_dest_V, void @empty, i32, i32, void @empty_0, i32, i32, void @empty_1, void @empty_1, void @empty_1, i32, i32, i32, i32, void @empty_1, void @empty_1"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 24 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %B_V_data_V"   --->   Operation 24 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 25 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %B_V_keep_V"   --->   Operation 25 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 26 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %B_V_strb_V"   --->   Operation 26 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 27 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %B_V_user_V"   --->   Operation 27 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 28 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %B_V_last_V"   --->   Operation 28 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 29 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %B_V_id_V"   --->   Operation 29 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 30 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i6 %B_V_dest_V"   --->   Operation 30 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 31 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @data_channel11_str, i32, void @p_str, void @p_str, i32, i32, i32 %data_channel11, i32 %data_channel11"   --->   Operation 31 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_channel11, void @empty_2, i32, i32, void @empty_1, i32, i32, void @empty_1, void @empty_1, void @empty_1, i32, i32, i32, i32, void @empty_1, void @empty_1"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 33 [1/1] (0.00ns)   --->   "%empty_10 = specchannel i32 @_ssdm_op_SpecChannel, void @data_channel22_str, i32, void @p_str, void @p_str, i32, i32, i32 %data_channel22, i32 %data_channel22"   --->   Operation 33 'specchannel' 'empty_10' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_channel22, void @empty_2, i32, i32, void @empty_1, i32, i32, void @empty_1, void @empty_1, void @empty_1, i32, i32, i32, i32, void @empty_1, void @empty_1"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 35 [1/1] (0.00ns)   --->   "%ret_ln12 = ret" [example.cpp:12]   --->   Operation 35 'ret' 'ret_ln12' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 13 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln0 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32, i32, void @empty_5"   --->   Operation 13 'specdataflowpipeline' 'specdataflowpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 14 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_6"   --->   Operation 14 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32, void @empty_7, i32, i32, void @empty_5, i32, i32, void @empty_5, void @empty_5, void @empty_5, i32, i32, i32, i32, void @empty_5, void @empty_5"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_V_data_V, i4 %A_V_keep_V, i4 %A_V_strb_V, i2 %A_V_user_V, i1 %A_V_last_V, i5 %A_V_id_V, i6 %A_V_dest_V, void @empty, i32, i32, void @empty_0, i32, i32, void @empty_1, void @empty_1, void @empty_1, i32, i32, i32, i32, void @empty_1, void @empty_1"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 17 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %A_V_data_V"   --->   Operation 17 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 18 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %A_V_keep_V"   --->   Operation 18 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 19 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %A_V_strb_V"   --->   Operation 19 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 20 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %A_V_user_V"   --->   Operation 20 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 21 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %A_V_last_V"   --->   Operation 21 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 22 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %A_V_id_V"   --->   Operation 22 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 23 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i6 %A_V_dest_V"   --->   Operation 23 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_V_data_V, i4 %B_V_keep_V, i4 %B_V_strb_V, i2 %B_V_user_V, i1 %B_V_last_V, i5 %B_V_id_V, i6 %B_V_dest_V, void @empty, i32, i32, void @empty_0, i32, i32, void @empty_1, void @empty_1, void @empty_1, i32, i32, i32, i32, void @empty_1, void @empty_1"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 25 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %B_V_data_V"   --->   Operation 25 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 26 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %B_V_keep_V"   --->   Operation 26 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 27 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %B_V_strb_V"   --->   Operation 27 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 28 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %B_V_user_V"   --->   Operation 28 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 29 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %B_V_last_V"   --->   Operation 29 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 30 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %B_V_id_V"   --->   Operation 30 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 31 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i6 %B_V_dest_V"   --->   Operation 31 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32, void @empty_2, i32, i32, void @empty_1, i32, i32, void @empty_3, void @empty_1, void @empty_1, i32, i32, i32, i32, void @empty_1, void @empty_1"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 33 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @data_channel11_str, i32, void @p_str, void @p_str, i32, i32, i32 %data_channel11, i32 %data_channel11"   --->   Operation 33 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_channel11, void @empty_4, i32, i32, void @empty_1, i32, i32, void @empty_1, void @empty_1, void @empty_1, i32, i32, i32, i32, void @empty_1, void @empty_1"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 35 [1/1] (0.00ns)   --->   "%empty_13 = specchannel i32 @_ssdm_op_SpecChannel, void @data_channel22_str, i32, void @p_str, void @p_str, i32, i32, i32 %data_channel22, i32 %data_channel22"   --->   Operation 35 'specchannel' 'empty_13' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 36 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_channel22, void @empty_4, i32, i32, void @empty_1, i32, i32, void @empty_1, void @empty_1, void @empty_1, i32, i32, i32, i32, void @empty_1, void @empty_1"   --->   Operation 36 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%ret_ln12 = ret" [example.cpp:12]   --->   Operation 37 'ret' 'ret_ln12' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -138,7 +140,7 @@ STG Binding:
 - Is datapath-only: 0
 - Is pipelined: 0
 - Is top level: 1
-Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_chain:ce=0
 Port [ A_V_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
 Port [ A_V_keep_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
 Port [ A_V_strb_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
@@ -166,6 +168,7 @@ call_ln11                (call                ) [ 0000000]
 specdataflowpipeline_ln0 (specdataflowpipeline) [ 0000000]
 spectopmodule_ln0        (spectopmodule       ) [ 0000000]
 specinterface_ln0        (specinterface       ) [ 0000000]
+specinterface_ln0        (specinterface       ) [ 0000000]
 specbitsmap_ln0          (specbitsmap         ) [ 0000000]
 specbitsmap_ln0          (specbitsmap         ) [ 0000000]
 specbitsmap_ln0          (specbitsmap         ) [ 0000000]
@@ -181,9 +184,10 @@ specbitsmap_ln0          (specbitsmap         ) [ 0000000]
 specbitsmap_ln0          (specbitsmap         ) [ 0000000]
 specbitsmap_ln0          (specbitsmap         ) [ 0000000]
 specbitsmap_ln0          (specbitsmap         ) [ 0000000]
+specinterface_ln0        (specinterface       ) [ 0000000]
 empty                    (specchannel         ) [ 0000000]
 specinterface_ln0        (specinterface       ) [ 0000000]
-empty_10                 (specchannel         ) [ 0000000]
+empty_13                 (specchannel         ) [ 0000000]
 specinterface_ln0        (specinterface       ) [ 0000000]
 ret_ln12                 (ret                 ) [ 0000000]
 </LifeTime>
@@ -376,7 +380,7 @@ ret_ln12                 (ret                 ) [ 0000000]
 <pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_3"/></StgValue>
+<StgValue><ssdm name="empty_5"/></StgValue>
 </bind>
 </comp>
 
@@ -394,7 +398,7 @@ ret_ln12                 (ret                 ) [ 0000000]
 <pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_4"/></StgValue>
+<StgValue><ssdm name="empty_6"/></StgValue>
 </bind>
 </comp>
 
@@ -412,7 +416,7 @@ ret_ln12                 (ret                 ) [ 0000000]
 <pin id="49" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty"/></StgValue>
+<StgValue><ssdm name="empty_7"/></StgValue>
 </bind>
 </comp>
 
@@ -421,7 +425,7 @@ ret_ln12                 (ret                 ) [ 0000000]
 <pin id="51" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="empty"/></StgValue>
 </bind>
 </comp>
 
@@ -430,7 +434,7 @@ ret_ln12                 (ret                 ) [ 0000000]
 <pin id="53" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_0"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </bind>
 </comp>
 
@@ -439,7 +443,7 @@ ret_ln12                 (ret                 ) [ 0000000]
 <pin id="55" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_1"/></StgValue>
+<StgValue><ssdm name="empty_0"/></StgValue>
 </bind>
 </comp>
 
@@ -448,7 +452,7 @@ ret_ln12                 (ret                 ) [ 0000000]
 <pin id="57" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+<StgValue><ssdm name="empty_1"/></StgValue>
 </bind>
 </comp>
 
@@ -457,7 +461,7 @@ ret_ln12                 (ret                 ) [ 0000000]
 <pin id="59" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_SpecChannel"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
 </bind>
 </comp>
 
@@ -466,7 +470,7 @@ ret_ln12                 (ret                 ) [ 0000000]
 <pin id="61" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="data_channel11_str"/></StgValue>
+<StgValue><ssdm name="empty_2"/></StgValue>
 </bind>
 </comp>
 
@@ -475,7 +479,7 @@ ret_ln12                 (ret                 ) [ 0000000]
 <pin id="63" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str"/></StgValue>
+<StgValue><ssdm name="empty_3"/></StgValue>
 </bind>
 </comp>
 
@@ -484,7 +488,7 @@ ret_ln12                 (ret                 ) [ 0000000]
 <pin id="65" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="_ssdm_op_SpecChannel"/></StgValue>
 </bind>
 </comp>
 
@@ -493,7 +497,7 @@ ret_ln12                 (ret                 ) [ 0000000]
 <pin id="67" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_2"/></StgValue>
+<StgValue><ssdm name="data_channel11_str"/></StgValue>
 </bind>
 </comp>
 
@@ -502,14 +506,41 @@ ret_ln12                 (ret                 ) [ 0000000]
 <pin id="69" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="70" class="1001" name="const_70">
+<pin_list>
+<pin id="71" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="72" class="1001" name="const_72">
+<pin_list>
+<pin id="73" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_4"/></StgValue>
+</bind>
+</comp>
+
+<comp id="74" class="1001" name="const_74">
+<pin_list>
+<pin id="75" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
 <StgValue><ssdm name="data_channel22_str"/></StgValue>
 </bind>
 </comp>
 
-<comp id="70" class="1004" name="data_channel11_fu_70">
+<comp id="76" class="1004" name="data_channel11_fu_76">
 <pin_list>
-<pin id="71" dir="0" index="0" bw="1" slack="0"/>
-<pin id="72" dir="1" index="1" bw="32" slack="1"/>
+<pin id="77" dir="0" index="0" bw="1" slack="0"/>
+<pin id="78" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
@@ -517,10 +548,10 @@ ret_ln12                 (ret                 ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="74" class="1004" name="data_channel22_fu_74">
+<comp id="80" class="1004" name="data_channel22_fu_80">
 <pin_list>
-<pin id="75" dir="0" index="0" bw="1" slack="0"/>
-<pin id="76" dir="1" index="1" bw="32" slack="1"/>
+<pin id="81" dir="0" index="0" bw="1" slack="0"/>
+<pin id="82" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
@@ -528,39 +559,19 @@ ret_ln12                 (ret                 ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="78" class="1004" name="grp_proc_1_fu_78">
+<comp id="84" class="1004" name="grp_proc_2_fu_84">
 <pin_list>
-<pin id="79" dir="0" index="0" bw="0" slack="0"/>
-<pin id="80" dir="0" index="1" bw="32" slack="1"/>
-<pin id="81" dir="0" index="2" bw="32" slack="1"/>
-<pin id="82" dir="0" index="3" bw="32" slack="0"/>
-<pin id="83" dir="0" index="4" bw="4" slack="0"/>
-<pin id="84" dir="0" index="5" bw="4" slack="0"/>
-<pin id="85" dir="0" index="6" bw="2" slack="0"/>
-<pin id="86" dir="0" index="7" bw="1" slack="0"/>
-<pin id="87" dir="0" index="8" bw="5" slack="0"/>
-<pin id="88" dir="0" index="9" bw="6" slack="0"/>
-<pin id="89" dir="1" index="10" bw="0" slack="2147483647"/>
-</pin_list>
-<bind>
-<opcode="call(48) " fcode="call"/>
-<opset="call_ln10/2 "/>
-</bind>
-</comp>
-
-<comp id="98" class="1004" name="grp_proc_2_fu_98">
-<pin_list>
-<pin id="99" dir="0" index="0" bw="0" slack="0"/>
-<pin id="100" dir="0" index="1" bw="32" slack="3"/>
-<pin id="101" dir="0" index="2" bw="32" slack="3"/>
-<pin id="102" dir="0" index="3" bw="32" slack="0"/>
-<pin id="103" dir="0" index="4" bw="4" slack="0"/>
-<pin id="104" dir="0" index="5" bw="4" slack="0"/>
-<pin id="105" dir="0" index="6" bw="2" slack="0"/>
-<pin id="106" dir="0" index="7" bw="1" slack="0"/>
-<pin id="107" dir="0" index="8" bw="5" slack="0"/>
-<pin id="108" dir="0" index="9" bw="6" slack="0"/>
-<pin id="109" dir="1" index="10" bw="0" slack="2147483647"/>
+<pin id="85" dir="0" index="0" bw="0" slack="0"/>
+<pin id="86" dir="0" index="1" bw="32" slack="3"/>
+<pin id="87" dir="0" index="2" bw="32" slack="3"/>
+<pin id="88" dir="0" index="3" bw="32" slack="0"/>
+<pin id="89" dir="0" index="4" bw="4" slack="0"/>
+<pin id="90" dir="0" index="5" bw="4" slack="0"/>
+<pin id="91" dir="0" index="6" bw="2" slack="0"/>
+<pin id="92" dir="0" index="7" bw="1" slack="0"/>
+<pin id="93" dir="0" index="8" bw="5" slack="0"/>
+<pin id="94" dir="0" index="9" bw="6" slack="0"/>
+<pin id="95" dir="1" index="10" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
@@ -568,20 +579,40 @@ ret_ln12                 (ret                 ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="118" class="1005" name="data_channel11_reg_118">
+<comp id="104" class="1004" name="grp_proc_1_fu_104">
 <pin_list>
-<pin id="119" dir="0" index="0" bw="32" slack="1"/>
-<pin id="120" dir="1" index="1" bw="32" slack="1"/>
+<pin id="105" dir="0" index="0" bw="0" slack="0"/>
+<pin id="106" dir="0" index="1" bw="32" slack="1"/>
+<pin id="107" dir="0" index="2" bw="32" slack="1"/>
+<pin id="108" dir="0" index="3" bw="32" slack="0"/>
+<pin id="109" dir="0" index="4" bw="4" slack="0"/>
+<pin id="110" dir="0" index="5" bw="4" slack="0"/>
+<pin id="111" dir="0" index="6" bw="2" slack="0"/>
+<pin id="112" dir="0" index="7" bw="1" slack="0"/>
+<pin id="113" dir="0" index="8" bw="5" slack="0"/>
+<pin id="114" dir="0" index="9" bw="6" slack="0"/>
+<pin id="115" dir="1" index="10" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln10/2 "/>
+</bind>
+</comp>
+
+<comp id="124" class="1005" name="data_channel11_reg_124">
+<pin_list>
+<pin id="125" dir="0" index="0" bw="32" slack="1"/>
+<pin id="126" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
 <opset="data_channel11 "/>
 </bind>
 </comp>
 
-<comp id="124" class="1005" name="data_channel22_reg_124">
+<comp id="130" class="1005" name="data_channel22_reg_130">
 <pin_list>
-<pin id="125" dir="0" index="0" bw="32" slack="1"/>
-<pin id="126" dir="1" index="1" bw="32" slack="1"/>
+<pin id="131" dir="0" index="0" bw="32" slack="1"/>
+<pin id="132" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
 <opset="data_channel22 "/>
@@ -591,53 +622,53 @@ ret_ln12                 (ret                 ) [ 0000000]
 </comp_list>
 
 <net_list>
-<net id="73"><net_src comp="28" pin="0"/><net_sink comp="70" pin=0"/></net>
+<net id="79"><net_src comp="28" pin="0"/><net_sink comp="76" pin=0"/></net>
 
-<net id="77"><net_src comp="28" pin="0"/><net_sink comp="74" pin=0"/></net>
+<net id="83"><net_src comp="28" pin="0"/><net_sink comp="80" pin=0"/></net>
 
-<net id="90"><net_src comp="30" pin="0"/><net_sink comp="78" pin=0"/></net>
+<net id="96"><net_src comp="32" pin="0"/><net_sink comp="84" pin=0"/></net>
 
-<net id="91"><net_src comp="0" pin="0"/><net_sink comp="78" pin=3"/></net>
+<net id="97"><net_src comp="14" pin="0"/><net_sink comp="84" pin=3"/></net>
 
-<net id="92"><net_src comp="2" pin="0"/><net_sink comp="78" pin=4"/></net>
+<net id="98"><net_src comp="16" pin="0"/><net_sink comp="84" pin=4"/></net>
 
-<net id="93"><net_src comp="4" pin="0"/><net_sink comp="78" pin=5"/></net>
+<net id="99"><net_src comp="18" pin="0"/><net_sink comp="84" pin=5"/></net>
 
-<net id="94"><net_src comp="6" pin="0"/><net_sink comp="78" pin=6"/></net>
+<net id="100"><net_src comp="20" pin="0"/><net_sink comp="84" pin=6"/></net>
 
-<net id="95"><net_src comp="8" pin="0"/><net_sink comp="78" pin=7"/></net>
+<net id="101"><net_src comp="22" pin="0"/><net_sink comp="84" pin=7"/></net>
 
-<net id="96"><net_src comp="10" pin="0"/><net_sink comp="78" pin=8"/></net>
+<net id="102"><net_src comp="24" pin="0"/><net_sink comp="84" pin=8"/></net>
 
-<net id="97"><net_src comp="12" pin="0"/><net_sink comp="78" pin=9"/></net>
+<net id="103"><net_src comp="26" pin="0"/><net_sink comp="84" pin=9"/></net>
 
-<net id="110"><net_src comp="32" pin="0"/><net_sink comp="98" pin=0"/></net>
+<net id="116"><net_src comp="30" pin="0"/><net_sink comp="104" pin=0"/></net>
 
-<net id="111"><net_src comp="14" pin="0"/><net_sink comp="98" pin=3"/></net>
+<net id="117"><net_src comp="0" pin="0"/><net_sink comp="104" pin=3"/></net>
 
-<net id="112"><net_src comp="16" pin="0"/><net_sink comp="98" pin=4"/></net>
+<net id="118"><net_src comp="2" pin="0"/><net_sink comp="104" pin=4"/></net>
 
-<net id="113"><net_src comp="18" pin="0"/><net_sink comp="98" pin=5"/></net>
+<net id="119"><net_src comp="4" pin="0"/><net_sink comp="104" pin=5"/></net>
 
-<net id="114"><net_src comp="20" pin="0"/><net_sink comp="98" pin=6"/></net>
+<net id="120"><net_src comp="6" pin="0"/><net_sink comp="104" pin=6"/></net>
 
-<net id="115"><net_src comp="22" pin="0"/><net_sink comp="98" pin=7"/></net>
+<net id="121"><net_src comp="8" pin="0"/><net_sink comp="104" pin=7"/></net>
 
-<net id="116"><net_src comp="24" pin="0"/><net_sink comp="98" pin=8"/></net>
+<net id="122"><net_src comp="10" pin="0"/><net_sink comp="104" pin=8"/></net>
 
-<net id="117"><net_src comp="26" pin="0"/><net_sink comp="98" pin=9"/></net>
+<net id="123"><net_src comp="12" pin="0"/><net_sink comp="104" pin=9"/></net>
 
-<net id="121"><net_src comp="70" pin="1"/><net_sink comp="118" pin=0"/></net>
+<net id="127"><net_src comp="76" pin="1"/><net_sink comp="124" pin=0"/></net>
 
-<net id="122"><net_src comp="118" pin="1"/><net_sink comp="78" pin=1"/></net>
+<net id="128"><net_src comp="124" pin="1"/><net_sink comp="104" pin=1"/></net>
 
-<net id="123"><net_src comp="118" pin="1"/><net_sink comp="98" pin=1"/></net>
+<net id="129"><net_src comp="124" pin="1"/><net_sink comp="84" pin=1"/></net>
 
-<net id="127"><net_src comp="74" pin="1"/><net_sink comp="124" pin=0"/></net>
+<net id="133"><net_src comp="80" pin="1"/><net_sink comp="130" pin=0"/></net>
 
-<net id="128"><net_src comp="124" pin="1"/><net_sink comp="78" pin=2"/></net>
+<net id="134"><net_src comp="130" pin="1"/><net_sink comp="104" pin=2"/></net>
 
-<net id="129"><net_src comp="124" pin="1"/><net_sink comp="98" pin=2"/></net>
+<net id="135"><net_src comp="130" pin="1"/><net_sink comp="84" pin=2"/></net>
 
 </net_list>
 
@@ -675,14 +706,14 @@ ret_ln12                 (ret                 ) [ 0000000]
 ============================================================
 
 * Functional unit list:
-|----------|------------------|---------|---------|---------|
-| Operation|  Functional Unit |  Delay  |    FF   |   LUT   |
-|----------|------------------|---------|---------|---------|
-|   call   | grp_proc_1_fu_78 |  0.466  |    82   |    19   |
-|          | grp_proc_2_fu_98 |  0.466  |    41   |    43   |
-|----------|------------------|---------|---------|---------|
-|   Total  |                  |  0.932  |   123   |    62   |
-|----------|------------------|---------|---------|---------|
+|----------|-------------------|---------|---------|---------|
+| Operation|  Functional Unit  |  Delay  |    FF   |   LUT   |
+|----------|-------------------|---------|---------|---------|
+|   call   |  grp_proc_2_fu_84 |  0.466  |    42   |   109   |
+|          | grp_proc_1_fu_104 |  0.466  |    82   |    19   |
+|----------|-------------------|---------|---------|---------|
+|   Total  |                   |  0.932  |   124   |   128   |
+|----------|-------------------|---------|---------|---------|
 
 Memories:
 N/A
@@ -691,8 +722,8 @@ N/A
 +----------------------+--------+
 |                      |   FF   |
 +----------------------+--------+
-|data_channel11_reg_118|   32   |
-|data_channel22_reg_124|   32   |
+|data_channel11_reg_124|   32   |
+|data_channel22_reg_130|   32   |
 +----------------------+--------+
 |         Total        |   64   |
 +----------------------+--------+
@@ -710,10 +741,10 @@ N/A
 +-----------+--------+--------+--------+
 |           |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+
-|  Function |    0   |   123  |   62   |
+|  Function |    0   |   124  |   128  |
 |   Memory  |    -   |    -   |    -   |
 |Multiplexer|    -   |    -   |    -   |
 |  Register |    -   |   64   |    -   |
 +-----------+--------+--------+--------+
-|   Total   |    0   |   187  |   62   |
+|   Total   |    0   |   188  |   128  |
 +-----------+--------+--------+--------+

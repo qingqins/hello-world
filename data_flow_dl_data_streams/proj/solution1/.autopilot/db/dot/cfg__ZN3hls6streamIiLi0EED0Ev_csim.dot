@@ -1,7 +1,0 @@
-digraph "CFG for 'hls::stream\<int, 0\>::~stream' function" {
-	label="CFG for 'hls::stream\<int, 0\>::~stream' function";
-
-	Node0x49b0060 [shape=record,filename="",linenumber="",label="{entry.predFake}"];
-	Node0x49b0060 -> Node0x495d890[ callList="" memoryops="" filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/hls_stream.h"];
-	Node0x495d890 [shape=record,filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/hls_stream.h",linenumber="129",label="{entry.succFake}"];
-}

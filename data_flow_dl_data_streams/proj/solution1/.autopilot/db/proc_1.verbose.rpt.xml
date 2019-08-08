@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'proc_1'" level="0">
-<item name = "Date">Wed Jul 31 02:49:00 2019
+<item name = "Date">Thu Aug  8 02:59:41 2019
 </item>
-<item name = "Version">2019.2.0 (Build 2605627 on Tue Jul 30 20:40:18 MDT 2019)</item>
+<item name = "Version">2019.2.0 (Build 2609964 on Mon Aug 05 02:36:12 MDT 2019)</item>
 <item name = "Project">proj</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">13.33, 3.401, 3.60</column>
+<column name="ap_clk">13.33, 3.240, 3.60</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">24, 24, 81.624 (ns), 81.624 (ns), 24, 24, none</column>
+<column name="">24, 24, 77.760 (ns), 77.760 (ns), 24, 24, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -85,8 +85,8 @@
 <column name="ap_block_state2_pp0_stage0_iter0">and, 0, 0, 1, 1, 1</column>
 <column name="ap_block_state3_pp0_stage0_iter1">and, 0, 0, 1, 1, 1</column>
 <column name="ap_block_state6_pp1_stage0_iter1">and, 0, 0, 1, 1, 1</column>
-<column name="icmp_ln17_fu_119_p2">icmp, 0, 0, 2, 4, 4</column>
-<column name="icmp_ln22_fu_135_p2">icmp, 0, 0, 2, 4, 4</column>
+<column name="icmp_ln25_fu_119_p2">icmp, 0, 0, 2, 4, 4</column>
+<column name="icmp_ln30_fu_135_p2">icmp, 0, 0, 2, 4, 4</column>
 <column name="ap_block_pp0_stage0_01001">or, 0, 0, 1, 1, 1</column>
 <column name="ap_block_state1">or, 0, 0, 1, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
@@ -121,8 +121,8 @@
 <column name="ap_enable_reg_pp1_iter1">1, 0, 1, 0</column>
 <column name="i_3_reg_108">4, 0, 4, 0</column>
 <column name="i_reg_97">4, 0, 4, 0</column>
-<column name="icmp_ln17_reg_147">1, 0, 1, 0</column>
-<column name="icmp_ln22_reg_162">1, 0, 1, 0</column>
+<column name="icmp_ln25_reg_147">1, 0, 1, 0</column>
+<column name="icmp_ln30_reg_162">1, 0, 1, 0</column>
 <column name="start_once_reg">1, 0, 1, 0</column>
 <column name="tmp_data_V_reg_156">32, 0, 32, 0</column>
 </table>

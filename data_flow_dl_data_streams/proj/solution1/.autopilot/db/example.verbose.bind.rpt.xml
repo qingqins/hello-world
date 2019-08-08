@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'example'" level="0">
-<item name = "Date">Wed Jul 31 02:49:00 2019
+<item name = "Date">Thu Aug  8 02:59:41 2019
 </item>
-<item name = "Version">2019.2.0 (Build 2605627 on Tue Jul 30 20:40:18 MDT 2019)</item>
+<item name = "Version">2019.2.0 (Build 2609964 on Mon Aug 05 02:36:12 MDT 2019)</item>
 <item name = "Project">proj</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">13.33, 5.297, 3.60</column>
+<column name="ap_clk">13.33, 7.737, 3.60</column>
 </table>
 </item>
 </section>
@@ -24,15 +24,15 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">24, 24, 0.127 (us), 0.127 (us), 25, 25, dataflow</column>
+<column name="">24, 24, 0.186 (us), 0.186 (us), 25, 25, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_proc_1_fu_78">proc_1, 24, 24, 81.624 (ns), 81.624 (ns), 24, 24, none</column>
-<column name="grp_proc_2_fu_98">proc_2, 13, 13, 68.861 (ns), 68.861 (ns), 13, 13, none</column>
+<column name="grp_proc_2_fu_84">proc_2, 13, 13, 0.101 (us), 0.101 (us), 13, 13, none</column>
+<column name="grp_proc_1_fu_104">proc_1, 24, 24, 77.760 (ns), 77.760 (ns), 24, 24, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

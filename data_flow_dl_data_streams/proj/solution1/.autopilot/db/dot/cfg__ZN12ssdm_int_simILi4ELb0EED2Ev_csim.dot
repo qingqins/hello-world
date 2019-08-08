@@ -1,7 +1,0 @@
-digraph "CFG for 'ssdm_int_sim\<4, false\>::~ssdm_int_sim' function" {
-	label="CFG for 'ssdm_int_sim\<4, false\>::~ssdm_int_sim' function";
-
-	Node0x48ea2c0 [shape=record,filename="",linenumber="",label="{entry.predFake}"];
-	Node0x48ea2c0 -> Node0x49ff3b0[ callList="" memoryops="" filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/ap_common.h"];
-	Node0x49ff3b0 [shape=record,filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/ap_common.h",linenumber="588",label="{entry.succFake}"];
-}

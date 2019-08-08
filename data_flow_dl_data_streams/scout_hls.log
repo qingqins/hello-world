@@ -1,21 +1,131 @@
 Sourcing Tcl script '/home/qingqing/.Xilinx/HLS_init.tcl'
-INFO: [HLS 200-10] Running '/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/bin/unwrapped/lnx64.o/scout_hls'
-INFO: [HLS 200-10] For user 'qingqing' on host 'xcoengvm229145' (Linux_x86_64 version 3.10.0-693.el7.x86_64) on Thu Aug 01 02:46:38 MDT 2019
+INFO: [HLS 200-10] Running '/proj/xbuilds/2019.2_0805_1/installs/lin64/Vitis/HEAD/bin/unwrapped/lnx64.o/scout_hls'
+INFO: [HLS 200-10] For user 'qingqing' on host 'xcoengvm229145' (Linux_x86_64 version 3.10.0-693.el7.x86_64) on Thu Aug 08 02:59:19 MDT 2019
 INFO: [HLS 200-10] On os "CentOS Linux release 7.4.1708 (Core) "
-INFO: [HLS 200-10] In directory '/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams'
-Sourcing Tcl script '/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/csim.tcl'
-INFO: [HLS 200-10] Opening project '/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj'.
+INFO: [HLS 200-10] In directory '/home/qingqing/git/hello-world/data_flow_dl_data_streams'
+Sourcing Tcl script '/home/qingqing/git/hello-world/data_flow_dl_data_streams/proj/solution1/csynth.tcl'
+INFO: [HLS 200-10] Opening project '/home/qingqing/git/hello-world/data_flow_dl_data_streams/proj'.
 INFO: [HLS 200-10] Adding design file 'example.cpp' to the project
 INFO: [HLS 200-10] Adding test bench file 'example_test.cpp' to the project
-INFO: [HLS 200-10] Opening solution '/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1'.
+INFO: [HLS 200-10] Opening solution '/home/qingqing/git/hello-world/data_flow_dl_data_streams/proj/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 13.333ns.
 INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-2'
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
-   Compiling ../../../../example_test.cpp in debug mode
-   Compiling ../../../../example.cpp in debug mode
-   Generating csim.exe
-Success: HW and SW results match
-   Generating dot files
-INFO: [SIM 211-1] CSim done with 0 errors.
-INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-10] Analyzing design file 'example.cpp' ... 
+WARNING: [HLS 214-111] Streams will behave like static variables inside a dataflow region: example.cpp:7:19
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file example.cpp
+WARNING: [HLS 200-651] Found issues in source files:
+example.cpp:5:33: warning: extra token before pragma subject is ignored [-Wextra-tokens]
+#pragma HLS INTERFACE axis port=&A
+                                ^
+example.cpp:6:33: warning: extra token before pragma subject is ignored [-Wextra-tokens]
+#pragma HLS INTERFACE axis port=&B
+                                ^
+2 warnings generated.
+
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axis<32, 2, 5, 6>, 0>::read()' into 'proc_1(hls::stream<ap_axis<32, 2, 5, 6>, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (example.cpp:26:15)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int, 0>::write(int const&)' into 'proc_1(hls::stream<ap_axis<32, 2, 5, 6>, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (example.cpp:32:21)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int, 0>::write(int const&)' into 'proc_1(hls::stream<ap_axis<32, 2, 5, 6>, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (example.cpp:28:21)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int, 0>::read(int&)' into 'hls::stream<int, 0>::read()' (/proj/xbuilds/2019.2_0805_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_stream_39.h:95:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axis<32, 2, 5, 6>, 0>::write(ap_axis<32, 2, 5, 6> const&)' into 'proc_2(hls::stream<ap_axis<32, 2, 5, 6>, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (example.cpp:64:7)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int, 0>::read()' into 'proc_2(hls::stream<ap_axis<32, 2, 5, 6>, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (example.cpp:63:53)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int, 0>::read()' into 'proc_2(hls::stream<ap_axis<32, 2, 5, 6>, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (example.cpp:63:30)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int, 0>::read()' into 'proc_2(hls::stream<ap_axis<32, 2, 5, 6>, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (example.cpp:61:53)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int, 0>::read()' into 'proc_2(hls::stream<ap_axis<32, 2, 5, 6>, 0>&, hls::stream<int, 0>&, hls::stream<int, 0>&)' (example.cpp:61:30)
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 1015.336 ; gain = 332.062 ; free physical = 12087 ; free virtual = 27604
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 1015.336 ; gain = 332.062 ; free physical = 12087 ; free virtual = 27604
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 1015.336 ; gain = 332.062 ; free physical = 12052 ; free virtual = 27579
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 1016.582 ; gain = 333.309 ; free physical = 12011 ; free virtual = 27542
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (example.cpp:25) in function 'proc_1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' (example.cpp:30) in function 'proc_1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (example.cpp:59) in function 'proc_2' automatically.
+INFO: [XFORM 203-712] Applying dataflow to function 'example', detected/extracted 2 process function(s): 
+	 'proc_1'
+	 'proc_2'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 1143.336 ; gain = 460.062 ; free physical = 11933 ; free virtual = 27487
+INFO: Deleting FE datastructures ...
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:41 ; elapsed = 00:00:49 . Memory (MB): peak = 1143.336 ; gain = 460.062 ; free physical = 11899 ; free virtual = 27460
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'example' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'proc_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 49.36 seconds; current allocated memory: 415.128 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 415.285 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'proc_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 415.372 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 415.518 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'example' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 415.598 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 415.768 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'proc_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'proc_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 416.268 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'proc_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'proc_2'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 417.170 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'example' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/A_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/B_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/B_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/B_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/B_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/B_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/B_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/B_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'example' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'example'.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 418.013 MB.
+INFO: [RTMG 210-285] Implementing FIFO 'data_channel11_U(example_fifo_w32_d8_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'data_channel22_U(example_fifo_w32_d8_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_proc_2_U0_U(example_start_for_proc_2_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 1143.336 ; gain = 460.062 ; free physical = 11887 ; free virtual = 27451
+INFO: [VHDL 208-304] Generating VHDL RTL for example with prefix example_.
+INFO: [VLOG 209-307] Generating Verilog RTL for example with prefix example_.
+INFO: [HLS 200-112] Total elapsed time: 51.61 seconds; peak allocated memory: 418.013 MB.

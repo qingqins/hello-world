@@ -12,16 +12,46 @@ using namespace std;
 
 namespace ap_rtl {
 
+const int example_example::C_S_AXI_DATA_WIDTH = "100000";
+const int example_example::C_S_AXI_WSTRB_WIDTH = "100";
+const int example_example::C_S_AXI_ADDR_WIDTH = "100000";
+const sc_logic example_example::ap_const_logic_1 = sc_dt::Log_1;
 const sc_lv<32> example_example::ap_const_lv32_0 = "00000000000000000000000000000000";
 const sc_lv<4> example_example::ap_const_lv4_0 = "0000";
 const sc_lv<2> example_example::ap_const_lv2_0 = "00";
 const sc_lv<1> example_example::ap_const_lv1_0 = "0";
 const sc_lv<5> example_example::ap_const_lv5_0 = "00000";
 const sc_lv<6> example_example::ap_const_lv6_0 = "000000";
-const sc_logic example_example::ap_const_logic_1 = sc_dt::Log_1;
 const sc_logic example_example::ap_const_logic_0 = sc_dt::Log_0;
 
 example_example::example_example(sc_module_name name) : sc_module(name), mVcdFile(0) {
+    example_control_s_axi_U = new example_example_control_s_axi<C_S_AXI_CONTROL_ADDR_WIDTH,C_S_AXI_CONTROL_DATA_WIDTH>("example_control_s_axi_U");
+    example_control_s_axi_U->AWVALID(s_axi_control_AWVALID);
+    example_control_s_axi_U->AWREADY(s_axi_control_AWREADY);
+    example_control_s_axi_U->AWADDR(s_axi_control_AWADDR);
+    example_control_s_axi_U->WVALID(s_axi_control_WVALID);
+    example_control_s_axi_U->WREADY(s_axi_control_WREADY);
+    example_control_s_axi_U->WDATA(s_axi_control_WDATA);
+    example_control_s_axi_U->WSTRB(s_axi_control_WSTRB);
+    example_control_s_axi_U->ARVALID(s_axi_control_ARVALID);
+    example_control_s_axi_U->ARREADY(s_axi_control_ARREADY);
+    example_control_s_axi_U->ARADDR(s_axi_control_ARADDR);
+    example_control_s_axi_U->RVALID(s_axi_control_RVALID);
+    example_control_s_axi_U->RREADY(s_axi_control_RREADY);
+    example_control_s_axi_U->RDATA(s_axi_control_RDATA);
+    example_control_s_axi_U->RRESP(s_axi_control_RRESP);
+    example_control_s_axi_U->BVALID(s_axi_control_BVALID);
+    example_control_s_axi_U->BREADY(s_axi_control_BREADY);
+    example_control_s_axi_U->BRESP(s_axi_control_BRESP);
+    example_control_s_axi_U->ACLK(ap_clk);
+    example_control_s_axi_U->ARESET(ap_rst_n_inv);
+    example_control_s_axi_U->ACLK_EN(ap_var_for_const0);
+    example_control_s_axi_U->ap_start(ap_start);
+    example_control_s_axi_U->interrupt(interrupt);
+    example_control_s_axi_U->ap_ready(ap_ready);
+    example_control_s_axi_U->ap_done(ap_done);
+    example_control_s_axi_U->ap_continue(ap_continue);
+    example_control_s_axi_U->ap_idle(ap_idle);
     proc_1_U0 = new example_proc_1("proc_1_U0");
     proc_1_U0->ap_clk(ap_clk);
     proc_1_U0->ap_rst(ap_rst_n_inv);
@@ -146,6 +176,7 @@ example_example::example_example(sc_module_name name) : sc_module(name), mVcdFil
     sensitive << ( ap_rst_n );
 
     SC_METHOD(thread_ap_sync_continue);
+    sensitive << ( ap_continue );
 
     SC_METHOD(thread_ap_sync_done);
     sensitive << ( proc_2_U0_ap_done );
@@ -159,6 +190,7 @@ example_example::example_example(sc_module_name name) : sc_module(name), mVcdFil
     sensitive << ( ap_start );
 
     SC_METHOD(thread_proc_2_U0_ap_continue);
+    sensitive << ( ap_continue );
 
     SC_METHOD(thread_proc_2_U0_ap_start);
     sensitive << ( start_for_proc_2_U0_empty_n );
@@ -182,6 +214,26 @@ example_example::example_example(sc_module_name name) : sc_module(name), mVcdFil
     mVcdFile->set_time_unit(1, SC_PS);
     if (1) {
 #ifdef __HLS_TRACE_LEVEL_PORT__
+    sc_trace(mVcdFile, s_axi_control_AWVALID, "(port)s_axi_control_AWVALID");
+    sc_trace(mVcdFile, s_axi_control_AWREADY, "(port)s_axi_control_AWREADY");
+    sc_trace(mVcdFile, s_axi_control_AWADDR, "(port)s_axi_control_AWADDR");
+    sc_trace(mVcdFile, s_axi_control_WVALID, "(port)s_axi_control_WVALID");
+    sc_trace(mVcdFile, s_axi_control_WREADY, "(port)s_axi_control_WREADY");
+    sc_trace(mVcdFile, s_axi_control_WDATA, "(port)s_axi_control_WDATA");
+    sc_trace(mVcdFile, s_axi_control_WSTRB, "(port)s_axi_control_WSTRB");
+    sc_trace(mVcdFile, s_axi_control_ARVALID, "(port)s_axi_control_ARVALID");
+    sc_trace(mVcdFile, s_axi_control_ARREADY, "(port)s_axi_control_ARREADY");
+    sc_trace(mVcdFile, s_axi_control_ARADDR, "(port)s_axi_control_ARADDR");
+    sc_trace(mVcdFile, s_axi_control_RVALID, "(port)s_axi_control_RVALID");
+    sc_trace(mVcdFile, s_axi_control_RREADY, "(port)s_axi_control_RREADY");
+    sc_trace(mVcdFile, s_axi_control_RDATA, "(port)s_axi_control_RDATA");
+    sc_trace(mVcdFile, s_axi_control_RRESP, "(port)s_axi_control_RRESP");
+    sc_trace(mVcdFile, s_axi_control_BVALID, "(port)s_axi_control_BVALID");
+    sc_trace(mVcdFile, s_axi_control_BREADY, "(port)s_axi_control_BREADY");
+    sc_trace(mVcdFile, s_axi_control_BRESP, "(port)s_axi_control_BRESP");
+    sc_trace(mVcdFile, ap_clk, "(port)ap_clk");
+    sc_trace(mVcdFile, ap_rst_n, "(port)ap_rst_n");
+    sc_trace(mVcdFile, interrupt, "(port)interrupt");
     sc_trace(mVcdFile, A_TDATA, "(port)A_TDATA");
     sc_trace(mVcdFile, A_TKEEP, "(port)A_TKEEP");
     sc_trace(mVcdFile, A_TSTRB, "(port)A_TSTRB");
@@ -196,19 +248,18 @@ example_example::example_example(sc_module_name name) : sc_module(name), mVcdFil
     sc_trace(mVcdFile, B_TLAST, "(port)B_TLAST");
     sc_trace(mVcdFile, B_TID, "(port)B_TID");
     sc_trace(mVcdFile, B_TDEST, "(port)B_TDEST");
-    sc_trace(mVcdFile, ap_clk, "(port)ap_clk");
-    sc_trace(mVcdFile, ap_rst_n, "(port)ap_rst_n");
     sc_trace(mVcdFile, A_TVALID, "(port)A_TVALID");
     sc_trace(mVcdFile, A_TREADY, "(port)A_TREADY");
-    sc_trace(mVcdFile, ap_start, "(port)ap_start");
     sc_trace(mVcdFile, B_TVALID, "(port)B_TVALID");
     sc_trace(mVcdFile, B_TREADY, "(port)B_TREADY");
-    sc_trace(mVcdFile, ap_done, "(port)ap_done");
-    sc_trace(mVcdFile, ap_ready, "(port)ap_ready");
-    sc_trace(mVcdFile, ap_idle, "(port)ap_idle");
 #endif
 #ifdef __HLS_TRACE_LEVEL_INT__
     sc_trace(mVcdFile, ap_rst_n_inv, "ap_rst_n_inv");
+    sc_trace(mVcdFile, ap_start, "ap_start");
+    sc_trace(mVcdFile, ap_ready, "ap_ready");
+    sc_trace(mVcdFile, ap_done, "ap_done");
+    sc_trace(mVcdFile, ap_continue, "ap_continue");
+    sc_trace(mVcdFile, ap_idle, "ap_idle");
     sc_trace(mVcdFile, proc_1_U0_ap_start, "proc_1_U0_ap_start");
     sc_trace(mVcdFile, proc_1_U0_ap_done, "proc_1_U0_ap_done");
     sc_trace(mVcdFile, proc_1_U0_ap_continue, "proc_1_U0_ap_continue");
@@ -266,6 +317,7 @@ example_example::~example_example() {
     mHdltvoutHandle << "] " << endl;
     mHdltvinHandle.close();
     mHdltvoutHandle.close();
+    delete example_control_s_axi_U;
     delete proc_1_U0;
     delete proc_2_U0;
     delete data_channel11_U;
@@ -330,7 +382,7 @@ void example_example::thread_ap_rst_n_inv() {
 }
 
 void example_example::thread_ap_sync_continue() {
-    ap_sync_continue = ap_const_logic_1;
+    ap_sync_continue = ap_continue.read();
 }
 
 void example_example::thread_ap_sync_done() {
@@ -350,7 +402,7 @@ void example_example::thread_proc_1_U0_ap_start() {
 }
 
 void example_example::thread_proc_2_U0_ap_continue() {
-    proc_2_U0_ap_continue = ap_const_logic_1;
+    proc_2_U0_ap_continue = ap_continue.read();
 }
 
 void example_example::thread_proc_2_U0_ap_start() {
@@ -381,29 +433,43 @@ void example_example::thread_hdltv_gen() {
     while (1) {
         wait();
         const char* mComma = ap_cycleNo == 0 ? " " : ", " ;
-        mHdltvinHandle << mComma << "{"  <<  " \"A_TDATA\" :  \"" << A_TDATA.read() << "\" ";
+        mHdltvinHandle << mComma << "{"  <<  " \"s_axi_control_AWVALID\" :  \"" << s_axi_control_AWVALID.read() << "\" ";
+        mHdltvoutHandle << mComma << "{"  <<  " \"s_axi_control_AWREADY\" :  \"" << s_axi_control_AWREADY.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"s_axi_control_AWADDR\" :  \"" << s_axi_control_AWADDR.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"s_axi_control_WVALID\" :  \"" << s_axi_control_WVALID.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"s_axi_control_WREADY\" :  \"" << s_axi_control_WREADY.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"s_axi_control_WDATA\" :  \"" << s_axi_control_WDATA.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"s_axi_control_WSTRB\" :  \"" << s_axi_control_WSTRB.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"s_axi_control_ARVALID\" :  \"" << s_axi_control_ARVALID.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"s_axi_control_ARREADY\" :  \"" << s_axi_control_ARREADY.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"s_axi_control_ARADDR\" :  \"" << s_axi_control_ARADDR.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"s_axi_control_RVALID\" :  \"" << s_axi_control_RVALID.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"s_axi_control_RREADY\" :  \"" << s_axi_control_RREADY.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"s_axi_control_RDATA\" :  \"" << s_axi_control_RDATA.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"s_axi_control_RRESP\" :  \"" << s_axi_control_RRESP.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"s_axi_control_BVALID\" :  \"" << s_axi_control_BVALID.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"s_axi_control_BREADY\" :  \"" << s_axi_control_BREADY.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"s_axi_control_BRESP\" :  \"" << s_axi_control_BRESP.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"ap_rst_n\" :  \"" << ap_rst_n.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"interrupt\" :  \"" << interrupt.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"A_TDATA\" :  \"" << A_TDATA.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"A_TKEEP\" :  \"" << A_TKEEP.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"A_TSTRB\" :  \"" << A_TSTRB.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"A_TUSER\" :  \"" << A_TUSER.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"A_TLAST\" :  \"" << A_TLAST.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"A_TID\" :  \"" << A_TID.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"A_TDEST\" :  \"" << A_TDEST.read() << "\" ";
-        mHdltvoutHandle << mComma << "{"  <<  " \"B_TDATA\" :  \"" << B_TDATA.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"B_TDATA\" :  \"" << B_TDATA.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"B_TKEEP\" :  \"" << B_TKEEP.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"B_TSTRB\" :  \"" << B_TSTRB.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"B_TUSER\" :  \"" << B_TUSER.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"B_TLAST\" :  \"" << B_TLAST.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"B_TID\" :  \"" << B_TID.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"B_TDEST\" :  \"" << B_TDEST.read() << "\" ";
-        mHdltvinHandle << " , " <<  " \"ap_rst_n\" :  \"" << ap_rst_n.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"A_TVALID\" :  \"" << A_TVALID.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"A_TREADY\" :  \"" << A_TREADY.read() << "\" ";
-        mHdltvinHandle << " , " <<  " \"ap_start\" :  \"" << ap_start.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"B_TVALID\" :  \"" << B_TVALID.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"B_TREADY\" :  \"" << B_TREADY.read() << "\" ";
-        mHdltvoutHandle << " , " <<  " \"ap_done\" :  \"" << ap_done.read() << "\" ";
-        mHdltvoutHandle << " , " <<  " \"ap_ready\" :  \"" << ap_ready.read() << "\" ";
-        mHdltvoutHandle << " , " <<  " \"ap_idle\" :  \"" << ap_idle.read() << "\" ";
         mHdltvinHandle << "}" << std::endl;
         mHdltvoutHandle << "}" << std::endl;
         ap_cycleNo++;

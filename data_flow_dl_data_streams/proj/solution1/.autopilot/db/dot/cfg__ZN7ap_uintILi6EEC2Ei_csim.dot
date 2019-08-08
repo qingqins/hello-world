@@ -1,7 +1,0 @@
-digraph "CFG for 'ap_uint\<6\>::ap_uint' function" {
-	label="CFG for 'ap_uint\<6\>::ap_uint' function";
-
-	Node0x47798c0 [shape=record,filename="",linenumber="",label="{entry.predFake}"];
-	Node0x47798c0 -> Node0x475a960[ callList="" memoryops="" filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/ap_int.h"];
-	Node0x475a960 [shape=record,filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/ap_int.h",linenumber="256",label="{entry.succFake}"];
-}

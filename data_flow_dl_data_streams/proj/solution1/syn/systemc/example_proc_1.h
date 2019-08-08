@@ -68,15 +68,15 @@ struct example_proc_1 : public sc_module {
     sc_signal< sc_logic > ap_CS_fsm_pp0_stage0;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter1;
     sc_signal< bool > ap_block_pp0_stage0;
-    sc_signal< sc_lv<1> > icmp_ln17_reg_147;
+    sc_signal< sc_lv<1> > icmp_ln25_reg_147;
     sc_signal< sc_logic > data_channel2_blk_n;
     sc_signal< sc_logic > ap_CS_fsm_pp1_stage0;
     sc_signal< sc_logic > ap_enable_reg_pp1_iter1;
     sc_signal< bool > ap_block_pp1_stage0;
-    sc_signal< sc_lv<1> > icmp_ln22_reg_162;
+    sc_signal< sc_lv<1> > icmp_ln30_reg_162;
     sc_signal< sc_logic > A_TDATA_blk_n;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter0;
-    sc_signal< sc_lv<1> > icmp_ln17_fu_119_p2;
+    sc_signal< sc_lv<1> > icmp_ln25_fu_119_p2;
     sc_signal< sc_lv<32> > access03_reg_84;
     sc_signal< sc_lv<4> > i_reg_97;
     sc_signal< sc_lv<4> > i_3_reg_108;
@@ -85,7 +85,7 @@ struct example_proc_1 : public sc_module {
     sc_signal< bool > ap_block_pp0_stage0_11001;
     sc_signal< sc_lv<4> > i_2_fu_125_p2;
     sc_signal< sc_lv<32> > tmp_data_V_reg_156;
-    sc_signal< sc_lv<1> > icmp_ln22_fu_135_p2;
+    sc_signal< sc_lv<1> > icmp_ln30_fu_135_p2;
     sc_signal< bool > ap_block_state5_pp1_stage0_iter0;
     sc_signal< bool > ap_block_state6_pp1_stage0_iter1;
     sc_signal< bool > ap_block_pp1_stage0_11001;
@@ -193,8 +193,8 @@ struct example_proc_1 : public sc_module {
     void thread_data_channel2_write();
     void thread_i_2_fu_125_p2();
     void thread_i_4_fu_141_p2();
-    void thread_icmp_ln17_fu_119_p2();
-    void thread_icmp_ln22_fu_135_p2();
+    void thread_icmp_ln25_fu_119_p2();
+    void thread_icmp_ln30_fu_135_p2();
     void thread_internal_ap_ready();
     void thread_real_start();
     void thread_start_out();

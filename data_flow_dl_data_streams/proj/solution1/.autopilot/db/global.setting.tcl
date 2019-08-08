@@ -41,14 +41,14 @@ set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xc7z020:-clg484:-2
 set SourceFiles {sc {} c ../../example.cpp}
-set SourceFlags {sc {} c {{ } {}}}
-set DirectiveFile /proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/proj/solution1/solution1.directive
-set TBFiles {verilog ../../example_test.cpp bc ../../example_test.cpp sc ../../example_test.cpp vhdl ../../example_test.cpp c {} cas ../../example_test.cpp}
+set SourceFlags {sc {} c {{}}}
+set DirectiveFile /home/qingqing/git/hello-world/data_flow_dl_data_streams/proj/solution1/solution1.directive
+set TBFiles {verilog ../../example_test.cpp bc ../../example_test.cpp vhdl ../../example_test.cpp sc ../../example_test.cpp cas ../../example_test.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
-set TBTops {verilog {} bc {} sc {} vhdl {} c {} cas {}}
-set TBInstNames {verilog {} bc {} sc {} vhdl {} c {} cas {}}
+set TBTops {verilog {} bc {} vhdl {} sc {} cas {} c {}}
+set TBInstNames {verilog {} bc {} vhdl {} sc {} cas {} c {}}
 set XDCFiles {}
 set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_gate" 0}
 set TBTVFileNotFound {}

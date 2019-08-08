@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="example.cpp" path="/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example.cpp"/>
+    <originFiles name="example.cpp" path="/home/qingqing/git/hello-world/data_flow_dl_data_streams/example.cpp"/>
   </source>
   <testbench>
-    <originFiles name="example_test.cpp" path="/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams/example_test.cpp"/>
+    <originFiles name="example_test.cpp" path="/home/qingqing/git/hello-world/data_flow_dl_data_streams/example_test.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

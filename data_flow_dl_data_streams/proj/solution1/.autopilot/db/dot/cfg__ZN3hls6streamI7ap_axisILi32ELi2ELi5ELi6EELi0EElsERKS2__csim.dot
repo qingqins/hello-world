@@ -1,7 +1,0 @@
-digraph "CFG for 'hls::stream\<ap_axis\<32, 2, 5, 6\>, 0\>::operator\<\<' function" {
-	label="CFG for 'hls::stream\<ap_axis\<32, 2, 5, 6\>, 0\>::operator\<\<' function";
-
-	Node0x47804c0 [shape=record,filename="",linenumber="",label="{entry.predFake}"];
-	Node0x47804c0 -> Node0x48ecfb0[ callList="" memoryops="" filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/hls_stream.h"];
-	Node0x48ecfb0 [shape=record,filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/hls_stream.h",linenumber="114",label="{entry.succFake}"];
-}

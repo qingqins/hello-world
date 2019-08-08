@@ -26,7 +26,7 @@
 						</inlineStackInfo>
 						<originalName>data_channel1</originalName>
 						<rtlName></rtlName>
-						<coreName>FIFO_SRL</coreName>
+						<coreName>FIFO</coreName>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -54,7 +54,7 @@
 						</inlineStackInfo>
 						<originalName>data_channel2</originalName>
 						<rtlName></rtlName>
-						<coreName>FIFO_SRL</coreName>
+						<coreName>FIFO</coreName>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -271,16 +271,16 @@
 					<Obj>
 						<type>0</type>
 						<id>13</id>
-						<name>_ln17</name>
+						<name>_ln25</name>
 						<fileName>example.cpp</fileName>
-						<fileDirectory>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</fileDirectory>
-						<lineNumber>17</lineNumber>
+						<fileDirectory>/home/qingqing/git/hello-world/data_flow_dl_data_streams</fileDirectory>
+						<lineNumber>25</lineNumber>
 						<contextFuncName>proc_1</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item class_id="10" tracking_level="0" version="0">
-								<first>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</first>
+								<first>/home/qingqing/git/hello-world/data_flow_dl_data_streams</first>
 								<second class_id="11" tracking_level="0" version="0">
 									<count>1</count>
 									<item_version>0</item_version>
@@ -289,7 +289,7 @@
 											<first>example.cpp</first>
 											<second>proc_1</second>
 										</first>
-										<second>17</second>
+										<second>25</second>
 									</item>
 								</second>
 							</item>
@@ -320,21 +320,21 @@
 						<type>0</type>
 						<id>15</id>
 						<name>access03</name>
-						<fileName>/proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot/ap_axi_sdata.h</fileName>
-						<fileDirectory>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</fileDirectory>
+						<fileName>/proj/xbuilds/2019.2_0805_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/ap_axi_sdata.h</fileName>
+						<fileDirectory>/home/qingqing/git/hello-world/data_flow_dl_data_streams</fileDirectory>
 						<lineNumber>167</lineNumber>
 						<contextFuncName>read</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</first>
+								<first>/home/qingqing/git/hello-world/data_flow_dl_data_streams</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot/ap_axi_sdata.h</first>
+											<first>/proj/xbuilds/2019.2_0805_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/ap_axi_sdata.h</first>
 											<second>read</second>
 										</first>
 										<second>167</second>
@@ -407,16 +407,16 @@
 					<Obj>
 						<type>0</type>
 						<id>18</id>
-						<name>icmp_ln17</name>
+						<name>icmp_ln25</name>
 						<fileName>example.cpp</fileName>
-						<fileDirectory>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</fileDirectory>
-						<lineNumber>17</lineNumber>
+						<fileDirectory>/home/qingqing/git/hello-world/data_flow_dl_data_streams</fileDirectory>
+						<lineNumber>25</lineNumber>
 						<contextFuncName>proc_1</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</first>
+								<first>/home/qingqing/git/hello-world/data_flow_dl_data_streams</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -425,7 +425,7 @@
 											<first>example.cpp</first>
 											<second>proc_1</second>
 										</first>
-										<second>17</second>
+										<second>25</second>
 									</item>
 								</second>
 							</item>
@@ -458,14 +458,14 @@
 						<id>20</id>
 						<name>i_2</name>
 						<fileName>example.cpp</fileName>
-						<fileDirectory>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</fileDirectory>
-						<lineNumber>17</lineNumber>
+						<fileDirectory>/home/qingqing/git/hello-world/data_flow_dl_data_streams</fileDirectory>
+						<lineNumber>25</lineNumber>
 						<contextFuncName>proc_1</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</first>
+								<first>/home/qingqing/git/hello-world/data_flow_dl_data_streams</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -474,7 +474,7 @@
 											<first>example.cpp</first>
 											<second>proc_1</second>
 										</first>
-										<second>17</second>
+										<second>25</second>
 									</item>
 								</second>
 							</item>
@@ -505,16 +505,16 @@
 					<Obj>
 						<type>0</type>
 						<id>21</id>
-						<name>_ln17</name>
+						<name>_ln25</name>
 						<fileName>example.cpp</fileName>
-						<fileDirectory>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</fileDirectory>
-						<lineNumber>17</lineNumber>
+						<fileDirectory>/home/qingqing/git/hello-world/data_flow_dl_data_streams</fileDirectory>
+						<lineNumber>25</lineNumber>
 						<contextFuncName>proc_1</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</first>
+								<first>/home/qingqing/git/hello-world/data_flow_dl_data_streams</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -523,7 +523,7 @@
 											<first>example.cpp</first>
 											<second>proc_1</second>
 										</first>
-										<second>17</second>
+										<second>25</second>
 									</item>
 								</second>
 							</item>
@@ -555,22 +555,22 @@
 					<Obj>
 						<type>0</type>
 						<id>23</id>
-						<name>empty_8</name>
-						<fileName>/proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot/ap_axi_sdata.h</fileName>
-						<fileDirectory>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</fileDirectory>
+						<name>empty_11</name>
+						<fileName>/proj/xbuilds/2019.2_0805_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/ap_axi_sdata.h</fileName>
+						<fileDirectory>/home/qingqing/git/hello-world/data_flow_dl_data_streams</fileDirectory>
 						<lineNumber>167</lineNumber>
 						<contextFuncName>read</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</first>
+								<first>/home/qingqing/git/hello-world/data_flow_dl_data_streams</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot/ap_axi_sdata.h</first>
+											<first>/proj/xbuilds/2019.2_0805_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/ap_axi_sdata.h</first>
 											<second>read</second>
 										</first>
 										<second>167</second>
@@ -611,21 +611,21 @@
 						<type>0</type>
 						<id>24</id>
 						<name>tmp_data_V</name>
-						<fileName>/proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot/ap_axi_sdata.h</fileName>
-						<fileDirectory>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</fileDirectory>
+						<fileName>/proj/xbuilds/2019.2_0805_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/ap_axi_sdata.h</fileName>
+						<fileDirectory>/home/qingqing/git/hello-world/data_flow_dl_data_streams</fileDirectory>
 						<lineNumber>167</lineNumber>
 						<contextFuncName>read</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</first>
+								<first>/home/qingqing/git/hello-world/data_flow_dl_data_streams</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot/ap_axi_sdata.h</first>
+											<first>/proj/xbuilds/2019.2_0805_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/ap_axi_sdata.h</first>
 											<second>read</second>
 										</first>
 										<second>167</second>
@@ -658,25 +658,25 @@
 					<Obj>
 						<type>0</type>
 						<id>25</id>
-						<name>data_channel1_write_ln133</name>
-						<fileName>/proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot/hls_stream.h</fileName>
-						<fileDirectory>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</fileDirectory>
-						<lineNumber>133</lineNumber>
+						<name>data_channel1_write_ln106</name>
+						<fileName>/proj/xbuilds/2019.2_0805_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_stream_39.h</fileName>
+						<fileDirectory>/home/qingqing/git/hello-world/data_flow_dl_data_streams</fileDirectory>
+						<lineNumber>106</lineNumber>
 						<contextFuncName>write</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</first>
+								<first>/home/qingqing/git/hello-world/data_flow_dl_data_streams</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot/hls_stream.h</first>
+											<first>/proj/xbuilds/2019.2_0805_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_stream_39.h</first>
 											<second>write</second>
 										</first>
-										<second>133</second>
+										<second>106</second>
 									</item>
 								</second>
 							</item>
@@ -699,7 +699,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>3.40</m_delay>
+				<m_delay>3.24</m_delay>
 				<m_topoIndex>9</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -813,16 +813,16 @@
 					<Obj>
 						<type>0</type>
 						<id>32</id>
-						<name>icmp_ln22</name>
+						<name>icmp_ln30</name>
 						<fileName>example.cpp</fileName>
-						<fileDirectory>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</fileDirectory>
-						<lineNumber>22</lineNumber>
+						<fileDirectory>/home/qingqing/git/hello-world/data_flow_dl_data_streams</fileDirectory>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>proc_1</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</first>
+								<first>/home/qingqing/git/hello-world/data_flow_dl_data_streams</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -831,7 +831,7 @@
 											<first>example.cpp</first>
 											<second>proc_1</second>
 										</first>
-										<second>22</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -864,14 +864,14 @@
 						<id>34</id>
 						<name>i_4</name>
 						<fileName>example.cpp</fileName>
-						<fileDirectory>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</fileDirectory>
-						<lineNumber>22</lineNumber>
+						<fileDirectory>/home/qingqing/git/hello-world/data_flow_dl_data_streams</fileDirectory>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>proc_1</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</first>
+								<first>/home/qingqing/git/hello-world/data_flow_dl_data_streams</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -880,7 +880,7 @@
 											<first>example.cpp</first>
 											<second>proc_1</second>
 										</first>
-										<second>22</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -911,16 +911,16 @@
 					<Obj>
 						<type>0</type>
 						<id>35</id>
-						<name>_ln22</name>
+						<name>_ln30</name>
 						<fileName>example.cpp</fileName>
-						<fileDirectory>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</fileDirectory>
-						<lineNumber>22</lineNumber>
+						<fileDirectory>/home/qingqing/git/hello-world/data_flow_dl_data_streams</fileDirectory>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>proc_1</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</first>
+								<first>/home/qingqing/git/hello-world/data_flow_dl_data_streams</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -929,7 +929,7 @@
 											<first>example.cpp</first>
 											<second>proc_1</second>
 										</first>
-										<second>22</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -961,25 +961,25 @@
 					<Obj>
 						<type>0</type>
 						<id>37</id>
-						<name>data_channel2_write_ln133</name>
-						<fileName>/proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot/hls_stream.h</fileName>
-						<fileDirectory>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</fileDirectory>
-						<lineNumber>133</lineNumber>
+						<name>data_channel2_write_ln106</name>
+						<fileName>/proj/xbuilds/2019.2_0805_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_stream_39.h</fileName>
+						<fileDirectory>/home/qingqing/git/hello-world/data_flow_dl_data_streams</fileDirectory>
+						<lineNumber>106</lineNumber>
 						<contextFuncName>write</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</first>
+								<first>/home/qingqing/git/hello-world/data_flow_dl_data_streams</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/proj/xbuilds/HEAD_daily_latest/installs/lin64/Scout/HEAD/common/technology/autopilot/hls_stream.h</first>
+											<first>/proj/xbuilds/2019.2_0805_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_stream_39.h</first>
 											<second>write</second>
 										</first>
-										<second>133</second>
+										<second>106</second>
 									</item>
 								</second>
 							</item>
@@ -1002,7 +1002,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>3.40</m_delay>
+				<m_delay>3.24</m_delay>
 				<m_topoIndex>16</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -1045,16 +1045,16 @@
 					<Obj>
 						<type>0</type>
 						<id>40</id>
-						<name>_ln26</name>
+						<name>_ln47</name>
 						<fileName>example.cpp</fileName>
-						<fileDirectory>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<fileDirectory>/home/qingqing/git/hello-world/data_flow_dl_data_streams</fileDirectory>
+						<lineNumber>47</lineNumber>
 						<contextFuncName>proc_1</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/proj/autoesl/qingqing/Testcases/hls/UnitSuite/Features/Deadlock/data_flow_dl_data_streams</first>
+								<first>/home/qingqing/git/hello-world/data_flow_dl_data_streams</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1063,7 +1063,7 @@
 											<first>example.cpp</first>
 											<second>proc_1</second>
 										</first>
-										<second>26</second>
+										<second>47</second>
 									</item>
 								</second>
 							</item>
@@ -1267,7 +1267,7 @@
 				<Obj>
 					<type>3</type>
 					<id>29</id>
-					<name>for.inc20.preheader</name>
+					<name>for.inc21.preheader</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1290,7 +1290,7 @@
 				<Obj>
 					<type>3</type>
 					<id>36</id>
-					<name>for.inc20</name>
+					<name>for.inc21</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1316,7 +1316,7 @@
 				<Obj>
 					<type>3</type>
 					<id>39</id>
-					<name>for.inc20.split</name>
+					<name>for.inc21.split</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1340,7 +1340,7 @@
 				<Obj>
 					<type>3</type>
 					<id>41</id>
-					<name>for.end22</name>
+					<name>if.end</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -2547,7 +2547,7 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln17_fu_119</first>
+			<first>icmp_ln25_fu_119</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2555,7 +2555,7 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln22_fu_135</first>
+			<first>icmp_ln30_fu_135</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2579,7 +2579,7 @@
 		<count>3</count>
 		<item_version>0</item_version>
 		<item>
-			<first>empty_8_read_fu_52</first>
+			<first>empty_11_read_fu_52</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2587,7 +2587,7 @@
 			</second>
 		</item>
 		<item>
-			<first>write_ln133_write_fu_70</first>
+			<first>write_ln106_write_fu_70</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2595,7 +2595,7 @@
 			</second>
 		</item>
 		<item>
-			<first>write_ln133_write_fu_77</first>
+			<first>write_ln106_write_fu_77</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2723,7 +2723,7 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln17_reg_147</first>
+			<first>icmp_ln25_reg_147</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2731,7 +2731,7 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln22_reg_162</first>
+			<first>icmp_ln30_reg_162</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2947,11 +2947,11 @@
 		<item_version>0</item_version>
 		<item class_id="54" tracking_level="0" version="0">
 			<first>1</first>
-			<second>FIFO_SRL</second>
+			<second>FIFO</second>
 		</item>
 		<item>
 			<first>2</first>
-			<second>FIFO_SRL</second>
+			<second>FIFO</second>
 		</item>
 	</port2core>
 	<node2core>

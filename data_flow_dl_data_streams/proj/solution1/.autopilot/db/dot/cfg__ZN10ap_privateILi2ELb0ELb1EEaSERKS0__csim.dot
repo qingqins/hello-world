@@ -1,7 +1,0 @@
-digraph "CFG for 'ap_private\<2, false, true\>::operator=' function" {
-	label="CFG for 'ap_private\<2, false, true\>::operator=' function";
-
-	Node0x47f8920 [shape=record,filename="",linenumber="",label="{entry.predFake}"];
-	Node0x47f8920 -> Node0x49a6540[ callList="" memoryops="" filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/etc/ap_private.h"];
-	Node0x49a6540 [shape=record,filename="/proj/xbuilds/2019.2_0801_1/installs/lin64/Scout/HEAD/include/etc/ap_private.h",linenumber="1454",label="{entry.succFake}"];
-}

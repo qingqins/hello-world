@@ -15,11 +15,34 @@
 #include "example_proc_2.h"
 #include "example_fifo_w32_d8_A.h"
 #include "example_start_for_proc_2_U0.h"
+#include "example_example_control_s_axi.h"
 
 namespace ap_rtl {
 
+template<unsigned int C_S_AXI_CONTROL_ADDR_WIDTH = 4,
+         unsigned int C_S_AXI_CONTROL_DATA_WIDTH = 32>
 struct example_example : public sc_module {
-    // Port declarations 24
+    // Port declarations 38
+    sc_in< sc_logic > s_axi_control_AWVALID;
+    sc_out< sc_logic > s_axi_control_AWREADY;
+    sc_in< sc_uint<C_S_AXI_CONTROL_ADDR_WIDTH> > s_axi_control_AWADDR;
+    sc_in< sc_logic > s_axi_control_WVALID;
+    sc_out< sc_logic > s_axi_control_WREADY;
+    sc_in< sc_uint<C_S_AXI_CONTROL_DATA_WIDTH> > s_axi_control_WDATA;
+    sc_in< sc_uint<C_S_AXI_CONTROL_DATA_WIDTH/8> > s_axi_control_WSTRB;
+    sc_in< sc_logic > s_axi_control_ARVALID;
+    sc_out< sc_logic > s_axi_control_ARREADY;
+    sc_in< sc_uint<C_S_AXI_CONTROL_ADDR_WIDTH> > s_axi_control_ARADDR;
+    sc_out< sc_logic > s_axi_control_RVALID;
+    sc_in< sc_logic > s_axi_control_RREADY;
+    sc_out< sc_uint<C_S_AXI_CONTROL_DATA_WIDTH> > s_axi_control_RDATA;
+    sc_out< sc_lv<2> > s_axi_control_RRESP;
+    sc_out< sc_logic > s_axi_control_BVALID;
+    sc_in< sc_logic > s_axi_control_BREADY;
+    sc_out< sc_lv<2> > s_axi_control_BRESP;
+    sc_in_clk ap_clk;
+    sc_in< sc_logic > ap_rst_n;
+    sc_out< sc_logic > interrupt;
     sc_in< sc_lv<32> > A_TDATA;
     sc_in< sc_lv<4> > A_TKEEP;
     sc_in< sc_lv<4> > A_TSTRB;
@@ -34,16 +57,10 @@ struct example_example : public sc_module {
     sc_out< sc_lv<1> > B_TLAST;
     sc_out< sc_lv<5> > B_TID;
     sc_out< sc_lv<6> > B_TDEST;
-    sc_in_clk ap_clk;
-    sc_in< sc_logic > ap_rst_n;
     sc_in< sc_logic > A_TVALID;
     sc_out< sc_logic > A_TREADY;
-    sc_in< sc_logic > ap_start;
     sc_out< sc_logic > B_TVALID;
     sc_in< sc_logic > B_TREADY;
-    sc_out< sc_logic > ap_done;
-    sc_out< sc_logic > ap_ready;
-    sc_out< sc_logic > ap_idle;
     sc_signal< sc_logic > ap_var_for_const0;
 
 
@@ -57,12 +74,18 @@ struct example_example : public sc_module {
 
     ofstream mHdltvinHandle;
     ofstream mHdltvoutHandle;
+    example_example_control_s_axi<C_S_AXI_CONTROL_ADDR_WIDTH,C_S_AXI_CONTROL_DATA_WIDTH>* example_control_s_axi_U;
     example_proc_1* proc_1_U0;
     example_proc_2* proc_2_U0;
     example_fifo_w32_d8_A* data_channel11_U;
     example_fifo_w32_d8_A* data_channel22_U;
     example_start_for_proc_2_U0* start_for_proc_2_U0_U;
     sc_signal< sc_logic > ap_rst_n_inv;
+    sc_signal< sc_logic > ap_start;
+    sc_signal< sc_logic > ap_ready;
+    sc_signal< sc_logic > ap_done;
+    sc_signal< sc_logic > ap_continue;
+    sc_signal< sc_logic > ap_idle;
     sc_signal< sc_logic > proc_1_U0_ap_start;
     sc_signal< sc_logic > proc_1_U0_ap_done;
     sc_signal< sc_logic > proc_1_U0_ap_continue;
@@ -105,13 +128,16 @@ struct example_example : public sc_module {
     sc_signal< sc_logic > start_for_proc_2_U0_empty_n;
     sc_signal< sc_logic > proc_2_U0_start_full_n;
     sc_signal< sc_logic > proc_2_U0_start_write;
+    static const int C_S_AXI_DATA_WIDTH;
+    static const int C_S_AXI_WSTRB_WIDTH;
+    static const int C_S_AXI_ADDR_WIDTH;
+    static const sc_logic ap_const_logic_1;
     static const sc_lv<32> ap_const_lv32_0;
     static const sc_lv<4> ap_const_lv4_0;
     static const sc_lv<2> ap_const_lv2_0;
     static const sc_lv<1> ap_const_lv1_0;
     static const sc_lv<5> ap_const_lv5_0;
     static const sc_lv<6> ap_const_lv6_0;
-    static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
     // Thread declarations
     void thread_ap_var_for_const0();
