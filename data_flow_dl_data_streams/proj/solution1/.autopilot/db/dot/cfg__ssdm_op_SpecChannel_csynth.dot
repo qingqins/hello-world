@@ -1,0 +1,7 @@
+digraph "CFG for '_ssdm_op_SpecChannel' function" {
+	label="CFG for '_ssdm_op_SpecChannel' function";
+
+	Node0x474e5b0 [shape=record,filename="",linenumber="",label="{entry.predFake}"];
+	Node0x474e5b0 -> Node0x464eb70[ callList="" memoryops="" filename=""];
+	Node0x464eb70 [shape=record,filename="",linenumber="",label="{entry.succFake}"];
+}

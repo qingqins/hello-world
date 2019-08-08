@@ -1,0 +1,15 @@
+<root versionMajor = "1" versionMinor = "5">
+  <kernel name="example" language="c" vlnv="xilinx.com:hls:example:1.0" attributes="" hash="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" compileOptions="" profileType="none" hwControlProtocol="ap_ctrl_chain">
+    <ports>
+      <port name="A" mode="read_only" dataWidth="128" portType="stream"/>
+      <port name="B" mode="write_only" dataWidth="128" portType="stream"/>
+      <port name="S_AXI_CONTROL" portType="addressable" mode="slave" base="0x0" range="0x1000" dataWidth="32"/>
+    </ports>
+    <args>
+      <arg id="0" name="A" addressQualifier="4" port="A" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x8" type="" memSize="0x10" origName="A" origUse="variable"/>
+      <arg id="1" name="B" addressQualifier="4" port="B" hostOffset="0x0" hostSize="0x8" offset="0xC" size="0x8" type="" memSize="0x10" origName="B" origUse="variable"/>
+    </args>
+    <compileWorkGroupSize x="1" y="1" z="1"/>
+    <maxWorkGroupSize x="1" y="1" z="1"/>
+  </kernel>
+</root>

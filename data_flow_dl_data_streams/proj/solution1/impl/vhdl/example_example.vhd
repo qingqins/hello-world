@@ -10,7 +10,30 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 entity example_example is
+generic (
+    C_S_AXI_CONTROL_ADDR_WIDTH : INTEGER := 4;
+    C_S_AXI_CONTROL_DATA_WIDTH : INTEGER := 32 );
 port (
+    s_axi_control_AWVALID : IN STD_LOGIC;
+    s_axi_control_AWREADY : OUT STD_LOGIC;
+    s_axi_control_AWADDR : IN STD_LOGIC_VECTOR (C_S_AXI_CONTROL_ADDR_WIDTH-1 downto 0);
+    s_axi_control_WVALID : IN STD_LOGIC;
+    s_axi_control_WREADY : OUT STD_LOGIC;
+    s_axi_control_WDATA : IN STD_LOGIC_VECTOR (C_S_AXI_CONTROL_DATA_WIDTH-1 downto 0);
+    s_axi_control_WSTRB : IN STD_LOGIC_VECTOR (C_S_AXI_CONTROL_DATA_WIDTH/8-1 downto 0);
+    s_axi_control_ARVALID : IN STD_LOGIC;
+    s_axi_control_ARREADY : OUT STD_LOGIC;
+    s_axi_control_ARADDR : IN STD_LOGIC_VECTOR (C_S_AXI_CONTROL_ADDR_WIDTH-1 downto 0);
+    s_axi_control_RVALID : OUT STD_LOGIC;
+    s_axi_control_RREADY : IN STD_LOGIC;
+    s_axi_control_RDATA : OUT STD_LOGIC_VECTOR (C_S_AXI_CONTROL_DATA_WIDTH-1 downto 0);
+    s_axi_control_RRESP : OUT STD_LOGIC_VECTOR (1 downto 0);
+    s_axi_control_BVALID : OUT STD_LOGIC;
+    s_axi_control_BREADY : IN STD_LOGIC;
+    s_axi_control_BRESP : OUT STD_LOGIC_VECTOR (1 downto 0);
+    ap_clk : IN STD_LOGIC;
+    ap_rst_n : IN STD_LOGIC;
+    interrupt : OUT STD_LOGIC;
     A_TDATA : IN STD_LOGIC_VECTOR (31 downto 0);
     A_TKEEP : IN STD_LOGIC_VECTOR (3 downto 0);
     A_TSTRB : IN STD_LOGIC_VECTOR (3 downto 0);
@@ -25,33 +48,35 @@ port (
     B_TLAST : OUT STD_LOGIC_VECTOR (0 downto 0);
     B_TID : OUT STD_LOGIC_VECTOR (4 downto 0);
     B_TDEST : OUT STD_LOGIC_VECTOR (5 downto 0);
-    ap_clk : IN STD_LOGIC;
-    ap_rst_n : IN STD_LOGIC;
     A_TVALID : IN STD_LOGIC;
     A_TREADY : OUT STD_LOGIC;
-    ap_start : IN STD_LOGIC;
     B_TVALID : OUT STD_LOGIC;
-    B_TREADY : IN STD_LOGIC;
-    ap_done : OUT STD_LOGIC;
-    ap_ready : OUT STD_LOGIC;
-    ap_idle : OUT STD_LOGIC );
+    B_TREADY : IN STD_LOGIC );
 end;
 
 
 architecture behav of example_example is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "example_example,hls_ip_2019_2_0,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg484-2,HLS_INPUT_CLOCK=13.333000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=5.297000,HLS_SYN_LAT=24,HLS_SYN_TPT=25,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=110,HLS_SYN_LUT=231,HLS_VERSION=2019_2_0}";
+    "example_example,hls_ip_2019_2_0,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg484-2,HLS_INPUT_CLOCK=13.333000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.737000,HLS_SYN_LAT=24,HLS_SYN_TPT=25,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=333,HLS_SYN_LUT=379,HLS_VERSION=2019_2_0}";
+    constant C_S_AXI_DATA_WIDTH : INTEGER range 63 downto 0 := 20;
+    constant C_S_AXI_WSTRB_WIDTH : INTEGER range 63 downto 0 := 4;
+    constant C_S_AXI_ADDR_WIDTH : INTEGER range 63 downto 0 := 20;
+    constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     constant ap_const_lv4_0 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
     constant ap_const_lv2_0 : STD_LOGIC_VECTOR (1 downto 0) := "00";
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
     constant ap_const_lv5_0 : STD_LOGIC_VECTOR (4 downto 0) := "00000";
     constant ap_const_lv6_0 : STD_LOGIC_VECTOR (5 downto 0) := "000000";
-    constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
 
     signal ap_rst_n_inv : STD_LOGIC;
+    signal ap_start : STD_LOGIC;
+    signal ap_ready : STD_LOGIC;
+    signal ap_done : STD_LOGIC;
+    signal ap_continue : STD_LOGIC;
+    signal ap_idle : STD_LOGIC;
     signal proc_1_U0_ap_start : STD_LOGIC;
     signal proc_1_U0_ap_done : STD_LOGIC;
     signal proc_1_U0_ap_continue : STD_LOGIC;
@@ -182,8 +207,74 @@ architecture behav of example_example is
     end component;
 
 
+    component example_example_control_s_axi IS
+    generic (
+        C_S_AXI_ADDR_WIDTH : INTEGER;
+        C_S_AXI_DATA_WIDTH : INTEGER );
+    port (
+        AWVALID : IN STD_LOGIC;
+        AWREADY : OUT STD_LOGIC;
+        AWADDR : IN STD_LOGIC_VECTOR (C_S_AXI_ADDR_WIDTH-1 downto 0);
+        WVALID : IN STD_LOGIC;
+        WREADY : OUT STD_LOGIC;
+        WDATA : IN STD_LOGIC_VECTOR (C_S_AXI_DATA_WIDTH-1 downto 0);
+        WSTRB : IN STD_LOGIC_VECTOR (C_S_AXI_DATA_WIDTH/8-1 downto 0);
+        ARVALID : IN STD_LOGIC;
+        ARREADY : OUT STD_LOGIC;
+        ARADDR : IN STD_LOGIC_VECTOR (C_S_AXI_ADDR_WIDTH-1 downto 0);
+        RVALID : OUT STD_LOGIC;
+        RREADY : IN STD_LOGIC;
+        RDATA : OUT STD_LOGIC_VECTOR (C_S_AXI_DATA_WIDTH-1 downto 0);
+        RRESP : OUT STD_LOGIC_VECTOR (1 downto 0);
+        BVALID : OUT STD_LOGIC;
+        BREADY : IN STD_LOGIC;
+        BRESP : OUT STD_LOGIC_VECTOR (1 downto 0);
+        ACLK : IN STD_LOGIC;
+        ARESET : IN STD_LOGIC;
+        ACLK_EN : IN STD_LOGIC;
+        ap_start : OUT STD_LOGIC;
+        interrupt : OUT STD_LOGIC;
+        ap_ready : IN STD_LOGIC;
+        ap_done : IN STD_LOGIC;
+        ap_continue : OUT STD_LOGIC;
+        ap_idle : IN STD_LOGIC );
+    end component;
+
+
 
 begin
+    example_control_s_axi_U : component example_example_control_s_axi
+    generic map (
+        C_S_AXI_ADDR_WIDTH => C_S_AXI_CONTROL_ADDR_WIDTH,
+        C_S_AXI_DATA_WIDTH => C_S_AXI_CONTROL_DATA_WIDTH)
+    port map (
+        AWVALID => s_axi_control_AWVALID,
+        AWREADY => s_axi_control_AWREADY,
+        AWADDR => s_axi_control_AWADDR,
+        WVALID => s_axi_control_WVALID,
+        WREADY => s_axi_control_WREADY,
+        WDATA => s_axi_control_WDATA,
+        WSTRB => s_axi_control_WSTRB,
+        ARVALID => s_axi_control_ARVALID,
+        ARREADY => s_axi_control_ARREADY,
+        ARADDR => s_axi_control_ARADDR,
+        RVALID => s_axi_control_RVALID,
+        RREADY => s_axi_control_RREADY,
+        RDATA => s_axi_control_RDATA,
+        RRESP => s_axi_control_RRESP,
+        BVALID => s_axi_control_BVALID,
+        BREADY => s_axi_control_BREADY,
+        BRESP => s_axi_control_BRESP,
+        ACLK => ap_clk,
+        ARESET => ap_rst_n_inv,
+        ACLK_EN => ap_const_logic_1,
+        ap_start => ap_start,
+        interrupt => interrupt,
+        ap_ready => ap_ready,
+        ap_done => ap_done,
+        ap_continue => ap_continue,
+        ap_idle => ap_idle);
+
     proc_1_U0 : component example_proc_1
     port map (
         ap_clk => ap_clk,
@@ -297,12 +388,12 @@ begin
                 ap_rst_n_inv <= not(ap_rst_n);
     end process;
 
-    ap_sync_continue <= ap_const_logic_1;
+    ap_sync_continue <= ap_continue;
     ap_sync_done <= proc_2_U0_ap_done;
     ap_sync_ready <= proc_1_U0_ap_ready;
     proc_1_U0_ap_continue <= ap_const_logic_1;
     proc_1_U0_ap_start <= ap_start;
-    proc_2_U0_ap_continue <= ap_const_logic_1;
+    proc_2_U0_ap_continue <= ap_continue;
     proc_2_U0_ap_start <= start_for_proc_2_U0_empty_n;
     proc_2_U0_start_full_n <= ap_const_logic_1;
     proc_2_U0_start_write <= ap_const_logic_0;

@@ -5,6 +5,11 @@
                 <option name="name" value="example"/>
             </pragma>
         </directive>
+        <directive functionName="example" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="example"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 
