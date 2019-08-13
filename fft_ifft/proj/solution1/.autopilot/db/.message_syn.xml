@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;fft_top.cpp&apos; ..."/>
+	<Message severity="WARNING" prefix="[HLS 214-140]" key="HLS 214-140" tag="" content="Array stream parameter &apos;in&apos; in function &apos;fft_top&apos; may require the &apos;volatile&apos; qualifier to prevent the compiler from altering array accesses and/or modifying the desired streaming order: fft_top.cpp:112"/>
+	<Message severity="WARNING" prefix="[HLS 214-140]" key="HLS 214-140" tag="" content="Array stream parameter &apos;out&apos; in function &apos;fft_top&apos; may require the &apos;volatile&apos; qualifier to prevent the compiler from altering array accesses and/or modifying the desired streaming order: fft_top.cpp:113"/>
+	<Message severity="WARNING" prefix="[HLS 214-140]" key="HLS 214-140" tag="" content="Array stream parameter &apos;ovflo&apos; in function &apos;fft_top&apos; may require the &apos;volatile&apos; qualifier to prevent the compiler from altering array accesses and/or modifying the desired streaming order: fft_top.cpp:114"/>
+	<Message severity="ERROR" prefix="[HLS 200-651]" key="HLS 200-651" tag="" content="Found issues in source files:
+In file included from fft_top.cpp:47:
+In file included from ./fft_top.h:48:
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft.h:452:28: warning: the &apos;complete/partial/region&apos; option to &apos;Unroll&apos; pragma is no longer supported in scout HLS compiler and will be ignored
+#pragma HLS unroll complete
+                           ^
+In file included from fft_top.cpp:47:
+In file included from ./fft_top.h:48:
+In file included from /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft.h:868:
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:96:28: warning: the &apos;complete/partial/region&apos; option to &apos;Unroll&apos; pragma is no longer supported in scout HLS compiler and will be ignored
+#pragma HLS unroll complete
+                           ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:520:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=xn
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:521:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=xk
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:589:9: warning: the pragma is not supported any more in scout HLS compiler so this pragma is ignored
+#pragma HLS data_pack variable=xn
+        ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:590:9: warning: the pragma is not supported any more in scout HLS compiler so this pragma is ignored
+#pragma HLS data_pack variable=xk
+        ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:586:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=xn
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:587:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=xk
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:678:9: warning: the pragma is not supported any more in scout HLS compiler so this pragma is ignored
+#pragma HLS data_pack variable=xn
+        ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:679:9: warning: the pragma is not supported any more in scout HLS compiler so this pragma is ignored
+#pragma HLS data_pack variable=xk
+        ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:675:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=xn
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:676:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=xk
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:674:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=status
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:673:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=config_ch
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:715:9: warning: the pragma is not supported any more in scout HLS compiler so this pragma is ignored
+#pragma HLS data_pack variable=config_ch
+        ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:716:9: warning: the pragma is not supported any more in scout HLS compiler so this pragma is ignored
+#pragma HLS data_pack variable=xn
+        ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:717:9: warning: the pragma is not supported any more in scout HLS compiler so this pragma is ignored
+#pragma HLS data_pack variable=xk
+        ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:713:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=xn
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:714:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=xk
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:712:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=status
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:711:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=config_ch
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:751:9: warning: the pragma is not supported any more in scout HLS compiler so this pragma is ignored
+#pragma HLS data_pack variable=xn
+        ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:752:9: warning: the pragma is not supported any more in scout HLS compiler so this pragma is ignored
+#pragma HLS data_pack variable=xk
+        ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:748:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=xn
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:749:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=xk
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:747:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=status
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:746:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=config_ch
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:786:9: warning: the pragma is not supported any more in scout HLS compiler so this pragma is ignored
+#pragma HLS data_pack variable=xn
+        ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:787:9: warning: the pragma is not supported any more in scout HLS compiler so this pragma is ignored
+#pragma HLS data_pack variable=xk
+        ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:783:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=xn
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:784:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=xk
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:782:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=status
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:781:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=config_ch
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:823:9: warning: the pragma is not supported any more in scout HLS compiler so this pragma is ignored
+#pragma HLS data_pack variable=config_ch
+        ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:824:9: warning: the pragma is not supported any more in scout HLS compiler so this pragma is ignored
+#pragma HLS data_pack variable=xn
+        ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:825:9: warning: the pragma is not supported any more in scout HLS compiler so this pragma is ignored
+#pragma HLS data_pack variable=xk
+        ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:821:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=xn
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:822:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=xk
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:820:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=status
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:819:9: warning: Ignore interface attribute or pragma which is not used in top function [-Wignored-interface-attribute]
+#pragma HLS interface ap_fifo port=config_ch
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fft_top.cpp:119:9: warning: the pragma is not supported any more in scout HLS compiler so this pragma is ignored
+#pragma HLS data_pack variable=in
+        ^
+fft_top.cpp:120:9: warning: the pragma is not supported any more in scout HLS compiler so this pragma is ignored
+#pragma HLS data_pack variable=out
+        ^
+fft_top.cpp:133:9: warning: the pragma is not supported any more in scout HLS compiler so this pragma is ignored
+#pragma HLS data_pack variable=fft_config1
+        ^
+fft_top.cpp:134:9: warning: the pragma is not supported any more in scout HLS compiler so this pragma is ignored
+#pragma HLS data_pack variable=fft_config2
+        ^
+fft_top.cpp:139:5: error: no matching function for call to &apos;fft&apos;
+    hls::fft&lt;config1&gt;
+    ^~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:639:8: note: candidate function not viable: no known conversion from &apos;cmpxData (*)[1024]&apos; to &apos;complex&lt;ap_fixed&lt;((config1::input_width + 7) / 8) * 8, 1&gt; &gt; *&apos; for 1st argument; remove &amp;
+  void fft(
+       ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:663:8: note: candidate function not viable: no known conversion from &apos;cmpxData [1024]&apos; to &apos;complex&lt;ap_fixed&lt;((config1::output_width + 7) / 8) * 8, ((config1::output_width + 7) / 8) * 8 - config1::input_width + 1&gt; &gt; (*)[1024]&apos; for 2nd argument; take the address of the argument with &amp;
+  void fft(
+       ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:702:8: note: candidate function not viable: no known conversion from &apos;cmpxData (*)[1024]&apos; to &apos;complex&lt;float&gt; *&apos; for 1st argument
+  void fft(
+       ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:737:8: note: candidate function not viable: no known conversion from &apos;cmpxData (*)[1024]&apos; to &apos;hls::x_complex&lt;ap_fixed&lt;((config1::input_width + 7) / 8) * 8, 1&gt; &gt; *&apos; for 1st argument
+  void fft(
+       ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:771:8: note: candidate function not viable: no known conversion from &apos;cmpxData (*)[1024]&apos; to &apos;hls::x_complex&lt;ap_fixed&lt;((config1::input_width + 7) / 8) * 8, 1&gt; &gt; (*)[1024]&apos; for 1st argument
+  void fft(
+       ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:810:8: note: candidate function not viable: no known conversion from &apos;cmpxData (*)[1024]&apos; to &apos;hls::x_complex&lt;float&gt; *&apos; for 1st argument
+  void fft(
+       ^
+fft_top.cpp:144:5: error: no matching function for call to &apos;fft&apos;
+    hls::fft&lt;config1&gt;
+    ^~~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:639:8: note: candidate function not viable: no known conversion from &apos;cmpxData (*)[1024]&apos; to &apos;complex&lt;ap_fixed&lt;((config1::input_width + 7) / 8) * 8, 1&gt; &gt; *&apos; for 1st argument; remove &amp;
+  void fft(
+       ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:663:8: note: candidate function not viable: no known conversion from &apos;cmpxData [1024]&apos; to &apos;complex&lt;ap_fixed&lt;((config1::output_width + 7) / 8) * 8, ((config1::output_width + 7) / 8) * 8 - config1::input_width + 1&gt; &gt; (*)[1024]&apos; for 2nd argument; take the address of the argument with &amp;
+  void fft(
+       ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:702:8: note: candidate function not viable: no known conversion from &apos;cmpxData (*)[1024]&apos; to &apos;complex&lt;float&gt; *&apos; for 1st argument
+  void fft(
+       ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:737:8: note: candidate function not viable: no known conversion from &apos;cmpxData (*)[1024]&apos; to &apos;hls::x_complex&lt;ap_fixed&lt;((config1::input_width + 7) / 8) * 8, 1&gt; &gt; *&apos; for 1st argument
+  void fft(
+       ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:771:8: note: candidate function not viable: no known conversion from &apos;cmpxData (*)[1024]&apos; to &apos;hls::x_complex&lt;ap_fixed&lt;((config1::input_width + 7) / 8) * 8, 1&gt; &gt; (*)[1024]&apos; for 1st argument
+  void fft(
+       ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_fft_x_complex.h:810:8: note: candidate function not viable: no known conversion from &apos;cmpxData (*)[1024]&apos; to &apos;hls::x_complex&lt;float&gt; *&apos; for 1st argument
+  void fft(
+       ^
+In file included from fft_top.cpp:47:
+In file included from ./fft_top.h:47:
+In file included from /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/ap_fixed.h:10:
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/ap_fixed_base.h:792:13: warning: shift count is negative [-Wshift-count-negative]
+      ret.V &lt;&lt;= (_AP_I - _AP_W);
+            ^   ~~~~~~~~~~~~~~~
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/ap_fixed_base.h:823:69: note: in instantiation of member function &apos;ap_fixed_base&lt;16, 1, true, AP_TRN, AP_WRAP, 0&gt;::to_ap_int_base&apos; requested here
+  inline __attribute__((always_inline)) int to_int() const { return to_ap_int_base().to_int(); }
+                                                                    ^
+/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/ap_fixed_base.h:996:71: note: in instantiation of member function &apos;ap_fixed_base&lt;16, 1, true, AP_TRN, AP_WRAP, 0&gt;::to_int&apos; requested here
+  inline __attribute__((always_inline)) operator int() const { return to_int(); }
+                                                                      ^
+fft_top.cpp:84:40: note: in instantiation of member function &apos;ap_fixed_base&lt;16, 1, true, AP_TRN, AP_WRAP, 0&gt;::operator int&apos; requested here
+            re = in_temp.real() - (int)(in_temp.real());
+                                       ^
+45 warnings and 2 errors generated."/>
+</Messages>
