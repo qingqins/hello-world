@@ -1,0 +1,55 @@
+Sourcing Tcl script '/home/qingqing/.Xilinx/HLS_init.tcl'
+INFO: [HLS 200-10] Running '/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'qingqing' on host 'xcoengvm229145' (Linux_x86_64 version 3.10.0-693.el7.x86_64) on Tue Aug 13 02:31:03 MDT 2019
+INFO: [HLS 200-10] On os "CentOS Linux release 7.4.1708 (Core) "
+INFO: [HLS 200-10] In directory '/home/qingqing/git/hello-world/loop_label'
+Sourcing Tcl script '/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/csynth.tcl'
+INFO: [HLS 200-10] Opening project '/home/qingqing/git/hello-world/loop_label/proj_loop_label'.
+INFO: [HLS 200-10] Adding design file 'example.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'example_test.cpp' to the project
+INFO: [HLS 200-10] Opening solution '/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 13.333ns.
+INFO: [HLS 200-10] Setting target device to 'xc7k160t-fbg484-1'
+INFO: [HLS 200-10] Analyzing design file 'example.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 884.090 ; gain = 500.051 ; free physical = 10292 ; free virtual = 27921
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 884.090 ; gain = 500.051 ; free physical = 10292 ; free virtual = 27921
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 884.090 ; gain = 500.051 ; free physical = 10291 ; free virtual = 27920
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 884.090 ; gain = 500.051 ; free physical = 10291 ; free virtual = 27920
+INFO: [XFORM 203-510] Pipelining loop 'LOOP_1' (example.cpp:76) in function 'example_label' automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 884.090 ; gain = 500.051 ; free physical = 10273 ; free virtual = 27902
+INFO: [HLS 200-472] Inferring partial write operation for 'B' (example.cpp:79:10)
+INFO: Deleting FE datastructures ...
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 884.090 ; gain = 500.051 ; free physical = 10272 ; free virtual = 27901
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'example_label' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'example_label' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 23.96 seconds; current allocated memory: 113.145 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 113.275 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'example_label' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'example_label/A' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'example_label/B' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'example_label' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Setting dangling out port 'example_label/A_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'example_label/A_Din_A' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'example_label'.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 113.569 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 884.090 ; gain = 500.051 ; free physical = 10266 ; free virtual = 27895
+INFO: [VHDL 208-304] Generating VHDL RTL for example_label with prefix example_label_.
+INFO: [VLOG 209-307] Generating Verilog RTL for example_label with prefix example_label_.
+Writing 'post_cfg_example_label.dot'...
+INFO: [HLS 200-112] Total elapsed time: 25.99 seconds; peak allocated memory: 113.569 MB.
