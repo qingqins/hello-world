@@ -6,7 +6,7 @@ void example(hls::stream<data_t>& A, hls::stream<data_t>& B){
 #pragma HLS INTERFACE axis port=&B
     hls::stream<int> data_channel1;
     hls::stream<int> data_channel2;
-#pragma HLS stream depth=10 variable=data_channel1,data_channel2
+#pragma HLS stream depth=8 variable=data_channel1,data_channel2
     proc_1(A, data_channel1, data_channel2);
     proc_2(B, data_channel1, data_channel2);
 }
