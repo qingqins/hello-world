@@ -1,0 +1,7 @@
+digraph "CFG for 'hls::stream\<int, 0\>::write' function" {
+	label="CFG for 'hls::stream\<int, 0\>::write' function";
+
+	Node0x5b4d330 [shape=record,filename="",linenumber="",label="{entry.predFake}"];
+	Node0x5b4d330 -> Node0x5c89880[ callList="" memoryops="" filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h"];
+	Node0x5c89880 [shape=record,filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h",linenumber="189",label="{entry.succFake}"];
+}

@@ -1,5 +1,5 @@
 // ==============================================================
-// Scout HLS - High-Level Synthesis from C, C++ and OpenCL v2019.2.0 (64-bit)
+// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2019.2.0 (64-bit)
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // ==============================================================
 #ifndef example_start_for_proc_2_U0_HH_

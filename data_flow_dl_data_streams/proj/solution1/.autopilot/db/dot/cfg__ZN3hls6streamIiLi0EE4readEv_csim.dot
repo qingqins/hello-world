@@ -1,0 +1,12 @@
+digraph "CFG for 'hls::stream\<int, 0\>::read' function" {
+	label="CFG for 'hls::stream\<int, 0\>::read' function";
+
+	Node0x5c6f250 [shape=record,filename="",linenumber="",label="{entry.predFake}"];
+	Node0x5c6f250 -> Node0x5c27270[ callList="" memoryops="" filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h"];
+	Node0x5c27270 [shape=record,filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h",linenumber="165",label="{entry.succFake|{<s0>T|<s1>F}}"];
+	Node0x5c27270:s0 -> Node0x5c71670[label="W:1" callList="" memoryops="" filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h"];
+	Node0x5c27270:s1 -> Node0x5c71670[label="W:21" callList="" memoryops="" filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h"];
+	Node0x5c71670 [shape=record,filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h",linenumber="176",label="{if.end.predFake}"];
+	Node0x5c71670 -> Node0x5c276d0[ callList="" memoryops="" filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h"];
+	Node0x5c276d0 [shape=record,filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h",linenumber="176",label="{if.end.succFake}"];
+}

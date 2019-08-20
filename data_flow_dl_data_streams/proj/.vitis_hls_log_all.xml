@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="proj" solutionName="solution1" date="2019-08-20T00:46:27.354-0600" type="Warning"/>
+        <logs message="WARNING: [HLS 200-651] Found issues in source files:&#xA;example.cpp:5:33: warning: extra token before pragma subject is ignored [-Wextra-tokens]&#xA;#pragma HLS INTERFACE axis port=&amp;A&#xA;                                ^&#xA;example.cpp:6:33: warning: extra token before pragma subject is ignored [-Wextra-tokens]&#xA;#pragma HLS INTERFACE axis port=&amp;B&#xA;                                ^&#xA;2 warnings generated.&#xA;&#xA;" projectName="proj" solutionName="solution1" date="2019-08-20T00:46:20.573-0600" type="Warning"/>
+        <logs message="WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file example.cpp" projectName="proj" solutionName="solution1" date="2019-08-20T00:46:13.872-0600" type="Warning"/>
+        <logs message="WARNING: [HLS 214-111] Streams will behave like static variables inside a dataflow region: example.cpp:7:19" projectName="proj" solutionName="solution1" date="2019-08-20T00:46:12.125-0600" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

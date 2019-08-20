@@ -1,0 +1,7 @@
+digraph "CFG for 'hls::stream\<ap_axis\<32, 2, 5, 6\>, 0\>::~stream' function" {
+	label="CFG for 'hls::stream\<ap_axis\<32, 2, 5, 6\>, 0\>::~stream' function";
+
+	Node0x5aab710 [shape=record,filename="",linenumber="",label="{entry.predFake}"];
+	Node0x5aab710 -> Node0x5ac3e10[ callList="" memoryops="" filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h"];
+	Node0x5ac3e10 [shape=record,filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h",linenumber="129",label="{entry.succFake}"];
+}

@@ -1,0 +1,17 @@
+digraph "CFG for 'hls::stream\<ap_axis\<32, 2, 5, 6\>, 0\>::read' function" {
+	label="CFG for 'hls::stream\<ap_axis\<32, 2, 5, 6\>, 0\>::read' function";
+
+	Node0x5a3b100 [shape=record,filename="",linenumber="",label="{entry.predFake}"];
+	Node0x5a3b100 -> Node0x5a29200[ callList="" memoryops="" filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h"];
+	Node0x5a29200 [shape=record,filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h",linenumber="165",label="{entry.succFake|{<s0>T|<s1>F}}"];
+	Node0x5a29200:s0 -> Node0x5a0dc70[label="W:1" callList="" memoryops="" filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h"];
+	Node0x5a29200:s1 -> Node0x5a0dc70[label="W:17" callList="" memoryops="" filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h"];
+	Node0x5a0dc70 [shape=record,filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h",linenumber="176",label="{if.end.predFake}"];
+	Node0x5a0dc70 -> Node0x5a27880[ callList="" memoryops="" filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h"];
+	Node0x5a27880 [shape=record,filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h",linenumber="177",label="{if.end.succFake|{<s0>T|<s1>F}}"];
+	Node0x5a27880:s0 -> Node0x5a43130;
+	Node0x5a27880:s1 -> Node0x5a43130[ callList="" memoryops="" filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h"];
+	Node0x5a43130 [shape=record,filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h",linenumber="177",label="{nrvo.skipdtor.predFake}"];
+	Node0x5a43130 -> Node0x5a2a900[ callList="" memoryops="" filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h"];
+	Node0x5a2a900 [shape=record,filename="/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/include/hls_stream.h",linenumber="177",label="{nrvo.skipdtor.succFake}"];
+}

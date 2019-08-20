@@ -1,0 +1,6 @@
+<annotationInfo>
+<item  id="12" filename="example.cpp" linenumber="78" name="icmp_ln78" contextFuncName="example_label" moduleName="example_label" rtlName="icmp_ln78_fu_81_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="/home/qingqing/git/hello-world/loop_label"><\/item>
+<item  id="14" filename="example.cpp" linenumber="78" name="add_ln78" contextFuncName="example_label" moduleName="example_label" rtlName="add_ln78_fu_87_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="/home/qingqing/git/hello-world/loop_label"><\/item>
+<item  id="18" filename="example.cpp" linenumber="79" name="zext_ln79" contextFuncName="example_label" moduleName="example_label" rtlName="zext_ln79_fu_93_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/qingqing/git/hello-world/loop_label"><\/item>
+<item  id="21" filename="example.cpp" linenumber="79" name="add_ln79" contextFuncName="example_label" moduleName="example_label" rtlName="B_Din_A" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="/home/qingqing/git/hello-world/loop_label"><\/item>
+</annotationInfo>

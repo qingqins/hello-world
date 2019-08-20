@@ -26,7 +26,7 @@
 						</inlineStackInfo>
 						<originalName>data_channel1</originalName>
 						<rtlName></rtlName>
-						<coreName>FIFO</coreName>
+						<coreName>FIFO_LUTRAM</coreName>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -54,7 +54,7 @@
 						</inlineStackInfo>
 						<originalName>data_channel2</originalName>
 						<rtlName></rtlName>
-						<coreName>FIFO</coreName>
+						<coreName>FIFO_LUTRAM</coreName>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -554,7 +554,7 @@
 						<type>0</type>
 						<id>23</id>
 						<name>tmp</name>
-						<fileName>/proj/xbuilds/2019.2_0805_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_stream_39.h</fileName>
+						<fileName>/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_stream_39.h</fileName>
 						<fileDirectory>/home/qingqing/git/hello-world/data_flow_dl_data_streams</fileDirectory>
 						<lineNumber>90</lineNumber>
 						<contextFuncName>read</contextFuncName>
@@ -568,7 +568,7 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/proj/xbuilds/2019.2_0805_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_stream_39.h</first>
+											<first>/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_stream_39.h</first>
 											<second>read</second>
 										</first>
 										<second>90</second>
@@ -593,7 +593,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>3.24</m_delay>
+				<m_delay>3.40</m_delay>
 				<m_topoIndex>7</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -603,7 +603,7 @@
 						<type>0</type>
 						<id>24</id>
 						<name>tmp_1</name>
-						<fileName>/proj/xbuilds/2019.2_0805_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_stream_39.h</fileName>
+						<fileName>/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_stream_39.h</fileName>
 						<fileDirectory>/home/qingqing/git/hello-world/data_flow_dl_data_streams</fileDirectory>
 						<lineNumber>90</lineNumber>
 						<contextFuncName>read</contextFuncName>
@@ -617,7 +617,7 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/proj/xbuilds/2019.2_0805_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_stream_39.h</first>
+											<first>/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_stream_39.h</first>
 											<second>read</second>
 										</first>
 										<second>90</second>
@@ -642,7 +642,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>3.24</m_delay>
+				<m_delay>3.40</m_delay>
 				<m_topoIndex>8</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -652,7 +652,7 @@
 						<type>0</type>
 						<id>25</id>
 						<name>add</name>
-						<fileName>/proj/xbuilds/2019.2_0805_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_stream_39.h</fileName>
+						<fileName>/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_stream_39.h</fileName>
 						<fileDirectory>/home/qingqing/git/hello-world/data_flow_dl_data_streams</fileDirectory>
 						<lineNumber>90</lineNumber>
 						<contextFuncName>read</contextFuncName>
@@ -666,7 +666,7 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/proj/xbuilds/2019.2_0805_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_stream_39.h</first>
+											<first>/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/hls_stream_39.h</first>
 											<second>read</second>
 										</first>
 										<second>90</second>
@@ -800,7 +800,7 @@
 						<type>0</type>
 						<id>28</id>
 						<name>B_V_data_V_write_ln178</name>
-						<fileName>/proj/xbuilds/2019.2_0805_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/ap_axi_sdata.h</fileName>
+						<fileName>/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/ap_axi_sdata.h</fileName>
 						<fileDirectory>/home/qingqing/git/hello-world/data_flow_dl_data_streams</fileDirectory>
 						<lineNumber>178</lineNumber>
 						<contextFuncName>write</contextFuncName>
@@ -814,7 +814,7 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>/proj/xbuilds/2019.2_0805_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/ap_axi_sdata.h</first>
+											<first>/proj/xbuilds/2019.2_0816_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/ap_axi_sdata.h</first>
 											<second>write</second>
 										</first>
 										<second>178</second>
@@ -2481,11 +2481,11 @@
 		<item_version>0</item_version>
 		<item class_id="54" tracking_level="0" version="0">
 			<first>1</first>
-			<second>FIFO</second>
+			<second>FIFO_LUTRAM</second>
 		</item>
 		<item>
 			<first>2</first>
-			<second>FIFO</second>
+			<second>FIFO_LUTRAM</second>
 		</item>
 	</port2core>
 	<node2core>

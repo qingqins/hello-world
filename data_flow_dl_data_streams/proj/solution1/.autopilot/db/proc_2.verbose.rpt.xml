@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'proc_2'" level="0">
-<item name = "Date">Thu Aug  8 02:59:41 2019
+<item name = "Date">Tue Aug 20 00:46:27 2019
 </item>
-<item name = "Version">2019.2.0 (Build 2609964 on Mon Aug 05 02:36:12 MDT 2019)</item>
+<item name = "Version">2019.2.0 (Build 2619705 on Thu Aug 15 14:33:04 MDT 2019)</item>
 <item name = "Project">proj</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">13.33, 7.737, 3.60</column>
+<column name="ap_clk">13.33, 7.898, 3.60</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">13, 13, 0.101 (us), 0.101 (us), 13, 13, none</column>
+<column name="">13, 13, 0.103 (us), 0.103 (us), 13, 13, none</column>
 </table>
 </item>
 <item name = "Detail">

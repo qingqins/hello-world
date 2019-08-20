@@ -17,16 +17,16 @@
 <PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>7.737</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.898</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
 <Best-caseLatency>13</Best-caseLatency>
 <Average-caseLatency>13</Average-caseLatency>
 <Worst-caseLatency>13</Worst-caseLatency>
-<Best-caseLatencyRealtime>0.101 (us)</Best-caseLatencyRealtime>
-<Average-caseLatencyRealtime>0.101 (us)</Average-caseLatencyRealtime>
-<Worst-caseLatencyRealtime>0.101 (us)</Worst-caseLatencyRealtime>
+<Best-caseLatencyRealtime>0.103 (us)</Best-caseLatencyRealtime>
+<Average-caseLatencyRealtime>0.103 (us)</Average-caseLatencyRealtime>
+<Worst-caseLatencyRealtime>0.103 (us)</Worst-caseLatencyRealtime>
 <Interval-min>13</Interval-min>
 <Interval-max>13</Interval-max>
 </SummaryOfOverallLatency>

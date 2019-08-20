@@ -1,0 +1,569 @@
+INFO-FLOW: Workspace /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1 opened at Tue Aug 13 02:31:04 MDT 2019
+Execute     config_clock -quiet -name default -period 13.333 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 13.333ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/kintex7/kintex7 
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx.lib 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/plb46.lib 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/fsl.lib 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/axi4.lib 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/maxi.lib 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/dsp48.lib 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/xfir.lib 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/xfft.lib 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/kintex7/dsp48e1.hlp 
+Execute     source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/kintex7/kintex7.gen 
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx.gen 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/plb46.gen 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/fsl.gen 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/axi4.gen 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/maxi.gen 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/util.gen 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.19 sec.
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/xfir.gen 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.29 sec.
+Command     ap_source done; 0.29 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/kintex7/kintex7_fpv6 
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7k160tfbg484-1 
+Execute       ap_part_info -name xc7k160tfbg484-1 -data single -quiet 
+Command       ap_part_info done; 5.12 sec.
+Execute       ap_part_info -name xc7k160tfbg484-1 -data info 
+Execute       add_library xilinx/kintex7/kintex7:xc7k160t:-fbg484:-1 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/kintex7/kintex7 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx.lib 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/plb46.lib 
+Execute               source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/fsl.lib 
+Execute               source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/axi4.lib 
+Execute               source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/maxi.lib 
+Execute               source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/saxilite.lib 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/dsp48.lib 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/xfir.lib 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/xfft.lib 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/dds_compiler.lib 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/kintex7/dsp48e1.hlp 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/kintex7/kintex7.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx.gen 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/plb46.gen 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/fsl.gen 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/axi4.gen 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/maxi.gen 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/util.gen 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.18 sec.
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/xfir.gen 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.27 sec.
+Command         ap_source done; 0.28 sec.
+Execute         ap_part_info -data single -name xc7k160t-fbg484-1 
+Execute         ap_part_info -name xc7k160t-fbg484-1 -data resources 
+Execute         ap_part_info -name xc7k160t-fbg484-1 -data info 
+Execute         ap_part_info -name xc7k160t-fbg484-1 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 25350} {LUT 101400} {FF 202800} {DSP48E 600} {BRAM 650} {URAM 0} 
+Execute         ap_part_info -name xc7k160t-fbg484-1 -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.58 sec.
+Execute       add_library xilinx/kintex7/kintex7_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/kintex7/kintex7_fpv6 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute               source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xc7k160t-fbg484-1'
+Execute       ap_part_info -name xc7k160t-fbg484-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 5.99 sec.
+Execute     ap_part_info -data single -name xc7k160tfbg484-1 
+Execute     ap_part_info -name xc7k160tfbg484-1 -data resources 
+Execute     ap_part_info -name xc7k160tfbg484-1 -data info 
+Execute     ap_part_info -name xc7k160tfbg484-1 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 25350} {LUT 101400} {FF 202800} {DSP48E 600} {BRAM 650} {URAM 0} 
+Execute     ap_part_info -name xc7k160tfbg484-1 -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 6.52 sec.
+Execute   set_part xc7k160tfbg484-1 
+Execute     ap_part_info -name xc7k160tfbg484-1 -data single -quiet 
+Execute     ap_part_info -name xc7k160tfbg484-1 -data info 
+Execute     add_library xilinx/kintex7/kintex7:xc7k160t:-fbg484:-1 
+Execute       get_default_platform 
+Execute       open_platform DefaultPlatform 
+Execute       import_lib /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/kintex7/kintex7 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx.lib 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/plb46.lib 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/fsl.lib 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/axi4.lib 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/maxi.lib 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/saxilite.lib 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/dsp48.lib 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/xfir.lib 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/xfft.lib 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/kintex7/dsp48e1.hlp 
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/kintex7/kintex7.gen 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/plb46.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/fsl.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/axi4.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/maxi.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/util.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.18 sec.
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/xfir.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.27 sec.
+Command       ap_source done; 0.27 sec.
+Execute       ap_part_info -data single -name xc7k160t-fbg484-1 
+Execute       ap_part_info -name xc7k160t-fbg484-1 -data resources 
+Execute       ap_part_info -name xc7k160t-fbg484-1 -data info 
+Execute       ap_part_info -name xc7k160t-fbg484-1 -data info 
+Execute       config_chip_info -quiet -resource {SLICE 25350} {LUT 101400} {FF 202800} {DSP48E 600} {BRAM 650} {URAM 0} 
+Execute       ap_part_info -name xc7k160t-fbg484-1 -data info 
+Execute       config_chip_info -quiet -speed slow 
+Command     add_library done; 0.44 sec.
+Execute     add_library xilinx/kintex7/kintex7_fpv6 
+Execute       get_default_platform 
+Execute       open_platform DefaultPlatform 
+Execute       import_lib /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/kintex7/kintex7_fpv6 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx_fp.lib 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/target_info.tcl 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     ap_part_info -name xc7k160t-fbg484-1 -data info 
+Execute     get_default_platform 
+Command   set_part done; 0.72 sec.
+Execute   create_clock -period 75MHz -name default 
+Execute   csynth_design -dump_post_cfg 
+Execute     get_config_compile -dump_cfg 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     config_compile -dump_post_cfg=1 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-10] Analyzing design file 'example.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling example.cpp as C++
+Execute       ap_part_info -name xc7k160t-fbg484-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute       clang_39 -src example.cpp  -fno-limit-debug-info -gcc-toolchain /proj/xbuilds/2019.2_0812_1/installs/lin64/Vivado/HEAD/tps/lnx64/gcc-6.2.0 -fhls -fno-exceptions  -E "example.cpp"       -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Wpragmas  -fno-threadsafe-statics -fno-use-cxa-atexit  -std=gnu++03  -target fpga64-xilinx-linux-gnu    -fno-threadsafe-statics -fno-use-cxa-atexit -I "/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/39" -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot" -I "/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.pp.0.cpp" 
+Execute         ap_eval exec -ignorestderr /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/clang.example.cpp.diag.yml -fno-limit-debug-info -gcc-toolchain /proj/xbuilds/2019.2_0812_1/installs/lin64/Vivado/HEAD/tps/lnx64/gcc-6.2.0 -fhls -fno-exceptions -E example.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Wpragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++03 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -I /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/39 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot -I /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.pp.0.cpp > /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/clang.example.cpp.out.log 2> /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/clang.example.cpp.err.log 
+INFO-FLOW: Done: GCC PP 39 time: 0.1 seconds per iteration
+Execute       set_directive_top example_label -name=example_label 
+INFO-FLOW: Setting directive 'TOP' name=example_label 
+INFO-FLOW: Setting directive 'TOP' name=example_label 
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO-FLOW: Setting directive 'TOP' name=example_label 
+Execute       list_core -type functional_unit 
+Execute       clang_tidy xilinx-systemc-detector /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.pp.0.cpp std=gnu++03 -target fpga  -directive=/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/.systemc_flag -fix-errors /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.pp.0.cpp -- -std=gnu++03 -target fpga -fhls -ferror-limit=0
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-constantarray-param,xilinx-loop-brace-bracket,xilinx-remove-assert /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.pp.0.cpp std=gnu++03 -target fpga  
+INFO-FLOW: exec /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-loop-brace-bracket,xilinx-remove-assert -fix-errors /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.pp.0.cpp -- -std=gnu++03 -target fpga -fhls -ferror-limit=0
+Execute       clang_tidy xilinx-directive2pragma /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.pp.0.cpp std=gnu++03 -target fpga  -directive=/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/all.directive.json -fix-errors /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.pp.0.cpp -- -std=gnu++03 -target fpga -fhls -ferror-limit=0
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.1 seconds per iteration
+Execute       clang_tidy -errorcheck xilinx-top-parameters /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.pp.0.cpp std=gnu++03 -target fpga  
+Execute         ap_eval exec -ignorestderr /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/clang-tidy.example.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-top-parameters -fix-errors /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.pp.0.cpp -- -std=gnu++03 -target fpga -fhls -ferror-limit=0 > /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/clang-tidy.example.pp.0.cpp.out.log 2> /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/clang-tidy.example.pp.0.cpp.err.log 
+Execute       clang_tidy -errorcheck xilinx-array-stream-check /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.pp.0.cpp std=gnu++03 -target fpga  
+Execute         ap_eval exec -ignorestderr /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/clang-tidy.example.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-array-stream-check -fix-errors /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.pp.0.cpp -- -std=gnu++03 -target fpga -fhls -ferror-limit=0 > /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/clang-tidy.example.pp.0.cpp.out.log 2> /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/clang-tidy.example.pp.0.cpp.err.log 
+Execute       clang_tidy -errorcheck xilinx-stream-in-struct /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.pp.0.cpp std=gnu++03 -target fpga  
+Execute         ap_eval exec -ignorestderr /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/clang-tidy.example.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-stream-in-struct -fix-errors /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.pp.0.cpp -- -std=gnu++03 -target fpga -fhls -ferror-limit=0 > /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/clang-tidy.example.pp.0.cpp.out.log 2> /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/clang-tidy.example.pp.0.cpp.err.log 
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/xilinx-dataflow-lawyer.example.pp.0.cpp.diag.yml /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.pp.0.cpp -- -std=gnu++03 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/xilinx-dataflow-lawyer.example.pp.0.cpp.out.log 2> /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/xilinx-dataflow-lawyer.example.pp.0.cpp.err.log 
+Execute       clang_tidy -errorcheck xilinx-infer-storage-only-attribute /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.pp.0.cpp std=gnu++03 -target fpga  
+Execute         ap_eval exec -ignorestderr /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/clang-tidy.example.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-infer-storage-only-attribute -fix-errors /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.pp.0.cpp -- -std=gnu++03 -target fpga -fhls -ferror-limit=0 > /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/clang-tidy.example.pp.0.cpp.out.log 2> /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/clang-tidy.example.pp.0.cpp.err.log 
+Execute       ap_part_info -name xc7k160t-fbg484-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute       clang_39 -src /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.pragma.2.cpp  -fno-limit-debug-info -fhls -flto -fno-exceptions   -Wno-error=c++11-narrowing   "/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.pragma.2.cpp"      -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Wpragmas  -fno-threadsafe-statics -fno-use-cxa-atexit  -std=gnu++03  -target fpga64-xilinx-linux-gnu  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot" -I "/proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -g -o "/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.bc" 
+Execute         ap_eval exec -ignorestderr /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/clang.example.pragma.2.cpp.diag.yml -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.pragma.2.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Wpragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++03 -target fpga64-xilinx-linux-gnu -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot -I /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.bc > /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/clang.example.pragma.2.cpp.out.log 2> /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/clang.example.pragma.2.cpp.err.log 
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.0.bc -args  "/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.g.bc"  
+Execute         ap_eval exec -ignorestderr /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example.g.bc -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.0.bc > /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/llvm-link.a.g.ld.0.bc.out.log 2> /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/llvm-link.a.g.ld.0.bc.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.1.lower.bc -args /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute         ap_eval exec -ignorestderr /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.diag.yml /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.1.lower.bc > /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.out.log 2> /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.err.log 
+INFO-FLOW: 
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/lib/libhlsm_39.bc /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/lib/libhlsmc++_39.bc 
+Execute         ap_eval exec -ignorestderr /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/lib/libhlsm_39.bc /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/lib/libhlsmc++_39.bc -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.2.m1.bc > /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.out.log 2> /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.err.log 
+Command         ap_eval done; 6.63 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 6.64 sec.
+Execute       run_link_or_opt -opt -out /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=example_label -reflow-float-conversion 
+Execute         ap_eval exec -ignorestderr /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.diag.yml /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=example_label -reflow-float-conversion -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.out.log 2> /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.err.log 
+Command         ap_eval done; 1.4 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 1.41 sec.
+Execute       run_link_or_opt -out /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/lib/libfloatconversion_39.bc 
+Execute         ap_eval exec -ignorestderr /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/lib/libfloatconversion_39.bc -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.4.m2.bc > /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.out.log 2> /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.err.log 
+Command         ap_eval done; 0.16 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 0.17 sec.
+Execute       run_link_or_opt -opt -out /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=example_label 
+Execute         ap_eval exec -ignorestderr /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.diag.yml /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=example_label -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.5.gdce.bc > /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.out.log 2> /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.err.log 
+INFO-FLOW: 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_interface -default_interface 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_config_interface -m_axi_offset 
+Execute       get_config_export -xo 
+INFO-FLOW: Doing LTO.
+Execute       clang_39 -src /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.0.bc  -fhls -mllvm -hls-top-function-name=example_label  -mllvm -hls-db-dir -mllvm /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db  -emit-llvm -c -mllvm -hls-bitcode-version=3.1  -target fpga64-xilinx-none  -mllvm  -xcl-xmlinfo=/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/../../../kernel.xml  -mllvm -pass-remarks=supported-subset -mllvm -hls-top-function-prefix=example_label_ -mllvm -reflow-enable-interface-default-setting=false -mllvm -reflow-enable-slave-interface-default-setting=false -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -mllvm -maxi-latency=0 -x ir "/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.5.gdce.bc" -o "/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.lto.bc"  
+Execute         ap_eval exec -ignorestderr /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/lnx64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/clang.a.g.ld.0.bc.diag.yml -fhls -mllvm -hls-top-function-name=example_label -mllvm -hls-db-dir -mllvm /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db -emit-llvm -c -mllvm -hls-bitcode-version=3.1 -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/../../../kernel.xml -mllvm -pass-remarks=supported-subset -mllvm -hls-top-function-prefix=example_label_ -mllvm -reflow-enable-interface-default-setting=false -mllvm -reflow-enable-slave-interface-default-setting=false -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -mllvm -maxi-latency=0 -x ir /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.lto.bc > /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/clang.a.g.ld.0.bc.out.log 2> /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/clang.a.g.ld.0.bc.err.log 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Command       clang_39 done; 0.12 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 884.090 ; gain = 500.051 ; free physical = 10292 ; free virtual = 27921
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 884.090 ; gain = 500.051 ; free physical = 10292 ; free virtual = 27921
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top example_label -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.0.bc -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Execute         disassemble /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.1 /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.1 
+Execute           is_encrypted /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.1.bc 
+Command         disassemble done; 1.14 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 884.090 ; gain = 500.051 ; free physical = 10291 ; free virtual = 27920
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.1.bc -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 884.090 ; gain = 500.051 ; free physical = 10291 ; free virtual = 27920
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.g.1.bc to /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db -interface-port-rename -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -function-uniquify -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.o.1.bc -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-510] Pipelining loop 'LOOP_1' (example.cpp:76) in function 'example_label' automatically.
+Execute         disassemble /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.o.1.tmp /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.o.1.tmp 
+Execute           is_encrypted /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.o.1.tmp.bc 
+Command         disassemble done; 1.68 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+Execute         disassemble /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.o.2 /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.o.2 
+Execute           is_encrypted /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.o.2.bc 
+Command         disassemble done; 1.51 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 884.090 ; gain = 500.051 ; free physical = 10273 ; free virtual = 27902
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin2 -bitwidthmin2 -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.o.2.bc -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [HLS 200-472] Inferring partial write operation for 'B' (example.cpp:79:10)
+Command         transform done; 0.14 sec.
+Execute         disassemble /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.o.3 /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.o.3 
+Execute           is_encrypted /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.o.3.bc 
+Command         disassemble done; 1.59 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 884.090 ; gain = 500.051 ; free physical = 10272 ; free virtual = 27901
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 6.48 sec.
+Command     elaborate done; 15.69 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'example_label' ...
+Execute       ap_set_top_model example_label 
+Execute       get_model_list example_label -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model example_label 
+Execute       get_model_list example_label -filter all-wo-channel 
+INFO-FLOW: Model list for configure: example_label
+INFO-FLOW: Configuring Module : example_label ...
+Execute       set_default_model example_label 
+Execute       apply_spec_resource_limit example_label 
+INFO-FLOW: Model list for preprocess: example_label
+INFO-FLOW: Preprocessing Module: example_label ...
+Execute       set_default_model example_label 
+Execute       cdfg_preprocess -model example_label 
+Execute       rtl_gen_preprocess example_label 
+INFO-FLOW: Model list for synthesis: example_label
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'example_label' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model example_label 
+Execute       schedule -model example_label 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 23.96 seconds; current allocated memory: 113.145 MB.
+Execute       syn_report -verbosereport -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.verbose.sched.rpt 
+Execute       db_write -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.sched.adb -f 
+INFO-FLOW: Finish scheduling example_label.
+Execute       set_default_model example_label 
+Execute       bind -model example_label 
+BIND OPTION: model=example_label
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 113.275 MB.
+Execute       syn_report -verbosereport -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.verbose.bind.rpt 
+Execute       db_write -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.bind.adb -f 
+INFO-FLOW: Finish binding example_label.
+Execute       get_model_list example_label -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess example_label 
+INFO-FLOW: Model list for RTL generation: example_label
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'example_label' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model example_label -module_prefix example_label_ -vendor xilinx -mg_file /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'example_label/A' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'example_label/B' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'example_label' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Setting dangling out port 'example_label/A_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'example_label/A_Din_A' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'example_label'.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 113.569 MB.
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.rtl_wrap.cfg.tcl 
+Execute       gen_rtl example_label -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/syn/systemc/example_label_example_label -synmodules example_label 
+Execute       gen_rtl example_label -istop -style xilinx -f -lang vhdl -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/syn/vhdl/example_label_example_label 
+Execute       gen_rtl example_label -istop -style xilinx -f -lang vlog -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/syn/verilog/example_label_example_label 
+Execute       syn_report -csynth -model example_label -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/syn/report/example_label_csynth.rpt 
+Execute       syn_report -rtlxml -model example_label -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/syn/report/example_label_csynth.xml 
+Execute       syn_report -verbosereport -model example_label -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.verbose.rpt 
+Execute       db_write -model example_label -f -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.adb 
+Execute       gen_tb_info example_label -p /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label 
+Execute       export_constraint_db -f -tool general -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.constraint.tcl 
+Execute       syn_report -designview -model example_label -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.design.xml 
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model example_label -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model example_label -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks example_label 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain example_label 
+INFO-FLOW: Model list for RTL component generation: example_label
+INFO-FLOW: Handling components in module [example_label] ... 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.compgen.tcl 
+INFO-FLOW: Append model example_label
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: example_label
+INFO-FLOW: To file: write model example_label
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/global.setting.tcl
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/generic/autopilot/common.gen 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/generic/autopilot/op.gen 
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/kintex7/kintex7.gen 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/plb46.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/fsl.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/axi4.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/maxi.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/util.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.18 sec.
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/xfir.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.28 sec.
+Command       ap_source done; 0.28 sec.
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=13.333 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7k160t-fbg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7k160t-fbg484-1 -data info -quiet 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.compgen.tcl 
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/global.setting.tcl
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/generic/autopilot/common.gen 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/generic/autopilot/op.gen 
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/kintex7/kintex7.gen 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/plb46.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/fsl.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/axi4.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/maxi.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/util.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.18 sec.
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/ip/xfir.gen 
+Execute           source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.27 sec.
+Command       ap_source done; 0.28 sec.
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute         source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=example_label xml_exists=0
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.rtl_wrap.cfg.tcl 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.rtl_wrap.cfg.tcl 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.rtl_wrap.cfg.tcl 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.tbgen.tcl 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.compgen.tcl 
+Execute         ap_part_info -name xc7k160t-fbg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7k160t-fbg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7k160t-fbg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7k160t-fbg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7k160t-fbg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7k160t-fbg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7k160t-fbg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7k160t-fbg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7k160t-fbg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7k160t-fbg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7k160t-fbg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7k160t-fbg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7k160t-fbg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7k160t-fbg484-1 -data info -quiet 
+Command       ap_source done; 0.25 sec.
+Execute       ap_part_info -name xc7k160t-fbg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7k160t-fbg484-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.compgen.tcl 
+Execute       ap_part_info -name xc7k160t-fbg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7k160t-fbg484-1 -data info -quiet 
+Execute       ap_part_info -name xc7k160t-fbg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7k160t-fbg484-1 -data info -quiet 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7k160t-fbg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7k160t-fbg484-1 -data info -quiet 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.constraint.tcl 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=2
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=2
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=1 #gSsdmPorts=2
+Execute       source /proj/xbuilds/2019.2_0812_1/installs/lin64/Vitis/HEAD/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -xo 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.tbgen.tcl 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.tbgen.tcl 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.rtl_wrap.cfg.tcl 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.compgen.dataonly.tcl 
+Execute       get_config_export -xo 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7k160t-fbg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7k160t-fbg484-1 -data info -quiet 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.constraint.tcl 
+Execute       sc_get_clocks example_label 
+Execute       ap_part_info -name xc7k160t-fbg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7k160t-fbg484-1 -data info -quiet 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+Execute       source /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/example_label.tbgen.tcl 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 884.090 ; gain = 500.051 ; free physical = 10266 ; free virtual = 27895
+INFO: [VHDL 208-304] Generating VHDL RTL for example_label with prefix example_label_.
+INFO: [VLOG 209-307] Generating Verilog RTL for example_label with prefix example_label_.
+Command     autosyn done; 2.1 sec.
+Execute     transform -hls /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/a.o.3.bc -hls-dot-post-cfg-only -o /home/qingqing/git/hello-world/loop_label/proj_loop_label/solution1/.autopilot/db/dot-post/xxx.bc -cfg-hier-userfilelist /home/qingqing/git/hello-world/loop_label/example_test.cpp /home/qingqing/git/hello-world/loop_label/example.cpp -f 
+Command   csynth_design done; 17.83 sec.
+Command ap_source done; 25.11 sec.
+Execute cleanup_all 

@@ -1,0 +1,7 @@
+digraph "CFG for 'test2' function" {
+	label="CFG for 'test2' function";
+
+	Node0x5b4f590 [shape=record,filename="../../../../example.cpp",linenumber="17",label="{entry.predFake}"];
+	Node0x5b4f590 -> Node0x5c9f0e0[ callList="" memoryops="" filename="../../../../example.cpp"];
+	Node0x5c9f0e0 [shape=record,filename="../../../../example.cpp",linenumber="17",label="{entry.succFake}"];
+}

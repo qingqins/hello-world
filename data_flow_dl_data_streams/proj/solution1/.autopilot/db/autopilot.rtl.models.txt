@@ -1,9 +1,8 @@
 regslice_core
 regslice_core
-example_fifo_w32_d8_A
-example_fifo_w32_d8_A
+example_fifo_w32_d10_A
+example_fifo_w32_d10_A
 example_start_for_proc_2_U0
-example_example_control_s_axi
 regslice_core
 proc_1
 proc_2
